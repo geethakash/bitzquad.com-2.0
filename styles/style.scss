@@ -1,0 +1,11 @@
+// import tailwind 
+@import './tailwind.scss';
+
+//import base styles
+@import './base/base';
+
+// import components
+@import './components';
+
+// import pages
+@import './pages';

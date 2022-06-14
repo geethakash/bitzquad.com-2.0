@@ -1,0 +1,65 @@
+.landing-container {
+  @apply h-screen mx-auto container;
+}
+
+.landing {
+  @apply relative flex h-full w-full items-center justify-center;
+
+  &-content {
+    @apply w-1/2 pl-28;
+
+    & h1 {
+      @apply pb-10 pr-20 text-6xl font-semibold;
+    }
+    & p {
+      @apply text-xl;
+      line-height: 150%;
+    }
+
+    & img {
+      @apply w-[500px] opacity-100;
+    }
+    & span {
+      @apply mt-5 text-5xl font-semibold;
+    }
+  }
+  &-logo {
+    @apply flex  w-1/2  items-center justify-center;
+
+    & img {
+      @apply aspect-square w-3/12;
+    }
+  }
+  &-text {
+    @apply mt-10 tracking-[5px];
+  }
+}
+
+.services {
+  &-container {
+    @apply relative h-screen w-full;
+    & .title-wrapper {
+      @apply mt-20 w-full bg-white;
+      & h3 {
+        @apply text-[5rem];
+      }
+    }
+    .parallax {
+      @apply h-screen w-full;
+    }
+  }
+
+  &-card {
+    @apply flex items-center justify-center  py-10  px-10;
+
+    & h4 {
+      @apply text-center text-5xl font-semibold leading-normal;
+    }
+  }
+}
+
+.worldwithus {
+  &-container {
+    @apply relative flex  h-screen w-full;
+  }
+}
