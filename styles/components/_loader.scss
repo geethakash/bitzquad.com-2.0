@@ -1,0 +1,31 @@
+.loader {
+  @apply absolute top-0 w-screen h-screen bg-white z-50;
+
+  .loader-circle {
+    @apply w-10 h-10 absolute rounded-full;
+  }
+  .loader-circle {
+    @apply w-10 h-10 absolute rounded-full scale-0;
+  }
+  .circle-1 {
+    @apply bg-[#e134ff];
+    animation: 1.5s circle-grow 0s normal ease-in-out;
+  }
+  .circle-2 {
+    @apply bg-[#7165fd];
+    animation: 1.4s circle-grow 0.4s normal ease-in-out;
+  }
+  .circle-3 {
+    @apply bg-white;
+    animation: 1s circle-grow 1s normal ease-in-out;
+  }
+}
+
+@keyframes circle-grow {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(100);
+  }
+}

@@ -1,9 +1,25 @@
 import React from 'react';
 import { LogoDark } from '../../constants/images';
+import { motion } from 'framer-motion';
 
 function Navbar() {
   return (
-    <nav className="navbar">
+    <motion.nav
+      initial={{
+        opacity: 0,
+        y: -100,
+      }}
+      animate={{
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 1,
+          delay: 0.6,
+          ease: 'easeInOut',
+        },
+      }}
+      className="navbar"
+    >
       <a className="navbar-brand" href="#">
         <img className="h-10" src={LogoDark.src} />
       </a>
@@ -48,7 +64,7 @@ function Navbar() {
           Menu
         </button>
       </div>
-    </nav>
+    </motion.nav>
   );
 }
 

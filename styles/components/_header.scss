@@ -1,5 +1,5 @@
 .navbar {
-  @apply fixed top-0 z-10 hidden w-full items-center justify-between px-24 py-16 transition-all duration-300 md:flex;
+  @apply fixed top-0 z-10 hidden w-full items-center justify-between px-24 py-16  md:flex;
 
   &-brand {
     @apply flex items-center justify-center;

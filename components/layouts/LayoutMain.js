@@ -5,9 +5,12 @@ import Head from 'next/head';
 import Navbar from '../defaults/Navbar';
 import Footer from '../defaults/Footer';
 
-const Layout = ({ children, title = 'Bitzquad.com' }) => {
+const Layout = ({
+  children,
+  title = 'Bitzquad | Solutions Beyond Technology',
+}) => {
   return (
-    <div className="flex flex-col min-h-screen relative container overflow-y-auto">
+    <>
       <Head>
         <title>{title}</title>
         <meta charSet="utf-8" />
@@ -17,9 +20,11 @@ const Layout = ({ children, title = 'Bitzquad.com' }) => {
       <header>
         <Navbar />
       </header>
-      {children}
-      <Footer />
-    </div>
+      <div className="flex flex-col min-h-screen relative overflow-y-auto">
+        {children}
+        <Footer />
+      </div>
+    </>
   );
 };
 
