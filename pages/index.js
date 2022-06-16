@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { LayoutMain, Loader } from '../components';
 import { Logo } from '../constants/images';
 import { motion } from 'framer-motion';
@@ -85,10 +85,11 @@ const AnimatedTitle = ({ landingTitle }) => {
         animate="animate"
       >
         {landingTitle.split(' ').map((word, index) => (
-          <>
+          <React.Fragment key={index}>
             {[...word].map((letter, i) => (
               <motion.span
                 className="landing-letter"
+                key={i}
                 variants={textRevealAnimation}
               >
                 {letter}
@@ -100,7 +101,7 @@ const AnimatedTitle = ({ landingTitle }) => {
               <span className="landing-word-spacer"> </span>
             )}
             <span> </span>
-          </>
+          </React.Fragment>
         ))}
       </motion.span>
     </div>
