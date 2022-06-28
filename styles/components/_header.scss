@@ -1,17 +1,17 @@
 .navbar {
-  @apply fixed top-0 z-10 hidden w-full items-center justify-between px-24 py-16  md:flex;
+  @apply top-0 z-10 flex w-full items-center justify-between px-8 py-8 md:py-10 md:px-12 lg:fixed lg:py-16 xl:px-24;
 
   &-brand {
     @apply flex items-center justify-center;
     & img {
-      @apply h-10;
+      @apply h-7 lg:h-10;
     }
   }
 
   &-links {
-    @apply flex items-center gap-x-20 text-xl font-semibold tracking-wider text-gray-600;
+    @apply hidden items-center gap-x-10 text-xl font-semibold tracking-wider text-gray-600 lg:flex xl:gap-x-20;
 
-    & .menu-button {
+    .menu-button {
       @apply flex items-center gap-x-2 font-bold transition-all duration-300 hover:-translate-x-2 hover:text-black;
     }
   }

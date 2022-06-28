@@ -1,13 +1,13 @@
-import React, { ReactNode } from 'react';
-import Link from 'next/link';
-import Script from 'next/script';
-import Head from 'next/head';
-import Navbar from '../defaults/Navbar';
-import Footer from '../defaults/Footer';
+import React, { ReactNode } from "react";
+import Link from "next/link";
+import Script from "next/script";
+import Head from "next/head";
+import Navbar from "../defaults/Navbar";
+import Footer from "../defaults/Footer";
 
 const Layout = ({
   children,
-  title = 'Bitzquad | Solutions Beyond Technology',
+  title = "Bitzquad | Solutions Beyond Technology",
 }) => {
   return (
     <>
@@ -20,7 +20,7 @@ const Layout = ({
       <header>
         <Navbar />
       </header>
-      <div className="flex flex-col min-h-screen relative overflow-y-auto">
+      <div className="relative flex min-h-screen flex-col overflow-y-auto">
         {children}
         <Footer />
       </div>

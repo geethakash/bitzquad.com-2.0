@@ -1,11 +1,11 @@
 .loader {
-  @apply absolute top-0 w-screen h-screen bg-white z-50;
+  @apply absolute top-0 z-50 h-screen w-screen bg-white;
 
   .loader-circle {
-    @apply w-10 h-10 absolute rounded-full;
+    @apply absolute h-10 w-10 rounded-full;
   }
   .loader-circle {
-    @apply w-10 h-10 absolute rounded-full scale-0;
+    @apply absolute h-10 w-10 scale-0 rounded-full;
   }
   .circle-1 {
     @apply bg-[#e134ff];
