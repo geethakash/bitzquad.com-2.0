@@ -24,9 +24,9 @@ function SideMenu({ MenuOpen, setMenuOpen }) {
                 <path
                   d="M37.9375 1.5625L19.75 19.75M19.75 19.75L1.5625 37.9375M19.75 19.75L37.9375 37.9375M19.75 19.75L1.5625 1.5625"
                   stroke="#3F3F46"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </button>
