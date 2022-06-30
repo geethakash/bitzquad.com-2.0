@@ -1,6 +1,6 @@
 import React from 'react';
 import { LogoDark } from '../../constants/images';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import SideMenu from './SideMenu';
 
 function Navbar() {
@@ -95,7 +95,9 @@ function Navbar() {
           </button>
         </div>
       </motion.nav>
-      {menuOpen && <SideMenu MenuOpen={menuOpen} setMenuOpen={setMenuOpen} />}
+      <AnimatePresence>
+        {menuOpen && <SideMenu MenuOpen={menuOpen} setMenuOpen={setMenuOpen} />}
+      </AnimatePresence>
     </>
   );
 }

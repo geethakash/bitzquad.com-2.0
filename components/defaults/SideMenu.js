@@ -1,77 +1,274 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+
+const sideMenuLinks = [
+  {
+    name: 'Home',
+    href: '#',
+  },
+  {
+    name: 'Services',
+    href: '#services',
+  },
+  {
+    name: 'About Us',
+    href: '#about',
+  },
+  {
+    name: 'Projects',
+    href: '#projects',
+  },
+  {
+    name: 'Team',
+    href: '#team',
+  },
+  {
+    name: 'Contact',
+    href: '#contact',
+  },
+];
+
+const sideMenuResources = [
+  {
+    name: 'Github',
+    href: 'https://github.com/bitzquad',
+  },
+  {
+    name: 'YouTube',
+    href: 'https://youtube.com/',
+  },
+  {
+    name: 'Blog',
+    href: 'https://blog.bitzquad.com',
+  },
+  {
+    name: 'Academy',
+    href: 'https://academy.bitzquad.com',
+  },
+];
+
+const sideMenuSocial = [
+  {
+    name: 'LinkedIn',
+    href: 'https://www.linkedin.com/company/bitzquad/',
+  },
+  {
+    name: 'Twitter',
+    href: 'https://twitter.com/bitzquad/',
+  },
+  {
+    name: 'Instagram',
+    href: 'https://www.instagram.com/bitzquad/',
+  },
+  {
+    name: 'Facebook',
+    href: 'https://www.facebook.com/bitzquad/',
+  },
+];
+
+// animations
+const sidebarAnim = {
+  initial: {
+    opacity: 0,
+    x: '100%',
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 1,
+      ease: [0.6, 0.01, -0.05, 0.95],
+    },
+  },
+  exit: {
+    opacity: 0,
+    x: '100%',
+    transition: {
+      duration: 0.5,
+      ease: [0.6, 0.01, -0.05, 0.95],
+    },
+  },
+};
+
+const sideMenuLinksAnim = {
+  animate: {
+    transition: {
+      delayChildren: 0.1,
+      ease: [0.6, 0.01, -0.05, 0.95],
+      staggerChildren: 0.06,
+    },
+  },
+};
+const sideMenuLinkAnim = {
+  initial: {
+    x: 50,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+    },
+  },
+};
+
+// resources links animation
+const resourcesLinksAnim = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1, transition: { duration: 1, delay: 0.6 } },
+};
+
+// social media links animations
+const socialLinksAnim = {
+  animate: {
+    transition: {
+      delayChildren: 0.2,
+      ease: [0.6, 0.01, -0.05, 0.95],
+      staggerChildren: 0.06,
+    },
+  },
+};
+
+const socialLinkAnim = {
+  initial: {
+    x: 50,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      delay: 0.6,
+      ease: 'easeInOut',
+      duration: 0.8,
+    },
+  },
+};
 
 function SideMenu({ MenuOpen, setMenuOpen }) {
+  // menuLink
+  const SideMenuLink = ({ href, name }) => {
+    return (
+      <motion.div
+        className="sidemenu__content_item"
+        variants={sideMenuLinkAnim}
+      >
+        <motion.a className="underline-link" href={href}>
+          {name}
+        </motion.a>
+      </motion.div>
+    );
+  };
+
   return (
-    <>
-      <div className="sidemenu__wrapper">
-        <div
-          className="sidemenu__backdrop"
-          onClick={() => setMenuOpen(false)}
-        ></div>
-        <div className="sidemenu__container">
-          <div className="sidemenu__header">
-            <button
-              onClick={() => setMenuOpen(false)}
-              className="sidemenu__header__closebutton"
+    <motion.div
+      className="sidemenu__wrapper"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      <div
+        className="sidemenu__backdrop"
+        onClick={() => setMenuOpen(false)}
+      ></div>
+      <motion.div
+        className="sidemenu__container"
+        variants={sidebarAnim}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+      >
+        <div className="sidemenu__header">
+          <motion.button
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{
+              opacity: 1,
+              scale: 1,
+              transition: { duration: 0.4, delay: 0.7 },
+            }}
+            exit={{ opacity: 0, scale: 0.3 }}
+            onClick={() => setMenuOpen(false)}
+            className="sidemenu__header__closebutton"
+          >
+            <svg
+              width="39"
+              height="39"
+              viewBox="0 0 39 39"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                width="39"
-                height="39"
-                viewBox="0 0 39 39"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M37.9375 1.5625L19.75 19.75M19.75 19.75L1.5625 37.9375M19.75 19.75L37.9375 37.9375M19.75 19.75L1.5625 1.5625"
-                  stroke="#3F3F46"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
-          <div className="sidemenu__content">
-            <div className="sidemenu__content_items">
-              <div className="sidemenu__content_item">
-                <a href="#">Home</a>
-              </div>
-              <div className="sidemenu__content_item">
-                <a href="#">Services</a>
-              </div>
-              <div className="sidemenu__content_item">
-                <a href="#">About Us</a>
-              </div>
-              <div className="sidemenu__content_item">
-                <a href="#">Projects</a>
-              </div>
-              <div className="sidemenu__content_item">
-                <a href="#">Team</a>
-              </div>
-              <div className="sidemenu__content_item">
-                <a href="#">Contact</a>
-              </div>
-            </div>
-            <div className="sidemenu__content_resources">
-              <h4>Resources</h4>
-              <a className="">Github</a>
-              <a className="">YouTube</a>
-              <a className="">Blog</a>
-              <a className="">Acadamy</a>
-            </div>
-          </div>
-          <div className="sidemenu__footer">
-            <div className="social-links">
-              <a href="#">LinkedIn</a>
-              <a href="#">Facebook</a>
-              <a href="#">Instagram</a>
-              <a href="#">Twitter</a>
-            </div>
-            <div className="multilingual">En</div>
-          </div>
+              <path
+                d="M37.9375 1.5625L19.75 19.75M19.75 19.75L1.5625 37.9375M19.75 19.75L37.9375 37.9375M19.75 19.75L1.5625 1.5625"
+                stroke="#3F3F46"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </motion.button>
         </div>
-      </div>
-    </>
+        <div className="sidemenu__content">
+          <motion.div
+            className="sidemenu__content_items"
+            variants={sideMenuLinksAnim}
+            initial="initial"
+            animate="animate"
+          >
+            {sideMenuLinks.map((link) => (
+              <SideMenuLink href={link.href} name={link.name} />
+            ))}
+          </motion.div>
+          <motion.div
+            className="sidemenu__content_resources"
+            variants={resourcesLinksAnim}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+          >
+            <h4>Resources</h4>
+            {sideMenuResources.map((link) => (
+              <a className="underline-link" href={link.href}>
+                {link.name}
+              </a>
+            ))}
+          </motion.div>
+        </div>
+        <div className="sidemenu__footer">
+          <motion.div
+            className="social-links"
+            variants={socialLinksAnim}
+            initial="initial"
+            animate="animate"
+          >
+            {sideMenuSocial.map((link) => (
+              <motion.div
+                variants={socialLinkAnim}
+                animate="animate"
+                initial="initial"
+              >
+                <a href={link.href} className="underline-link" target="_blank">
+                  {link.name}
+                </a>
+              </motion.div>
+            ))}
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.25,
+              delay: 0.7,
+            }}
+            className="multilingual"
+          >
+            <button className="flex aspect-square h-14 items-center justify-center rounded-full transition-all duration-300 hover:bg-black hover:text-white">
+              En
+            </button>
+          </motion.div>
+        </div>
+      </motion.div>
+    </motion.div>
   );
 }
 

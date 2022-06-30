@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
-import { Logo } from "../../constants/images";
-import { motion } from "framer-motion";
+import React, { useEffect } from 'react';
+import { Logo } from '../../constants/images';
+import { motion } from 'framer-motion';
 
 function Loader({ setLoading }) {
   return (
@@ -11,7 +11,7 @@ function Loader({ setLoading }) {
         <div className="loader-circle circle-3"></div> */}
         <div className="relative aspect-square w-8/12 rounded-full  p-20 xl:w-[400px]">
           <motion.img
-            initial={{ scale: 0, opacity: 0 }}
+            initial={{ scale: 0.4, opacity: 0 }}
             animate={{
               scale: 1,
               opacity: 1,
@@ -19,7 +19,7 @@ function Loader({ setLoading }) {
               transition: {
                 // delay: 1,
                 duration: 1,
-                ease: "easeInOut",
+                ease: 'easeInOut',
               },
             }}
             onAnimationComplete={() => setTimeout(() => setLoading(false), 500)}
