@@ -215,8 +215,8 @@ function SideMenu({ MenuOpen, setMenuOpen }) {
             initial="initial"
             animate="animate"
           >
-            {sideMenuLinks.map((link) => (
-              <SideMenuLink href={link.href} name={link.name} />
+            {sideMenuLinks.map((link, index) => (
+              <SideMenuLink href={link.href} name={link.name} key={index} />
             ))}
           </motion.div>
           <motion.div
@@ -227,8 +227,8 @@ function SideMenu({ MenuOpen, setMenuOpen }) {
             exit="exit"
           >
             <h4>Resources</h4>
-            {sideMenuResources.map((link) => (
-              <a className="underline-link" href={link.href}>
+            {sideMenuResources.map((link, index) => (
+              <a className="underline-link" href={link.href} key={index}>
                 {link.name}
               </a>
             ))}
@@ -241,13 +241,19 @@ function SideMenu({ MenuOpen, setMenuOpen }) {
             initial="initial"
             animate="animate"
           >
-            {sideMenuSocial.map((link) => (
+            {sideMenuSocial.map((link, index) => (
               <motion.div
+                key={index}
                 variants={socialLinkAnim}
                 animate="animate"
                 initial="initial"
               >
-                <a href={link.href} className="underline-link" target="_blank">
+                <a
+                  href={link.href}
+                  className="underline-link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   {link.name}
                 </a>
               </motion.div>
