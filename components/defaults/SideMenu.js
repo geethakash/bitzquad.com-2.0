@@ -254,6 +254,7 @@ function SideMenu({ MenuOpen, setMenuOpen }) {
               {sideMenuSocial.map((link, index) => (
                 <motion.div
                   key={index}
+                  className="social-links_item"
                   variants={socialLinkAnim}
                   animate="animate"
                   initial="initial"

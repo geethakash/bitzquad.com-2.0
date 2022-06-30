@@ -60,7 +60,7 @@
         @apply grid grid-cols-2 pr-20 text-xl lg:flex 2xl:pr-20 2xl:text-2xl;
       }
 
-      & a {
+      &_item {
         @apply mt-3 text-2xl xl:mr-10 2xl:mt-5;
       }
     }
