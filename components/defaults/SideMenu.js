@@ -115,8 +115,8 @@ const sideMenuLinkAnim = {
 
 // resources links animation
 const resourcesLinksAnim = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1, transition: { duration: 1, delay: 0.6 } },
+  initial: { opacity: 0, x: 50 },
+  animate: { opacity: 1, x: 0, transition: { duration: 1, delay: 0.4 } },
 };
 
 // social media links animations
@@ -243,7 +243,13 @@ function SideMenu({ MenuOpen, setMenuOpen }) {
             initial="initial"
             animate="animate"
           >
-            <h4>Social</h4>
+            <motion.h4
+              variants={socialLinkAnim}
+              animate="animate"
+              initial="initial"
+            >
+              Social
+            </motion.h4>
             <div className="social-links_wrapper">
               {sideMenuSocial.map((link, index) => (
                 <motion.div

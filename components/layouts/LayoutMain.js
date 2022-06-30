@@ -20,7 +20,7 @@ const Layout = ({
       <header>
         <Navbar />
       </header>
-      <div className="relative flex min-h-screen flex-col overflow-y-auto">
+      <div className="relative flex h-screen flex-col overflow-y-auto">
         {children}
         <Footer />
       </div>

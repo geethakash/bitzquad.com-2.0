@@ -1,20 +1,20 @@
 .sidemenu_ {
   &_wrapper {
-    @apply absolute top-0 right-0 z-40 flex h-screen w-full flex-col bg-[#eeeeeeb3] bg-opacity-80 md:flex-row;
+    @apply absolute top-0 right-0 z-40 flex h-screen w-full flex-col  bg-[#eeeeeeb3] bg-opacity-80 md:flex-row;
   }
   &_backdrop {
     @apply hidden flex-auto lg:block;
   }
   &_container {
-    @apply h-full w-full flex-col justify-between bg-white lg:flex lg:w-2/3;
+    @apply h-full w-full flex-col justify-between bg-white lg:w-2/3 xl:flex;
   }
   &_header {
-    @apply flex justify-end p-8 pb-3;
+    @apply flex justify-end p-8 pb-3 2xl:p-16;
 
     &_closebutton {
       @apply cursor-pointer;
       & svg {
-        @apply scale-75;
+        @apply scale-75 2xl:scale-100;
       }
       &:hover {
         @apply text-gray-600;
@@ -26,38 +26,38 @@
     @apply flex flex-col px-10 lg:flex-row;
 
     &_items {
-      @apply text-5xl font-bold lg:pl-44 lg:text-7xl;
+      @apply text-5xl font-bold lg:pl-10 lg:text-5xl xl:pl-14 2xl:text-7xl;
     }
     &_item {
-      @apply pt-3  lg:py-5;
+      @apply pt-3 lg:pt-4 2xl:py-5;
     }
     &_resources {
-      @apply flex-col items-center pt-5 pr-20 text-2xl lg:flex lg:flex-auto lg:pl-10 lg:pt-36;
+      @apply flex-col items-center pt-10 pr-20 text-2xl lg:flex lg:flex-auto lg:pt-14 lg:pl-10 2xl:pt-36;
       &_wrapper {
         @apply grid grid-cols-2 flex-col items-center lg:flex;
       }
 
       & h4 {
-        @apply text-3xl font-bold uppercase text-[#5C5C5C] lg:text-5xl;
+        @apply text-3xl font-bold uppercase text-[#5C5C5C] 2xl:text-5xl;
       }
       & a {
-        @apply mt-3 text-2xl lg:mt-5 lg:text-4xl;
+        @apply mt-3 text-2xl 2xl:mt-5 2xl:text-4xl;
       }
     }
   }
 
   &_footer {
-    @apply py-5  lg:flex lg:flex-row lg:justify-between lg:px-20 lg:pl-24;
+    @apply py-10 lg:flex  lg:flex-row lg:items-center lg:justify-between lg:py-5 lg:px-10 lg:pl-5 2xl:pl-24;
 
     & .social-links {
-      @apply pl-10 ;
+      @apply pl-10;
 
       & h4 {
-        @apply text-3xl font-bold uppercase text-[#5C5C5C] lg:text-5xl;
+        @apply block text-3xl font-bold uppercase text-[#5C5C5C] lg:hidden lg:text-5xl;
       }
 
       &_wrapper {
-        @apply grid grid-cols-2 gap-x-10 pr-20 text-2xl lg:flex lg:pr-0;
+        @apply grid grid-cols-2 pr-20 text-xl lg:flex 2xl:pr-20 2xl:text-2xl;
       }
 
       & a {
@@ -65,7 +65,7 @@
       }
     }
     & .multilingual {
-      @apply text-2xl;
+      @apply float-right mr-10 mt-3 text-2xl lg:float-none lg:mr-5 lg:mt-0 ;
     }
   }
 }
