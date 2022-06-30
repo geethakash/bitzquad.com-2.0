@@ -189,7 +189,7 @@ function SideMenu({ MenuOpen, setMenuOpen }) {
             }}
             exit={{ opacity: 0, scale: 0.3 }}
             onClick={() => setMenuOpen(false)}
-            className="sidemenu__header__closebutton"
+            className="sidemenu__header_closebutton"
           >
             <svg
               width="39"
@@ -227,11 +227,13 @@ function SideMenu({ MenuOpen, setMenuOpen }) {
             exit="exit"
           >
             <h4>Resources</h4>
-            {sideMenuResources.map((link, index) => (
-              <a className="underline-link" href={link.href} key={index}>
-                {link.name}
-              </a>
-            ))}
+            <div className="sidemenu__content_resources_wrapper">
+              {sideMenuResources.map((link, index) => (
+                <a className="underline-link" href={link.href} key={index}>
+                  {link.name}
+                </a>
+              ))}
+            </div>
           </motion.div>
         </div>
         <div className="sidemenu__footer">
@@ -241,23 +243,26 @@ function SideMenu({ MenuOpen, setMenuOpen }) {
             initial="initial"
             animate="animate"
           >
-            {sideMenuSocial.map((link, index) => (
-              <motion.div
-                key={index}
-                variants={socialLinkAnim}
-                animate="animate"
-                initial="initial"
-              >
-                <a
-                  href={link.href}
-                  className="underline-link"
-                  target="_blank"
-                  rel="noreferrer"
+            <h4>Social</h4>
+            <div className="social-links_wrapper">
+              {sideMenuSocial.map((link, index) => (
+                <motion.div
+                  key={index}
+                  variants={socialLinkAnim}
+                  animate="animate"
+                  initial="initial"
                 >
-                  {link.name}
-                </a>
-              </motion.div>
-            ))}
+                  <a
+                    href={link.href}
+                    className="underline-link"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {link.name}
+                  </a>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}

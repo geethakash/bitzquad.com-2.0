@@ -1,46 +1,67 @@
 .sidemenu_ {
   &_wrapper {
-    @apply absolute top-0 right-0 z-40 flex h-screen w-full bg-[#eeeeeeb3] bg-opacity-80;
+    @apply absolute top-0 right-0 z-40 flex h-screen w-full flex-col bg-[#eeeeeeb3] bg-opacity-80 md:flex-row;
   }
   &_backdrop {
-    @apply flex-auto;
+    @apply hidden flex-auto lg:block;
   }
   &_container {
-    @apply flex h-full w-2/3 flex-col justify-between bg-white;
+    @apply h-full w-full flex-col justify-between bg-white lg:flex lg:w-2/3;
   }
   &_header {
-    @apply flex justify-end p-14;
+    @apply flex justify-end p-8 pb-3;
+
+    &_closebutton {
+      @apply cursor-pointer;
+      & svg {
+        @apply scale-75;
+      }
+      &:hover {
+        @apply text-gray-600;
+      }
+    }
   }
 
   &_content {
-    @apply flex flex-row px-10;
+    @apply flex flex-col px-10 lg:flex-row;
 
     &_items {
-      @apply pl-44 text-7xl font-bold;
+      @apply text-5xl font-bold lg:pl-44 lg:text-7xl;
     }
     &_item {
-      @apply py-5;
+      @apply pt-3  lg:py-5;
     }
     &_resources {
-      @apply flex flex-auto flex-col items-center pt-36 pl-10 pr-20 text-2xl;
+      @apply flex-col items-center pt-5 pr-20 text-2xl lg:flex lg:flex-auto lg:pl-10 lg:pt-36;
+      &_wrapper {
+        @apply grid grid-cols-2 flex-col items-center lg:flex;
+      }
 
       & h4 {
-        @apply text-5xl font-bold uppercase text-[#5C5C5C];
+        @apply text-3xl font-bold uppercase text-[#5C5C5C] lg:text-5xl;
       }
       & a {
-        @apply mt-5  text-4xl;
+        @apply mt-3 text-2xl lg:mt-5 lg:text-4xl;
       }
     }
   }
 
   &_footer {
-    @apply flex flex-row justify-between py-5 px-20 pl-24;
+    @apply py-5  lg:flex lg:flex-row lg:justify-between lg:px-20 lg:pl-24;
 
     & .social-links {
-      @apply text-2xl flex ;
+      @apply pl-10 ;
+
+      & h4 {
+        @apply text-3xl font-bold uppercase text-[#5C5C5C] lg:text-5xl;
+      }
+
+      &_wrapper {
+        @apply grid grid-cols-2 gap-x-10 pr-20 text-2xl lg:flex lg:pr-0;
+      }
 
       & a {
-        @apply mr-10;
+        @apply lg:mr-10;
       }
     }
     & .multilingual {
