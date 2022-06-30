@@ -26,7 +26,7 @@
     @apply flex flex-col px-10 lg:flex-row;
 
     &_items {
-      @apply text-5xl font-bold lg:pl-10 lg:text-5xl xl:pl-14 2xl:text-7xl;
+      @apply text-5xl font-bold lg:pl-10 lg:text-5xl xl:pl-14 2xl:pl-24 2xl:text-7xl;
     }
     &_item {
       @apply pt-3 lg:pt-4 2xl:py-5;
@@ -61,11 +61,11 @@
       }
 
       & a {
-        @apply lg:mr-10;
+        @apply mt-3 text-2xl xl:mr-10 2xl:mt-5;
       }
     }
     & .multilingual {
-      @apply float-right mr-10 mt-3 text-2xl lg:float-none lg:mr-5 lg:mt-0 ;
+      @apply float-right mr-10 mt-3 text-2xl lg:float-none lg:mr-5 lg:mt-0;
     }
   }
 }

@@ -30,7 +30,7 @@
   }
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) {
   .underline-link:hover::before {
     @apply left-0 right-0 w-full bg-current text-current no-underline;
   }
