@@ -24,7 +24,7 @@ function Navbar() {
         className="navbar"
       >
         <a className="navbar-brand" href="#">
-          <img className="h-10" src={LogoDark.src} />
+          <img className="h-10" src={LogoDark.src} alt="bz-logo" />
         </a>
         <div className="navbar-links">
           <a
