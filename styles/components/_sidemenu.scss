@@ -34,7 +34,7 @@
     &_resources {
       @apply flex-col items-center  pr-20 pt-10 text-2xl md:flex md:flex-auto md:justify-center md:pt-0 lg:pl-10;
       &_wrapper {
-        @apply sm:grid grid-cols-2 flex-col items-center md:flex;
+        @apply grid grid-cols-2 flex-col items-center md:flex;
       }
 
       & h4 {
