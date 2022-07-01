@@ -93,7 +93,7 @@ const sidebarAnim = {
 const sideMenuLinksAnim = {
   animate: {
     transition: {
-      delayChildren: 0.1,
+      // delayChildren: 0.1,
       ease: [0.6, 0.01, -0.05, 0.95],
       staggerChildren: 0.06,
     },
@@ -276,7 +276,7 @@ function SideMenu({ MenuOpen, setMenuOpen }) {
             animate={{ opacity: 1, scale: 1 }}
             transition={{
               duration: 0.25,
-              delay: 0.7,
+              delay: 1,
             }}
             className="multilingual"
           >
