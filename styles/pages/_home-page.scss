@@ -1,30 +1,28 @@
 .landing-container {
-  @apply h-screen mx-auto container;
+  @apply container mx-auto lg:h-screen;
 }
 
 .landing {
-  @apply relative flex h-full w-full items-center justify-center;
+  @apply relative flex h-full w-full justify-center lg:items-center;
 
   &-content {
-    @apply w-1/2 pl-28;
+    @apply px-5 md:w-8/12 lg:pl-12 xl:w-1/2 xl:pl-28;
 
-    & h1 {
-      @apply pb-10 pr-20 text-6xl font-semibold;
+    & .landing-title-wrapper {
+      @apply overflow-y-auto py-5 pb-5 lg:mb-5 lg:pr-20;
+    }
+
+    & .landing-title,
+    .landing-letter {
+      @apply relative inline-block text-4xl font-semibold lg:text-6xl;
     }
     & p {
-      @apply text-xl;
+      @apply text-base lg:text-xl;
       line-height: 150%;
-    }
-
-    & img {
-      @apply w-[500px] opacity-100;
-    }
-    & span {
-      @apply mt-5 text-5xl font-semibold;
     }
   }
   &-logo {
-    @apply flex  w-1/2  items-center justify-center;
+    @apply hidden w-4/12  items-center  justify-center md:flex lg:w-1/2;
 
     & img {
       @apply aspect-square w-3/12;
@@ -32,29 +30,6 @@
   }
   &-text {
     @apply mt-10 tracking-[5px];
-  }
-}
-
-.services {
-  &-container {
-    @apply relative h-screen w-full;
-    & .title-wrapper {
-      @apply mt-20 w-full bg-white;
-      & h3 {
-        @apply text-[5rem];
-      }
-    }
-    .parallax {
-      @apply h-screen w-full;
-    }
-  }
-
-  &-card {
-    @apply flex items-center justify-center  py-10  px-10;
-
-    & h4 {
-      @apply text-center text-5xl font-semibold leading-normal;
-    }
   }
 }
 
