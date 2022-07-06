@@ -1,14 +1,17 @@
-import React, { ReactNode } from "react";
-import Link from "next/link";
-import Script from "next/script";
-import Head from "next/head";
-import Navbar from "../defaults/Navbar";
-import Footer from "../defaults/Footer";
+import React, { ReactNode, useRef } from 'react';
+import Link from 'next/link';
+import Script from 'next/script';
+import Head from 'next/head';
+import Navbar from '../defaults/Navbar';
+import Footer from '../defaults/Footer';
+import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
+import 'locomotive-scroll/dist/locomotive-scroll.min.css';
 
 const Layout = ({
   children,
-  title = "Bitzquad | Solutions Beyond Technology",
+  title = 'Bitzquad | Solutions Beyond Technology',
 }) => {
+  const containerRef = useRef(null);
   return (
     <>
       <Head>
@@ -17,13 +20,23 @@ const Layout = ({
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Script src="/assets/js/cursorControls.js" />
-      <header>
-        <Navbar />
-      </header>
-      <div className="relative flex h-screen flex-col overflow-y-auto">
-        {children}
-        <Footer />
-      </div>
+      <LocomotiveScrollProvider
+        innerRef={containerRef}
+        options={{
+          smooth: true,
+        }}
+        watch={[]}
+      >
+        <div
+          className="relative flex min-h-screen flex-col"
+          data-scroll-container
+          ref={containerRef}
+        >
+          <Navbar />
+          {children}
+          <Footer />
+        </div>
+      </LocomotiveScrollProvider>
     </>
   );
 };

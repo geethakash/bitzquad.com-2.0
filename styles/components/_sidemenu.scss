@@ -1,6 +1,6 @@
 .sidemenu_ {
   &_wrapper {
-    @apply absolute top-0 right-0 z-40 flex h-screen w-full flex-col  bg-[#eeeeeeb3] bg-opacity-80 md:flex-row;
+    @apply fixed top-0 right-0 z-40 flex h-screen w-full flex-col  bg-[#eeeeeeb3] bg-opacity-80 md:flex-row;
   }
   &_backdrop {
     @apply hidden flex-auto lg:block;

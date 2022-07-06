@@ -54,6 +54,7 @@ function Landing() {
         <div className="landing-logo">
           <motion.img
             className=""
+            
             src={Logo.src}
             alt="bz-logo"
             layoutId="landing-logo-image"

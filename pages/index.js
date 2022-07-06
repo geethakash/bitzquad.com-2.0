@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 // local imports
-import { Landing, LayoutMain, Loader } from '../components';
+import { CustomerFeedback, Landing, LayoutMain, Loader } from '../components';
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -15,6 +15,7 @@ export default function Home() {
       ) : (
         <LayoutMain>
           <Landing />
+          <CustomerFeedback />
         </LayoutMain>
       )}
     </>

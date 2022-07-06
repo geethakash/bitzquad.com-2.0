@@ -1,5 +1,5 @@
 .navbar {
-  @apply top-0 z-10 flex w-full items-center justify-between px-8 py-8 md:py-10 md:px-12 lg:fixed lg:py-16 xl:px-24;
+  @apply top-0 z-10 flex w-full items-center justify-between px-8 py-8 md:py-10 md:px-12 lg:absolute lg:py-16 xl:px-24;
 
   &-brand {
     @apply flex items-center justify-center;
@@ -17,21 +17,5 @@
   }
   &-link {
     @apply transition-all duration-300 hover:text-black;
-  }
-}
-
-.underline-link {
-  @apply relative no-underline;
-
-  &::before {
-    content: '';
-    transition: width 0.8s cubic-bezier(0.25, 1, 0.5, 1);
-    @apply absolute bottom-0 right-0 h-[2px] w-0 bg-current no-underline;
-  }
-}
-
-@media (hover: hover) {
-  .underline-link:hover::before {
-    @apply left-0 right-0 w-full bg-current text-current no-underline;
   }
 }
