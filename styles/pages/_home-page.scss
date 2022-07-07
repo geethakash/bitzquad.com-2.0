@@ -3,18 +3,18 @@
 }
 
 .landing {
-  @apply relative flex h-full w-full justify-center lg:items-center;
+  @apply relative h-full w-full justify-center lg:flex lg:items-center;
 
   &-content {
-    @apply px-5 md:w-8/12 lg:pl-12 xl:w-1/2 xl:pl-28;
+    @apply md:w-8/12 lg:pl-12 xl:w-1/2 xl:pl-28;
 
     & .landing-title-wrapper {
-      @apply overflow-y-auto py-5 pb-5 lg:mb-5 lg:pr-20;
+      @apply overflow-y-auto py-5 pb-5 pr-10 lg:mb-5 2xl:pr-20;
     }
 
     & .landing-title,
     .landing-letter {
-      @apply relative inline-block text-4xl font-semibold lg:text-6xl;
+      @apply relative inline-block text-4xl font-semibold lg:text-5xl 2xl:text-6xl;
     }
     & p {
       @apply text-base lg:text-xl;
@@ -22,7 +22,7 @@
     }
   }
   &-logo {
-    @apply hidden w-4/12  items-center  justify-center md:flex lg:w-1/2;
+    @apply hidden w-4/12  items-center  justify-center lg:flex lg:w-1/2;
 
     & img {
       @apply aspect-square w-3/12;

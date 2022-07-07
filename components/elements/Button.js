@@ -1,8 +1,9 @@
+import { motion } from 'framer-motion';
 function Button({ children, className }) {
   return (
-    <div className="p-5">
-      <button className={className}>{children}</button>
-    </div>
+    <motion.div className="p-5">
+      <motion.button className={className}>{children}</motion.button>
+    </motion.div>
   );
 }
 

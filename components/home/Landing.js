@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 // local imports
-import { Logo } from '../../constants/images';
+import { Logo, Landingsm } from '../../constants/images';
 import { Button } from '../../components';
 
 const textRevealAnimation = {
@@ -26,27 +26,46 @@ const titleAnimation = {
   },
 };
 
-function Landing() {
+function Landing({ loading }) {
   return (
-    <div className=" landing-container">
+    <div className="landing-container">
       <div className="landing">
         <div className="landing-content">
-          <AnimatedTitle landingTitle="Solutions Beyond Technology" />
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              ease: 'easeInOut',
-              delay: 1.8,
-              duration: 1,
-            }}
-          >
-            For athletes, high altitude produces two contradictory effects on
-            performance. For explosive events (sprints up to 400 metres long
-            jump triple jump) the reduction in atmospheric pressure means there
-            is less resistance from the atmosphere and the athletes performance
-            will generally be better at high altitude.
-          </motion.p>
+          <motion.img
+            initial={{ opacity: 0 }}
+            animate={
+              !loading
+                ? {
+                    opacity: 1,
+
+                    transition: { delay: 1, duration: 0.6, ease: 'easeInOut' },
+                  }
+                : {}
+            }
+            src={Landingsm.src}
+            alt="cover-img"
+            className="h-auto w-full md:hidden"
+          />
+          <div className="px-5">
+            {!loading && (
+              <AnimatedTitle landingTitle="Solutions Beyond Technology" />
+            )}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={!loading ? { opacity: 1, y: 0 } : {}}
+              transition={{
+                ease: 'easeInOut',
+                delay: 1.8,
+                duration: 1,
+              }}
+            >
+              For athletes, high altitude produces two contradictory effects on
+              performance. For explosive events (sprints up to 400 metres long
+              jump triple jump) the reduction in atmospheric pressure means
+              there is less resistance from the atmosphere and the athletes
+              performance will generally be better at high altitude.
+            </motion.p>
+          </div>
           <Button className="w-full rounded-full border py-6 text-2xl md:hidden">
             View Services
           </Button>
@@ -54,7 +73,6 @@ function Landing() {
         <div className="landing-logo">
           <motion.img
             className=""
-            
             src={Logo.src}
             alt="bz-logo"
             layoutId="landing-logo-image"
@@ -93,7 +111,7 @@ const AnimatedTitle = ({ landingTitle }) => {
             {index === 1 ? (
               <br />
             ) : (
-              <span className="landing-word-spacer"> </span>
+              <span className="landing-word-spacer"></span>
             )}
             <span> </span>
           </React.Fragment>

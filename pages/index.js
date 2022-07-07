@@ -2,22 +2,21 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 // local imports
-import { CustomerFeedback, Landing, LayoutMain, Loader } from '../components';
+import { Landing, LayoutMain, Loader, Testimonials } from '../components';
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
   return (
     <>
-      {loading ? (
+      {loading && (
         <div>
           <Loader setLoading={setLoading} />
         </div>
-      ) : (
-        <LayoutMain>
-          <Landing />
-          <CustomerFeedback />
-        </LayoutMain>
       )}
+      <LayoutMain>
+        <Landing loading={loading} />
+        <Testimonials />
+      </LayoutMain>
     </>
   );
 }

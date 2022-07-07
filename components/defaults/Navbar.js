@@ -17,7 +17,7 @@ function Navbar() {
           y: 0,
           transition: {
             duration: 1,
-            delay: 0.6,
+            delay: 2,
             ease: 'easeInOut',
           },
         }}
