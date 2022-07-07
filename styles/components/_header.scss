@@ -1,5 +1,5 @@
 .navbar {
-  @apply fixed top-0 z-10 hidden w-full items-center justify-between px-24 py-16 transition-all duration-300 md:flex;
+  @apply top-0 z-10 flex w-full items-center justify-between px-8 py-8 md:py-10 md:px-12 lg:absolute lg:py-16 xl:px-24;
 
   &-brand {
     @apply flex items-center justify-center;
@@ -9,29 +9,13 @@
   }
 
   &-links {
-    @apply flex items-center gap-x-20 text-xl font-semibold tracking-wider text-gray-600;
+    @apply hidden items-center gap-x-10 text-xl font-semibold tracking-wider text-gray-600 lg:flex xl:gap-x-20;
 
-    & .menu-button {
+    .menu-button {
       @apply flex items-center gap-x-2 font-bold transition-all duration-300 hover:-translate-x-2 hover:text-black;
     }
   }
   &-link {
     @apply transition-all duration-300 hover:text-black;
-  }
-}
-
-.underline-link {
-  @apply relative no-underline;
-
-  &::before {
-    content: '';
-    transition: width 0.8s cubic-bezier(0.25, 1, 0.5, 1);
-    @apply absolute bottom-0 right-0 h-0.5 w-0 bg-current no-underline;
-  }
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .underline-link:hover::before {
-    @apply left-0 right-0 w-full bg-current text-current no-underline;
   }
 }

@@ -45,6 +45,22 @@ body {
   @apply bg-purple-500 tracking-wider text-white;
 }
 
+.underline-link {
+  @apply relative no-underline;
+
+  &::before {
+    content: '';
+    transition: width 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    @apply absolute bottom-0 right-0 h-[2px] w-0 bg-current no-underline;
+  }
+}
+
+@media (hover: hover) {
+  .underline-link:hover::before {
+    @apply left-0 right-0 w-full bg-current text-current no-underline;
+  }
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 5px;
