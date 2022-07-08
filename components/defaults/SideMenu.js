@@ -163,9 +163,8 @@ function SideMenu({ MenuOpen, setMenuOpen }) {
 
   return (
     <motion.div
-      data-scroll
-      data-scroll-sticky
       className="sidemenu__wrapper"
+      style={{ position: 'fixed', top: 0, left: 0, zIndex: 100 }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
