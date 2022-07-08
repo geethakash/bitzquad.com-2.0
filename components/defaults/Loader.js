@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Logo } from '../../constants/images';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 function Loader({ setLoading }) {
   return (
@@ -23,7 +23,6 @@ function Loader({ setLoading }) {
               },
             }}
             onAnimationComplete={() => setTimeout(() => setLoading(false), 500)}
-            exit={{ scale: 0, opacity: 0 }}
             layoutId="landing-logo-image"
             src={Logo.src}
             alt="BZ-logo"

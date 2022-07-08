@@ -1,5 +1,5 @@
 import React from 'react';
-import { LogoDark } from '../../constants/images';
+import { LogoDark, Logo } from '../../constants/images';
 import { motion, AnimatePresence } from 'framer-motion';
 import SideMenu from './SideMenu';
 
@@ -17,7 +17,7 @@ function Navbar() {
           y: 0,
           transition: {
             duration: 1,
-            delay: 0.6,
+            delay: 2,
             ease: 'easeInOut',
           },
         }}
