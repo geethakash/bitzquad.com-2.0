@@ -13,3 +13,4 @@ export { default as Button } from './elements/Button';
 // Home
 export { default as Landing } from './home/Landing';
 export { default as Testimonials } from './home/Testimonials';
+export { default as Collaborate } from './home/Collaborate';
