@@ -1,11 +1,11 @@
-import { TweenLite } from 'gsap/gsap-core';
+import { TweenLite } from "gsap/gsap-core";
 
 // for smooth scroll
 var html = document.documentElement;
 var body = document.body;
 
 var scroller = {
-  target: document.querySelector('.scroll-container'),
+  target: document.querySelector(".scroll-container"),
   ease: 0.07, // <= scroll speed
   endY: 0,
   y: 0,
@@ -20,13 +20,13 @@ TweenLite.set(scroller.target, {
   force3D: true,
 });
 
-window.addEventListener('load', onLoad);
+window.addEventListener("load", onLoad);
 
 function onLoad() {
   updateScroller();
   window.focus();
-  window.addEventListener('resize', onResize);
-  document.addEventListener('scroll', onScroll);
+  window.addEventListener("resize", onResize);
+  document.addEventListener("scroll", onScroll);
 }
 
 function updateScroller() {
@@ -34,7 +34,7 @@ function updateScroller() {
 
   if (resized) {
     var height = scroller.target.clientHeight;
-    body.style.height = height + 'px';
+    body.style.height = height + "px";
     scroller.resizeRequest = 0;
   }
 
