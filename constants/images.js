@@ -7,6 +7,10 @@ export { default as Testimonial_2 } from '../assets/images/testimonial-2.jpg';
 export { default as Testimonial_3 } from '../assets/images/testimonial-3.jpg';
 export { default as Testimonial_4 } from '../assets/images/testimonial-4.jpg';
 export { default as Testimonial_5 } from '../assets/images/testimonial-5.jpg';
+
+
+export { default as CollaborateImg }from '../assets/images/collaborate-img.png'
+
 // cover images
 export { default as Landingsm } from '../assets/images/landing-sm.webp';
 
