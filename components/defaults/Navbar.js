@@ -1,5 +1,5 @@
 import React from 'react';
-import { LogoDark } from '../../constants/images';
+import { LogoDark, Logo } from '../../constants/images';
 import { motion, AnimatePresence } from 'framer-motion';
 import SideMenu from './SideMenu';
 

@@ -22,7 +22,7 @@
     }
   }
   &-logo {
-    @apply hidden w-4/12  items-center  justify-center lg:flex lg:w-1/2;
+    @apply absolute left-[43%] top-[25%] -z-30 w-4/12  items-center justify-center  md:top-[-100%] lg:static lg:z-0 lg:flex lg:w-1/2;
 
     & img {
       @apply aspect-square w-3/12;
@@ -68,4 +68,8 @@
       }
     }
   }
+}
+
+.shape {
+  @apply  absolute top-0 left-0 hidden  h-auto w-full md:top-20 lg:top-0 lg:block;
 }

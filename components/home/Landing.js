@@ -2,7 +2,17 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 // local imports
-import { Logo, Landingsm } from '../../constants/images';
+import {
+  Logo,
+  Landingsm,
+  Shape1,
+  Shape2,
+  Shape3,
+  Shape4,
+  Shape5,
+  Shape6,
+  Shape7,
+} from '../../constants/images';
 import { Button } from '../../components';
 
 const textRevealAnimation = {
@@ -29,6 +39,7 @@ const titleAnimation = {
 function Landing({ loading }) {
   return (
     <div className="landing-container">
+      {!loading && <ShapesContainer />}
       <div className="landing">
         <div className="landing-content">
           <motion.img
@@ -66,9 +77,11 @@ function Landing({ loading }) {
               performance will generally be better at high altitude.
             </motion.p>
           </div>
-          <Button className="w-full rounded-full border py-6 text-2xl md:hidden">
-            View Services
-          </Button>
+          {!loading && (
+            <Button className="w-full rounded-full border py-6 text-2xl md:hidden">
+              View Services
+            </Button>
+          )}
         </div>
         <div className="landing-logo">
           <motion.img
@@ -122,3 +135,49 @@ const AnimatedTitle = ({ landingTitle }) => {
 };
 
 export default Landing;
+
+const ShapesContainer = () => {
+  const shapes = [
+    {
+      src: Shape1.src,
+      alt: Shape1.alt,
+    },
+    {
+      src: Shape2.src,
+      alt: Shape2.alt,
+    },
+    {
+      src: Shape3.src,
+      alt: Shape3.alt,
+    },
+    {
+      src: Shape4.src,
+      alt: Shape4.alt,
+    },
+    {
+      src: Shape5.src,
+      alt: Shape5.alt,
+    },
+  ];
+
+  return (
+    <div className="shapes-container" data-scroll data-scroll-speed="4">
+      {[...shapes].map((shape, index) => (
+        <motion.img
+          className="shape"
+          key={index}
+          src={shape.src}
+          alt={shape.alt}
+          layoutId={`shape-${index}`}
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 0.8, scale: 1 }}
+          transition={{
+            ease: [0.6, 0.01, -0.05, 0.95],
+            duration: 2.6,
+            delay: 1.6 + index * 0.07,
+          }}
+        />
+      ))}
+    </div>
+  );
+};
