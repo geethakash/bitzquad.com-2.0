@@ -91,7 +91,7 @@ function CustomerFeedback() {
         }}
         viewport={{ once: true }}
       >
-        What Our clients say
+        Testimonials
       </motion.h3>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -134,10 +134,7 @@ function CustomerFeedback() {
         </div>
         <div className="testimonials__content__item_content">
           <div className="testimonials__content__item_content_user">
-            <motion.div
-              
-              className="block aspect-square h-16 w-16 overflow-hidden  rounded-full lg:hidden"
-            >
+            <motion.div className="block aspect-square h-16 w-16 overflow-hidden  rounded-full lg:hidden">
               <AnimatePresence exitBeforeEnter>
                 <motion.img
                   key={testimonials.indexOf(selectedTestimonial)}
