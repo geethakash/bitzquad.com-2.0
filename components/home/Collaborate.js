@@ -40,7 +40,7 @@ function Collaborate() {
               questions, inquire us. Our team/specialists are always available
               to help you.
             </p>
-            <button className="talk-btn">Let's Talk</button>
+            <button className="talk-btn">Let&quot;s Talk</button>
           </div>
           <div className="collaborate__content_image">
             <img src={CollaborateImg.src} />
