@@ -75,7 +75,7 @@
 .collaborate_ {
   @apply bg-[url(/_next/static/media/collaborate-img.5818b821.png)] bg-cover bg-no-repeat lg:mx-auto lg:bg-none;
   & h3 {
-    @apply text-3xl font-semibold text-white md:text-5xl lg:text-slate-800 2xl:text-6xl;
+    @apply text-3xl font-semibold text-white md:text-5xl lg:text-black 2xl:text-6xl;
   }
   &_bgwrapper {
     @apply bg-slate-900 bg-opacity-80 px-5 pt-14 pb-40 lg:bg-inherit 2xl:pt-20;
@@ -104,4 +104,35 @@
 
 .shape {
   @apply absolute top-0 left-0 hidden  h-auto w-full md:top-20 lg:top-0 lg:block;
+}
+
+// service card section
+
+.servicecard_ {
+  @apply container mx-auto;
+  & h3 {
+    @apply text-3xl font-semibold md:text-5xl 2xl:text-6xl;
+  }
+  &_bgwrapper {
+    @apply px-5 pt-14 pb-24 2xl:pt-20;
+  }
+  &_content {
+    @apply flex w-full justify-center lg:gap-x-10 pt-4 lg:pt-8 2xl:pt-10 xl:gap-x-16 relative;
+    &_text {
+      @apply w-full;
+
+      & p {
+        @apply text-slate-800 text-lg lg:text-2xl;
+      }
+      & .learn-btn {
+        @apply mt-6 rounded-full border-2 px-7 py-2 text-lg lg:text-2xl ;
+      }
+    }
+    &_bigtxt {
+      @apply  flex flex-row justify-center pt-14 text-9xl text-[25vw] md:text-[35vh] lg:text-[40vh] xl:text-[48vh] 2xl:text-[55vh] opacity-50; 
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke-width: 1.5px;
+      
+    }
+  }
 }
