@@ -28,7 +28,7 @@ const Layout = ({
         watch={[]}
       >
         <div
-          className="relative flex min-h-screen flex-col"
+          className=" flex min-h-screen flex-col"
           data-scroll-container
           ref={containerRef}
         >
