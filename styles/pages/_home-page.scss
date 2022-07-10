@@ -117,7 +117,7 @@
     @apply px-5 pt-14 pb-24 2xl:pt-20;
   }
   &_content {
-    @apply relative flex w-full justify-center pt-4 lg:gap-x-10 lg:pt-8 xl:gap-x-16 2xl:pt-10;
+    @apply flex w-full justify-center pt-4 lg:gap-x-10 lg:pt-8 xl:gap-x-16 2xl:pt-10;
     &_text {
       @apply w-full;
 
@@ -148,7 +148,7 @@
     @apply relative px-5 pt-16 pb-40 md:pb-60 lg:pb-80 xl:pb-96 2xl:pt-20;
   }
   &_content {
-    @apply relative flex w-full flex-row justify-center gap-10 space-x-4 overflow-x-visible pt-12  lg:pt-16;
+    @apply flex w-full flex-row justify-center gap-10 space-x-4 overflow-x-visible pt-12  lg:pt-16;
     &_card {
       @apply relative h-[400px] w-72 flex-shrink-0 rounded-tl-[2rem] rounded-tr-[2rem] rounded-br-[2rem] bg-cover bg-no-repeat;
       &_text {
