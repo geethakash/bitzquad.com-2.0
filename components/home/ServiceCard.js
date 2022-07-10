@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 function ServiceCard({title, description,buttonText, color}) {
   return (
-    <div className="servicecard_ lg:!container md:!max-w-full">
+    <div className="servicecard_">
       <div className="servicecard__bgwrapper"> 
         <motion.h3
           initial={{ opacity: 0, y: 20 }}

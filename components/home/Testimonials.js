@@ -104,6 +104,7 @@ function CustomerFeedback() {
             ease: 'easeInOut',
           },
         }}
+        viewport={{ once: true }}
         className="testimonials__content__item"
       >
         <div className="testimonials__content__item_image">
@@ -217,6 +218,7 @@ function CustomerFeedback() {
             ease: 'easeInOut',
           },
         }}
+        viewport={{ once: true }}
         className="mx-auto mt-20 flex h-2 gap-x-4 px-5 lg:w-1/3 lg:px-0 "
       >
         {testimonials.map((testimonial, index) => (
