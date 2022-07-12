@@ -35,7 +35,7 @@
 
 // testimonials section
 .testimonials_ {
-  @apply container mx-auto mb-40  px-5 pt-14 2xl:pt-20;
+  @apply container mx-auto mb-20 px-5  pt-14 lg:mb-40 2xl:pt-20;
   & h3 {
     @apply text-3xl font-semibold md:text-5xl 2xl:text-6xl;
   }
@@ -54,7 +54,7 @@
       @apply relative flex flex-col-reverse overflow-hidden pt-2 lg:w-9/12  lg:flex-col xl:pt-5 2xl:pt-10;
 
       &_user {
-        @apply mt-8 flex w-full items-center overflow-hidden lg:mt-0 lg:block;
+        @apply mt-8 flex w-full items-center truncate lg:mt-0 lg:block;
       }
 
       & .person {
@@ -117,22 +117,21 @@
     @apply px-5 pt-14 pb-24 2xl:pt-20;
   }
   &_content {
-    @apply flex w-full justify-center lg:gap-x-10 pt-4 lg:pt-8 2xl:pt-10 xl:gap-x-16 relative;
+    @apply relative flex w-full justify-center pt-4 lg:gap-x-10 lg:pt-8 xl:gap-x-16 2xl:pt-10;
     &_text {
       @apply w-full;
 
       & p {
-        @apply text-slate-800 text-lg lg:text-2xl;
+        @apply text-lg text-slate-800 lg:text-2xl;
       }
       & .learn-btn {
-        @apply mt-6 rounded-full border-2 px-7 py-2 text-lg lg:text-2xl ;
+        @apply mt-6 rounded-full border-2 px-7 py-2 text-lg lg:text-2xl;
       }
     }
     &_bigtxt {
-      @apply  flex flex-row justify-center pt-14 text-9xl text-[25vw] md:text-[35vh] lg:text-[40vh] xl:text-[48vh] 2xl:text-[55vh] opacity-50; 
+      @apply flex flex-row justify-start overflow-x-hidden pt-14 text-9xl text-[25vw] opacity-50 md:text-[35vh] lg:text-[40vh] xl:text-[48vh] 2xl:text-[55vh];
       -webkit-text-fill-color: transparent;
       -webkit-text-stroke-width: 1.5px;
-      
     }
   }
 }

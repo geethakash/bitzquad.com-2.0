@@ -19,10 +19,31 @@ const contentAnim = {
   },
   exit: {
     x: '-100%',
+    opacity: 0.5,
     transition: {
       // delay: 0.6,
+      duration: 1,
+      ease: [0.73, 0.02, 0.06, 0.87],
+    },
+  },
+};
+
+const contentAnimMobile = {
+  initial: { opacity: 0 },
+  animate: {
+    x: '0',
+    opacity: 1,
+    transition: {
       duration: 1.6,
-      ease: [0.08, 0.82, 0.17, 1],
+      ease: [0.77, 0, 0.18, 1],
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      // delay: 0.6,
+      duration: 1,
+      ease: [0.73, 0.02, 0.06, 0.87],
     },
   },
 };
@@ -114,17 +135,16 @@ function CustomerFeedback() {
               animate={{
                 x: 0,
                 transition: {
-                  delay: 0.6,
                   duration: 1.6,
                   ease: [0.77, 0, 0.18, 1],
                 },
               }}
               exit={{
-                x: '100%',
-
+                // x: '100%',
+                opacity: 0,
                 transition: {
                   duration: 1,
-                  ease: [0.77, 0, 0.18, 1],
+                  ease: [0.73, 0.02, 0.06, 0.87],
                 },
               }}
               src={selectedTestimonial?.img}
@@ -134,37 +154,65 @@ function CustomerFeedback() {
         </div>
         <div className="testimonials__content__item_content">
           <div className="testimonials__content__item_content_user">
-            <motion.div className="block aspect-square h-16 w-16 overflow-hidden  rounded-full lg:hidden">
+            <div className="mobile_cust_cont flex items-center gap-x-5">
+              <motion.div className="block aspect-square w-2/12 overflow-hidden  rounded-full lg:hidden">
+                <AnimatePresence exitBeforeEnter>
+                  <motion.img
+                    key={testimonials.indexOf(selectedTestimonial)}
+                    initial={{ opacity: 0 }}
+                    animate={{
+                      opacity: 1,
+                      // x: 0,
+                      transition: {
+                        delay: 0.8,
+                        duration: 0.8,
+                        ease: 'easeInOut',
+                      },
+                    }}
+                    exit={{
+                      opacity: 0,
+                      // x: '-100%',
+                      transition: {
+                        // delay: 0.8,
+                        duration: 0.8,
+                        ease: 'easeInOut',
+                      },
+                    }}
+                    className="w-full object-cover "
+                    src={selectedTestimonial?.img}
+                  />
+                </AnimatePresence>
+              </motion.div>
+              <div className="block w-10/12 truncate lg:hidden">
+                <AnimatePresence exitBeforeEnter>
+                  <motion.h5
+                    className="person"
+                    key={testimonials.indexOf(selectedTestimonial)}
+                    variants={contentAnimMobile}
+                    initial="initial"
+                    animate="animate"
+                    exit="exit"
+                  >
+                    {selectedTestimonial?.name}
+                  </motion.h5>
+                </AnimatePresence>
+                <AnimatePresence exitBeforeEnter>
+                  <motion.p
+                    className="role"
+                    key={testimonials.indexOf(selectedTestimonial)}
+                    variants={contentAnimMobile}
+                    initial="initial"
+                    animate="animate"
+                    exit="exit"
+                  >
+                    {selectedTestimonial?.role}
+                  </motion.p>
+                </AnimatePresence>
+              </div>
+            </div>
+            <div className="hidden lg:block">
               <AnimatePresence exitBeforeEnter>
-                <motion.img
-                  key={testimonials.indexOf(selectedTestimonial)}
-                  initial={{ opacity: 0, x: '100%' }}
-                  animate={{
-                    opacity: 1,
-                    x: 0,
-                    transition: {
-                      delay: 0.8,
-                      duration: 0.8,
-                      ease: 'easeInOut',
-                    },
-                  }}
-                  exit={{
-                    opacity: 0,
-                    x: '-100%',
-                    transition: {
-                      // delay: 0.8,
-                      duration: 0.8,
-                      ease: 'easeInOut',
-                    },
-                  }}
-                  className=" w-full object-cover "
-                  src={selectedTestimonial?.img}
-                />
-              </AnimatePresence>
-            </motion.div>
-            <div className="pl-3">
-              <AnimatePresence exitBeforeEnter>
-                <motion.div
+                <motion.h5
                   className="person"
                   key={testimonials.indexOf(selectedTestimonial)}
                   variants={contentAnim}
@@ -173,10 +221,10 @@ function CustomerFeedback() {
                   exit="exit"
                 >
                   {selectedTestimonial?.name}
-                </motion.div>
+                </motion.h5>
               </AnimatePresence>
               <AnimatePresence exitBeforeEnter>
-                <motion.div
+                <motion.p
                   className="role"
                   key={testimonials.indexOf(selectedTestimonial)}
                   variants={contentAnim}
@@ -185,7 +233,7 @@ function CustomerFeedback() {
                   exit="exit"
                 >
                   {selectedTestimonial?.role}
-                </motion.div>
+                </motion.p>
               </AnimatePresence>
             </div>
           </div>
