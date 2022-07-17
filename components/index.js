@@ -10,9 +10,8 @@ export { default as SideMenu } from './defaults/SideMenu';
 // elements
 export { default as Button } from './elements/Button';
 
-// Home
+// Home 
 export { default as Landing } from './home/Landing';
 export { default as Testimonials } from './home/Testimonials';
 export { default as Collaborate } from './home/Collaborate';
-export { default as ServiceCard } from './home/ServiceCard';
-export { default as OurTeam } from './home/OurTeam';
+export { default as Services } from './home/Services';
