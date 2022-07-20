@@ -35,7 +35,7 @@
 
 // testimonials section
 .testimonials_ {
-  @apply container mx-auto mb-40  px-5 pt-14 2xl:pt-20;
+  @apply container mx-auto mb-20 px-5  pt-14 lg:mb-40 2xl:pt-20;
   & h3 {
     @apply text-3xl font-semibold md:text-5xl 2xl:text-6xl;
   }
@@ -54,7 +54,7 @@
       @apply relative flex flex-col-reverse overflow-hidden pt-2 lg:w-9/12  lg:flex-col xl:pt-5 2xl:pt-10;
 
       &_user {
-        @apply mt-8 flex w-full items-center overflow-hidden lg:mt-0 lg:block;
+        @apply mt-8 flex w-full items-center truncate lg:mt-0 lg:block;
       }
 
       & .person {
