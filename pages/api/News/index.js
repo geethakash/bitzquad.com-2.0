@@ -6,6 +6,7 @@ import queryparser from "../../../middleware/queryparser";
 
 /*  API Route Handler    */
 export default async function handler(req, res) {
+  
   switch (req.method) {
     case "GET":
       await handleGET(req, res);

@@ -9,7 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "axios": "^0.27.2",
+    "@mailchimp/mailchimp_marketing": "^3.0.75",
+    "mailchimp": "^1.2.1",
     "mongoose": "^6.4.4",
     "next": "12.1.6",
     "react": "18.1.0",
