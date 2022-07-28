@@ -32,8 +32,8 @@ function OurPartners() {
     >
       <h3>Our partners</h3>
       <div className="partners_card_container">
-        {partnerList.map((partner) => (
-          <div className="partners_card">
+        {partnerList.map((partner, index) => (
+          <div className="partners_card" key={index}>
             <a href={partner.url} target="_blank">
               <img
                 className="partners_card_image"
