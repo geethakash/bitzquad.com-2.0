@@ -34,7 +34,7 @@ function OurPartners() {
       <div className="partners_card_container">
         {partnerList.map((partner, index) => (
           <div className="partners_card" key={index}>
-            <a href={partner.url} target="_blank">
+            <a href={partner.url} target="_blank" rel="noopener noreferrer">
               <img
                 className="partners_card_image"
                 src={partner.image}
