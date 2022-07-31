@@ -23,7 +23,7 @@ function Collaborate() {
         >
           Collaborate with Us
         </motion.h3>
-        
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{
@@ -47,7 +47,7 @@ function Collaborate() {
             </p>
             {/* <button className="talk-btn">Let&quot;s Talk</button> */}
             <Button className="talk-btn " parentClassName="px-0">
-              Let's Talk
+              Let&apos;s Talk
             </Button>
           </div>
           <Link href="/squad">
