@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import React, { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 // local imports
 
@@ -11,6 +11,7 @@ import {
   Loader,
   Testimonials,
   Services,
+  OurPartners,
 } from '../components';
 
 export default function Home() {
@@ -24,9 +25,11 @@ export default function Home() {
       )}
       <LayoutMain>
         <Landing loading={loading} />
+        <OurPartners />
+
+        {/* <Services /> */}
         <Testimonials />
         <Collaborate />
-        <Services />
       </LayoutMain>
     </>
   );
