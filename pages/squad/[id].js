@@ -67,10 +67,15 @@ function index({ member }) {
           <motion.div
             className="relative flex aspect-video h-full w-1/3"
             transition={{ duration: 1 }}
-            layoutId={`member-img-${member?.id}`}
           >
+            <motion.div
+              initial={{ opacity: 1 }}
+              animate={{ opacity: 0 }}
+              transition={{ duration: 1 }}
+              className="absolute top-0 left-0 z-20 h-full w-full bg-white"
+            ></motion.div>
             <motion.img
-              className="z-40 w-full object-cover"
+              className="z-10 w-full object-cover"
               src={member?.img}
             />
           </motion.div>

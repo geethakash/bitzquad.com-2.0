@@ -8,7 +8,7 @@ import { members } from '../../constants/members';
 const cardColors = [
   '#9FD0FB',
   '#E6CAA4',
-  '#E6E6E6',
+  '#98A8FF',
   '#F5F5F5',
   '#C9DBCC',
   '#F5F5F5',
@@ -18,8 +18,20 @@ const cardColors = [
 function index() {
   return (
     <LayoutMain>
-      <div className="container relative mx-auto h-full w-full ">
-        <motion.div className="mt-40 grid grid-cols-4 gap-x-20 px-20">
+      <div className="container relative mx-auto h-full w-full bg-gray-50 lg:mt-52 lg:bg-transparent">
+        <div className=" px-6 py-10 lg:py-0">
+          <h1 className="text-3xl font-semibold lg:text-5xl">Our Squad</h1>
+          <p className="mt-4 text-sm font-semibold leading-6 tracking-widest text-gray-500 lg:mt-5 lg:text-xl xl:w-7/12">
+            We are passionate to build new digital products for a better future
+            by collaborating with new clients.
+          </p>
+          <div className="mt-5 flex gap-x-4 text-lg">
+            <span className="underline">All</span>
+            <span className="underline-link">Technical</span>
+            <span className="underline-link">Management</span>
+          </div>
+        </div>
+        <motion.div className="my-10 grid grid-cols-2 gap-y-3 gap-x-4 px-6 md:grid-cols-3 lg:mt-20 lg:gap-y-12  lg:gap-x-12">
           {members.map((member, index) => (
             <MemberCard key={index} member={member} index={index} />
           ))}
@@ -36,20 +48,19 @@ export const MemberCard = ({ member, index }) => {
         <motion.div
           className="relative aspect-square object-cover"
           style={{
-            backgroundColor: cardColors[index % cardColors.length],
-            // backgroundColor: '#D9D9D9',
+            backgroundColor:
+              member.bgColor || cardColors[index % cardColors.length],
           }}
           transition={{ duration: 1 }}
-          layoutId={`member-img-${member.id}`}
         >
-          <motion.img src={member.img} className="z-20 w-full" />
+          <motion.img src={member.img} className=" w-full" />
         </motion.div>
         <div className="">
-          <h3 className="mt-5 text-3xl font-bold">
+          <h3 className="mt-1 text-base font-bold uppercase lg:mt-4 lg:text-3xl">
             {member.firstName} {member.lastName}
           </h3>
 
-          <h5 className="mt-1 text-lg font-semibold text-gray-500">
+          <h5 className=" text-sm text-gray-500 lg:text-xl">
             {member.role.text}
           </h5>
         </div>
