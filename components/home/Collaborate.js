@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import { CollaborateImg } from '../../constants/images';
+import { Button } from '..';
 import Link from 'next/link';
 
 function Collaborate() {
@@ -44,7 +45,10 @@ function Collaborate() {
               questions, inquire us. Our team/specialists are always available
               to help you.
             </p>
-            <button className="talk-btn">Let&quot;s Talk</button>
+            {/* <button className="talk-btn">Let&quot;s Talk</button> */}
+            <Button className="talk-btn " parentClassName="px-0">
+              Let's Talk
+            </Button>
           </div>
           <Link href="/squad">
             <div className="collaborate__content_image">
