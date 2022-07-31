@@ -22,6 +22,7 @@ function Collaborate() {
         >
           Collaborate with Us
         </motion.h3>
+        
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{

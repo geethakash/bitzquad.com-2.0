@@ -75,7 +75,7 @@
 .collaborate_ {
   @apply bg-[url(/_next/static/media/collaborate-img.5818b821.png)] bg-cover bg-no-repeat lg:mx-auto lg:bg-none;
   & h3 {
-    @apply text-3xl font-semibold text-white md:text-4xl  lg:text-5xl 2xl:text-6xl;
+    @apply text-3xl font-semibold text-black md:text-4xl  lg:text-5xl 2xl:text-6xl;
   }
   &_bgwrapper {
     @apply bg-slate-900 bg-opacity-80 px-5 pt-14 pb-40 lg:bg-inherit 2xl:pt-20;
