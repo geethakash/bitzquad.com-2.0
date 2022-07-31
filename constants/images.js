@@ -25,3 +25,6 @@ export { default as Shape7 } from '../assets/images/shapes/shape-7.png';
 // partners images
 export { default as Partner_deinclusive } from '../assets/images/partners/partner-deinclusive.webp';
 export { default as Partner_wowhomies } from '../assets/images/partners/partner-wow-homies.webp';
+
+// squad roles-bg-text
+export { default as FounderRole } from '../assets/images/squad/role/founder-bg-text.svg';
