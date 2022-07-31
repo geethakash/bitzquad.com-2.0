@@ -5,13 +5,23 @@ import { LayoutMain } from '../../components';
 import Link from 'next/link';
 import { members } from '../../constants/members';
 
+const cardColors = [
+  '#9FD0FB',
+  '#E6CAA4',
+  '#E6E6E6',
+  '#F5F5F5',
+  '#C9DBCC',
+  '#F5F5F5',
+  '#9FD0FB',
+];
+
 function index() {
   return (
     <LayoutMain>
       <div className="container relative mx-auto h-full w-full ">
         <motion.div className="mt-40 grid grid-cols-4 gap-x-20 px-20">
           {members.map((member, index) => (
-            <MemberCard key={index} member={member} />
+            <MemberCard key={index} member={member} index={index} />
           ))}
         </motion.div>
       </div>
@@ -19,12 +29,16 @@ function index() {
   );
 }
 
-export const MemberCard = ({ member }) => {
+export const MemberCard = ({ member, index }) => {
   return (
     <Link href={`/squad/${member.id}`}>
       <div>
         <motion.div
-          className="relative  object-cover"
+          className="relative aspect-square object-cover"
+          style={{
+            backgroundColor: cardColors[index % cardColors.length],
+            // backgroundColor: '#D9D9D9',
+          }}
           transition={{ duration: 1 }}
           layoutId={`member-img-${member.id}`}
         >

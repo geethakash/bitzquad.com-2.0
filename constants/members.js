@@ -3,9 +3,9 @@ export const members = [
     id: 1,
     firstName: 'Jeff',
     lastName: 'Daylan',
-    role: { text: 'Head of Operational' },
+    role: { text: 'Head of Operational', bgText: '' },
     img: 'https://i.postimg.cc/KzScCZfV/andrew-power-9-ZXp-KFl-Qkjo-unsplash-removebg-preview.png',
-    team: 'Squad',
+    team: 'Technical',
     bgColor: '#f5f5f5',
     description:
       'We are passionate to build new digital products for a better future by collaborating with new clients. If you have an idea to create a new digital product for your business needs or any other questions, inquire us. Our team/specialists are always available to help you.',
@@ -32,10 +32,9 @@ export const members = [
     id: 2,
     firstName: 'Anne',
     lastName: 'deBruijn',
-    role: { text: 'Head of Management' },
+    role: { text: 'Head of Management', bgText: '' },
     img: 'https://i.postimg.cc/28RzxgJL/michael-dam-m-EZ3-Po-FGs-k-unsplash-removebg-preview.png',
-    team: 'Tech',
-    bgColor: '#f5f5f5',
+    team: 'Technical',
     description:
       "We're a team of UI/UX designers who are passionate about building products that are easy to use and easy to understand. We're always looking for new ideas to build new products and we're always looking for new ways to make our products better. If you have an idea to create a new digital product for your business needs or any other questions, inquire us. Our team/specialists are always available to help you.",
     social: [
@@ -61,9 +60,9 @@ export const members = [
     id: 3,
     firstName: 'John',
     lastName: 'Lennon',
-    role: { text: 'Art Director' },
+    role: { text: 'Art Director', bgText: '' },
     img: 'https://i.postimg.cc/SNM4543f/michael-dam-m-EZ3-Po-FGs-k-unsplash-removebg-preview-1.png',
-    team: 'Tech',
+    team: 'Operational',
     bgColor: '#f5f5f5',
     description:
       "We're a team of UI/UX designers who are passionate about building products that are easy to use and easy to understand. We're always looking for new ideas to build new products and we're always looking for new ways to make our products better. If you have an idea to create a new digital product for your business needs or any other questions, inquire us. Our team/specialists are always available to help you.",
@@ -79,6 +78,36 @@ export const members = [
       {
         name: 'Instagram',
         url: 'https://www.instagram.com/john.hancock/',
+      },
+      {
+        name: 'Github',
+        url: '',
+      },
+    ],
+  },
+  {
+    id: 4,
+    firstName: 'Paul',
+    lastName: 'McCartney',
+    role: { text: 'Art Director', bgText: '' },
+    img: 'https://i.postimg.cc/SNM4543f/michael-dam-m-EZ3-Po-FGs-k-unsplash-removebg-preview-1.png',
+    team: 'Operational',
+
+    description:
+      "We're a team of UI/UX designers who are passionate about building products that are easy to use and easy to understand. We're always looking for new ideas to build new products and we're always looking for new ways to make our products better. If you have an idea to create a new digital product for your business needs or any other questions, inquire us. Our team/specialists are always available to help you.",
+    social: [
+      {
+        name: 'Facebook',
+        url: 'https://www.facebook.com/paul.mccartney',
+      },
+      {
+        name: 'Linked In',
+
+        url: 'https://www.linkedin.com/in/paul-mccartney/',
+      },
+      {
+        name: 'Instagram',
+        url: 'https://www.instagram.com/paul.mccartney/',
       },
       {
         name: 'Github',
