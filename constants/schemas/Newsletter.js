@@ -1,21 +1,21 @@
-import mongoose from 'mongoose'
+import mongoose from "mongoose";
 
 const NewsletterSchema = new mongoose.Schema(
-  {
-    email: {
-      type: String,
-      required: true,
+    {
+        email: {
+            type: String,
+            required: true,
+        },
+        subscribed: {
+            type: Boolean,
+            default: true,
+        },
+        deleted: {
+            type: Boolean,
+            default: false,
+        },
     },
-    subscribed: {
-      type: Boolean,
-      default: true,
-    },
-    deleted: {
-      type: Boolean,
-      default: false,
-    },
-  },
-  {timestamps: true}
-)
+    { timestamps: true }
+);
 
-export default mongoose.models.Newsletter || mongoose.model('Newsletter', NewsletterSchema)
+export default mongoose.models.Newsletter || mongoose.model("Newsletter", NewsletterSchema);

@@ -1,6 +1,6 @@
 /*  Importings    */
 import mongodb from "../../../middleware/mongodb";
-import News from "../../../constants/schemas/news";
+import News from "../../../constants/schemas/News";
 import Transmit from "../../../constants/Transmit";
 import queryparser from "../../../middleware/queryparser";
 import request from "../../../middleware/request";
