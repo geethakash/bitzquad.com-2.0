@@ -508,6 +508,7 @@ const All = () => {
                                                                             .fill(1)
                                                                             .map((_, i) => (
                                                                                 <a
+                                                                                    key={i}
                                                                                     onClick={() => {
                                                                                         setSelectedPage(i);
                                                                                     }}
