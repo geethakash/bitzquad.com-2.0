@@ -41,7 +41,7 @@
   }
 
   &_content__item {
-    @apply flex w-full justify-center lg:gap-x-10 lg:px-5 lg:pt-8 xl:gap-x-16 xl:px-28 2xl:pt-16;
+    @apply flex w-full justify-center lg:gap-x-10 lg:px-5 lg:pt-8 xl:gap-x-16 xl:px-20 2xl:pt-16;
 
     &_image {
       @apply relative hidden w-3/12 overflow-hidden object-cover lg:block;
