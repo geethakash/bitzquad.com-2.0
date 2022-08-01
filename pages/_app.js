@@ -1,6 +1,6 @@
-import "../styles/style.scss";
-import { AnimatePresence, AnimateSharedLayout } from "framer-motion";
-import Head from "next/head";
+import '../styles/style.scss';
+import { AnimatePresence, AnimateSharedLayout } from 'framer-motion';
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }) {
   return (

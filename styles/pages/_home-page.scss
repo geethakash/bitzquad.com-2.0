@@ -35,9 +35,9 @@
 
 // testimonials section
 .testimonials_ {
-  @apply container mx-auto mb-40  px-5 pt-14 2xl:pt-20;
+  @apply container mx-auto mb-20 px-5  pt-14 lg:mb-40 2xl:pt-20;
   & h3 {
-    @apply text-3xl font-semibold md:text-5xl 2xl:text-6xl;
+    @apply text-3xl font-semibold md:text-4xl  lg:text-5xl 2xl:text-6xl;
   }
 
   &_content__item {
@@ -54,7 +54,7 @@
       @apply relative flex flex-col-reverse overflow-hidden pt-2 lg:w-9/12  lg:flex-col xl:pt-5 2xl:pt-10;
 
       &_user {
-        @apply mt-8 flex w-full items-center overflow-hidden lg:mt-0 lg:block;
+        @apply mt-8 flex w-full items-center truncate lg:mt-0 lg:block;
       }
 
       & .person {
@@ -75,7 +75,7 @@
 .collaborate_ {
   @apply bg-[url(/_next/static/media/collaborate-img.5818b821.png)] bg-cover bg-no-repeat lg:mx-auto lg:bg-none;
   & h3 {
-    @apply text-3xl font-semibold text-white md:text-5xl lg:text-black 2xl:text-6xl;
+    @apply text-3xl font-semibold text-black md:text-4xl  lg:text-5xl 2xl:text-6xl;
   }
   &_bgwrapper {
     @apply bg-slate-900 bg-opacity-80 px-5 pt-14 pb-40 lg:bg-inherit 2xl:pt-20;
@@ -86,7 +86,7 @@
       @apply w-full lg:w-2/3;
 
       & p {
-        @apply pt-8 text-lg text-white lg:text-3xl lg:text-slate-800;
+        @apply pt-8 text-lg text-gray-300 lg:text-3xl lg:text-slate-800;
       }
       & .talk-btn {
         @apply mt-8 rounded-full border-2 border-purple-700 bg-purple-700 px-7 py-2 text-lg text-white lg:bg-transparent lg:text-2xl lg:text-purple-700;
@@ -117,22 +117,77 @@
     @apply px-5 pt-14 pb-24 2xl:pt-20;
   }
   &_content {
-    @apply flex w-full justify-center lg:gap-x-10 pt-4 lg:pt-8 2xl:pt-10 xl:gap-x-16 relative;
+    @apply flex w-full justify-center pt-4 lg:gap-x-10 lg:pt-8 xl:gap-x-16 2xl:pt-10;
     &_text {
       @apply w-full;
 
       & p {
-        @apply text-slate-800 text-lg lg:text-2xl;
+        @apply text-lg text-slate-800 lg:text-2xl;
       }
       & .learn-btn {
-        @apply mt-6 rounded-full border-2 px-7 py-2 text-lg lg:text-2xl ;
+        @apply mt-6 rounded-full border-2 px-7 py-2 text-lg lg:text-2xl;
       }
     }
     &_bigtxt {
-      @apply  flex flex-row justify-center pt-14 text-9xl text-[25vw] md:text-[35vh] lg:text-[40vh] xl:text-[48vh] 2xl:text-[55vh] opacity-50; 
+      @apply flex flex-row justify-center  pt-14 text-9xl text-[25vw] opacity-50 md:text-[35vh] lg:text-[40vh] xl:text-[48vh] 2xl:text-[55vh];
       -webkit-text-fill-color: transparent;
-      -webkit-text-stroke-width: 1.5px;
-      
+      -webkit-text-stroke-width: 3px;
+      font-family: 'Poppins';
+    }
+  }
+}
+
+// our team section
+
+.ourteam_ {
+  @apply container mx-auto;
+  & h3 {
+    @apply text-3xl font-semibold md:text-4xl  lg:text-5xl 2xl:text-6xl;
+  }
+  &_bgwrapper {
+    @apply relative px-5 pt-16 pb-40 md:pb-60 lg:pb-80 xl:pb-96 2xl:pt-20;
+  }
+  &_content {
+    @apply flex w-full flex-row justify-center gap-10 space-x-4 overflow-x-visible pt-12  lg:pt-16;
+    &_card {
+      @apply relative h-[400px] w-72 flex-shrink-0 rounded-tl-[2rem] rounded-tr-[2rem] rounded-br-[2rem] bg-cover bg-no-repeat;
+      &_text {
+        @apply absolute bottom-0 top-auto flex w-72 flex-col items-start justify-start rounded-br-[2rem] bg-opacity-95 bg-gradient-to-t from-black to-transparent pl-3 pb-3 pt-32;
+        & .name {
+          @apply text-base  text-white lg:text-xl;
+        }
+        & .title {
+          @apply text-xs text-white lg:text-sm;
+        }
+      }
+    }
+  }
+  &_bigtxt {
+    @apply absolute top-[500px] bottom-auto -z-10 flex w-full justify-center md:top-[400px];
+    & div {
+      @apply flex flex-row justify-center whitespace-nowrap text-9xl text-[25vw] opacity-50 md:text-[35vh] lg:text-[40vh] xl:text-[48vh] 2xl:text-[55vh];
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke-width: 3px;
+      -webkit-text-stroke-color: black;
+    }
+  }
+}
+
+.partners {
+  &_container {
+    @apply container mx-auto mt-20  px-5 2xl:mt-52;
+
+    & h3 {
+      @apply text-3xl font-semibold md:text-4xl  lg:text-5xl 2xl:text-6xl;
+    }
+  }
+
+  &_card {
+    &_container {
+      @apply mx-auto my-10 grid w-3/4 grid-cols-2 items-center justify-center gap-x-10 lg:my-20 lg:w-1/2 lg:gap-x-20 xl:mt-32;
+    }
+    &_image {
+      @apply relative h-auto w-full overflow-hidden object-cover opacity-50 grayscale transition-all duration-300 ease-in-out hover:opacity-100 hover:grayscale-0;
     }
   }
 }

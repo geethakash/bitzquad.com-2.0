@@ -15,4 +15,5 @@ export { default as Button } from './elements/Button';
 export { default as Landing } from './home/Landing';
 export { default as Testimonials } from './home/Testimonials';
 export { default as Collaborate } from './home/Collaborate';
-export { default as ServiceCard } from './home/ServiceCard';
+export { default as Services } from './home/Services';
+export { default as OurPartners } from './home/OurPartners';
