@@ -6,11 +6,14 @@ import { useRouter } from "next/router";
 import { LogoDark, Logo } from "../../constants/images";
 import Head from "next/head";
 import { getMenu } from "../../constants/hooks/getMenu";
+import useUserStore from "../../constants/stores/userStore";
 
 const Layout = ({ children }) => {
     const router = useRouter();
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const [sidebarCollapse, setSidebarCollapse] = useState(false);
+
+    const user = useUserStore.user;
 
     const navigation = getMenu();
 
@@ -21,7 +24,7 @@ const Layout = ({ children }) => {
     function classNames(...classes) {
         return classes.filter(Boolean).join(" ");
     }
-    return (
+    return user ? (
         <>
             <Transition.Root show={sidebarOpen} as={Fragment}>
                 <Dialog as="div" className="relative z-40 md:hidden" onClose={setSidebarOpen}>
@@ -232,6 +235,8 @@ const Layout = ({ children }) => {
                 {children}
             </div>
         </>
+    ) : (
+        <p>No Access</p>
     );
 };
 

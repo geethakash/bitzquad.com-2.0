@@ -2,6 +2,7 @@ import { LockClosedIcon } from "@heroicons/react/solid";
 import * as React from "react";
 import request from "../../middleware/request";
 import { useRouter } from "next/router";
+import useUserStore from "../../constants/stores/userStore";
 
 const Login = () => {
     const router = useRouter();
@@ -18,6 +19,7 @@ const Login = () => {
             password,
         });
         if (resp.status === 200 && resp.data.status == 200 && resp.data.data && resp.data.data.name) {
+            useUserStore.setUser(resp.data.data);
             router.push("/admin/dashboard");
         } else {
             alert("Error: failed to login : ");
