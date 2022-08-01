@@ -37,6 +37,7 @@ function OurPartners() {
             <a href={partner.url} target="_blank" rel="noopener noreferrer">
               <img
                 className="partners_card_image"
+                data-cursor-text="click"
                 src={partner.image}
                 alt={partner.name}
               />
