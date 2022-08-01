@@ -18,7 +18,7 @@ const cardColors = [
 function index() {
   return (
     <LayoutMain>
-      <div className="container relative mx-auto h-full w-full bg-gray-50 lg:mt-52 lg:bg-transparent">
+      <div className="bz-container relative mx-auto h-full w-full bg-gray-50 lg:mt-52 lg:bg-transparent">
         <div className=" px-6 py-10 lg:py-0">
           <h1 className="text-3xl font-semibold lg:text-5xl">Our Squad</h1>
           <p className="mt-4 text-sm font-semibold leading-6 tracking-widest text-gray-500 lg:mt-5 lg:text-xl xl:w-7/12">
