@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const [sidebarCollapse, setSidebarCollapse] = useState(false);
 
-    const user = useUserStore.user;
+    const user = useUserStore((state) => state.user);
 
     const navigation = getMenu();
 
@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
     function classNames(...classes) {
         return classes.filter(Boolean).join(" ");
     }
-    return user ? (
+    return user.name ? (
         <>
             <Transition.Root show={sidebarOpen} as={Fragment}>
                 <Dialog as="div" className="relative z-40 md:hidden" onClose={setSidebarOpen}>

@@ -11,6 +11,8 @@ const Login = () => {
     const [email, setEmail] = React.useState("");
     const [password, setPassword] = React.useState("");
 
+    const setUser = useUserStore((state) => state.setUser);
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         const resp = await request.Post("/api/auth/login", {
@@ -19,7 +21,8 @@ const Login = () => {
             password,
         });
         if (resp.status === 200 && resp.data.status == 200 && resp.data.data && resp.data.data.name) {
-            useUserStore.setUser(resp.data.data);
+            console.log("login success");
+            setUser(resp.data.data);
             router.push("/admin/dashboard");
         } else {
             alert("Error: failed to login : ");
