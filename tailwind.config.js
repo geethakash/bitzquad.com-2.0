@@ -15,6 +15,9 @@ module.exports = {
           500: '#b3b3b3',
         },
       },
+      screens: {
+        '3xl': '1780px',
+      },
     },
   },
   plugins: [],
