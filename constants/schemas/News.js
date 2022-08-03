@@ -1,29 +1,12 @@
 import mongoose from "mongoose";
 
 const NewsSchema = new mongoose.Schema(
-  {
-    title: {
-      type: String,
-      required: true,
-    },
-    content: {
-      type: String,
-      required: true,
-    },
-    thumbnail: {
-      type: String,
-      required: true,
-    },
-    category: {
-        type: String,
-        required: true,
-    },
-    writer: {
-        name: {
+    {
+        title: {
             type: String,
             required: true,
         },
-        title: {
+        content: {
             type: String,
             required: true,
         },
@@ -31,17 +14,34 @@ const NewsSchema = new mongoose.Schema(
             type: String,
             required: true,
         },
+        category: {
+            type: String,
+            required: true,
+        },
+        writer: {
+            name: {
+                type: String,
+                required: true,
+            },
+            title: {
+                type: String,
+                required: true,
+            },
+            thumbnail: {
+                type: String,
+                required: true,
+            },
+        },
+        status: {
+            type: String,
+            default: "Pending",
+        },
+        deleted: {
+            type: Boolean,
+            default: false,
+        },
     },
-    archived: {
-      type: Boolean,
-      default: false,
-    },
-    deleted: {
-      type: Boolean,
-      default: false,
-    },
-  },
-  { timestamps: true }
+    { timestamps: true }
 );
 
 export default mongoose.models.News || mongoose.model("News", NewsSchema);
