@@ -18,8 +18,8 @@ const cardColors = [
 function index() {
   return (
     <LayoutMain>
-      <div className="container relative mx-auto h-full w-full bg-gray-50 lg:mt-52 lg:bg-transparent">
-        <div className=" px-6 py-10 lg:py-0">
+      <div className="bz-container relative mx-auto mt-0 h-full w-full bg-gray-50 md:bg-transparent lg:mt-52">
+        <div className=" py-10 lg:px-10 lg:py-0">
           <h1 className="text-3xl font-semibold lg:text-5xl">Our Squad</h1>
           <p className="mt-4 text-sm font-semibold leading-6 tracking-widest text-gray-500 lg:mt-5 lg:text-xl xl:w-7/12">
             We are passionate to build new digital products for a better future
@@ -31,7 +31,7 @@ function index() {
             <span className="underline-link">Management</span>
           </div>
         </div>
-        <motion.div className="my-10 grid grid-cols-2 gap-y-3 gap-x-4 px-6 md:grid-cols-3 lg:mt-20 lg:gap-y-12  lg:gap-x-12">
+        <motion.div className="my-10 grid grid-cols-2 gap-y-3 gap-x-4 md:grid-cols-3 lg:mt-20 lg:gap-y-12  lg:gap-x-12 lg:px-10">
           {members.map((member, index) => (
             <MemberCard key={index} member={member} index={index} />
           ))}
