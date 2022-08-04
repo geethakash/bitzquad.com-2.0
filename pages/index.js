@@ -24,12 +24,14 @@ export default function Home() {
         </div>
       )}
       <LayoutMain>
-        <Landing loading={loading} />
-        <OurPartners />
+        <div data-scroll-section>
+          <Landing loading={loading} />
+          <OurPartners />
 
-        {/* <Services /> */}
-        <Testimonials />
-        <Collaborate />
+          {/* <Services /> */}
+          <Testimonials />
+          <Collaborate />
+        </div>
       </LayoutMain>
     </>
   );

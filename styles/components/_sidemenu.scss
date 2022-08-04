@@ -1,6 +1,6 @@
 .sidemenu_ {
   &_wrapper {
-    @apply fixed top-0 right-0 z-40 flex h-screen w-full flex-col  bg-[#eeeeeeb3] bg-opacity-80 md:flex-row;
+    @apply fixed top-0 right-0 z-40 flex max-h-screen w-full flex-col  overflow-y-scroll bg-[#eeeeeeb3] bg-opacity-80 backdrop-blur-sm md:h-screen md:flex-row;
   }
   &_backdrop {
     @apply hidden flex-auto lg:block;
@@ -26,10 +26,10 @@
     @apply flex flex-col px-10 md:flex-row;
 
     &_items {
-      @apply text-5xl font-bold lg:pl-10 lg:text-5xl xl:pl-14 2xl:pl-24 2xl:text-7xl;
+      @apply text-5xl font-bold lg:pl-10 lg:text-4xl xl:pl-14 xl:text-5xl 2xl:pl-24 2xl:text-6xl 3xl:text-7xl;
     }
     &_item {
-      @apply pt-3 lg:pt-4 2xl:py-5;
+      @apply pt-3 lg:pt-4 2xl:py-3 3xl:py-4;
     }
     &_resources {
       @apply flex-col items-center  pr-20 pt-10 text-2xl md:flex md:flex-auto md:justify-center md:pt-0 lg:pl-10;
@@ -47,7 +47,7 @@
   }
 
   &_footer {
-    @apply py-10 lg:flex  lg:flex-row lg:items-center lg:justify-between lg:py-5 lg:px-10 lg:pl-5 2xl:pl-24;
+    @apply py-10 lg:flex  lg:flex-row lg:items-center lg:justify-between lg:py-5 lg:px-10 lg:pl-5 2xl:py-10 2xl:pl-24;
 
     & .social-links {
       @apply pl-10;
@@ -61,7 +61,7 @@
       }
 
       &_item {
-        @apply mt-3 text-2xl lg:mr-10 2xl:mt-5;
+        @apply mt-3 text-2xl lg:mr-8 lg:text-xl 2xl:mr-10 2xl:mt-5 3xl:text-2xl;
       }
     }
     & .multilingual {
