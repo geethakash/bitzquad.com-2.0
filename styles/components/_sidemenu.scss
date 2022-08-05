@@ -1,12 +1,12 @@
 .sidemenu_ {
   &_wrapper {
-    @apply fixed top-0 right-0 z-40 flex max-h-screen w-full flex-col  overflow-y-scroll bg-[#eeeeeeb3] bg-opacity-80 backdrop-blur-sm md:h-screen md:flex-row;
+    @apply fixed top-0 right-0 z-40 flex h-screen  w-full flex-col   bg-[#eeeeeeb3] bg-opacity-80 backdrop-blur-sm  md:flex-row;
   }
   &_backdrop {
     @apply hidden flex-auto lg:block;
   }
   &_container {
-    @apply  h-full w-full flex-col justify-between bg-white xl:flex xl:w-2/3;
+    @apply h-full w-full flex-col justify-between overflow-y-scroll bg-white xl:flex xl:w-2/3;
   }
   &_header {
     @apply flex justify-end p-8 pb-3 2xl:p-16 2xl:pb-0;
@@ -57,7 +57,7 @@
       }
 
       &_wrapper {
-        @apply grid grid-cols-2 pr-20 text-xl lg:pr-0 xl:flex 2xl:pr-20 2xl:text-2xl;
+        @apply grid grid-cols-2 pr-10 text-xl lg:pr-0 xl:flex 2xl:pr-20 2xl:text-2xl;
       }
 
       &_item {
