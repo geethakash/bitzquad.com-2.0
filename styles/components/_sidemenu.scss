@@ -6,7 +6,7 @@
     @apply hidden flex-auto lg:block;
   }
   &_container {
-    @apply h-full w-full flex-col justify-between bg-white xl:flex xl:w-2/3;
+    @apply test-screens h-full w-full flex-col justify-between bg-white xl:flex xl:w-2/3;
   }
   &_header {
     @apply flex justify-end p-8 pb-3 2xl:p-16 2xl:pb-0;
@@ -29,7 +29,7 @@
       @apply text-5xl font-bold lg:pl-10 lg:text-4xl xl:pl-14 xl:text-5xl 2xl:pl-24 2xl:text-6xl 3xl:text-7xl;
     }
     &_item {
-      @apply pt-3 lg:pt-4 2xl:py-3 3xl:py-4;
+      @apply pt-3 lg:pt-4 2xl:py-3;
     }
     &_resources {
       @apply flex-col items-center  pr-20 pt-10 text-2xl md:flex md:flex-auto md:justify-center md:pt-0 lg:pl-10;
