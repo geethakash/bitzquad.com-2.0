@@ -56,7 +56,7 @@ function index() {
                       alt={project.name}
                     />
                     <button
-                      className={`absolute bottom-2 right-2 px-2 py-2 ${project.backgroundColor} ${project.primaryTextColor} `}
+                      className={`absolute bottom-2 right-2 block px-2 py-2 lg:hidden ${project.backgroundColor} ${project.primaryTextColor} `}
                     >
                       view case study
                     </button>
