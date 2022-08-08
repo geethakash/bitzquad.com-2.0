@@ -7,7 +7,7 @@ function index() {
   return (
     <LayoutMain>
       <div className="bz-container " data-scroll-section>
-        <div className=" py-10 pb-20 lg:px-10 ">
+        <div className=" md:py-10 md:pb-32 lg:px-10 ">
           <h1 className="text-3xl font-semibold lg:text-5xl">Projects</h1>
           <p className="mt-4 text-sm font-semibold leading-6 tracking-widest text-gray-500 lg:mt-5 lg:text-xl xl:w-7/12">
             We are passionate to build new digital products for a better future
@@ -27,15 +27,18 @@ function index() {
                   index % 2 == 1 ? '  text-left' : 'items-end text-right'
                 }`}
               >
-                <h3 className=" text-3xl font-bold tracking-widest first-letter:capitalize">
+                <h3 className=" text-3xl font-semibold tracking-widest first-letter:capitalize">
                   {project.name}
                 </h3>
-                <p className="w-10/12 text-base">{project.description}</p>
+                <p className="mt-4 w-10/12 text-lg">{project.description}</p>
               </div>
               <div className="relative aspect-[9/6] w-1/2">
-                <Link href={`/${project.name}`}>
-                  <div className="absolute bottom-1/2 z-40 aspect-[8/7] w-full translate-y-[50%] overflow-hidden ">
-                    <div className="relative max-h-full w-full  bg-green-400"></div>
+                <Link href={`/projects/${project.name}`}>
+                  <div
+                    data-cursor-text="view"
+                    data-cursor={`${project.primaryColor}`}
+                    className="absolute bottom-1/2  aspect-[8/7] w-full translate-y-[50%] overflow-hidden "
+                  >
                     <img
                       src={project.image}
                       data-scroll
