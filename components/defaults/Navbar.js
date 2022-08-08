@@ -8,7 +8,6 @@ function Navbar() {
   return (
     <>
       <motion.nav
-        data-scroll-section
         initial={{
           opacity: 0,
           y: -100,
