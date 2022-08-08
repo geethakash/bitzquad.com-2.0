@@ -32,7 +32,7 @@
       @apply pt-3 lg:pt-4 2xl:py-3;
     }
     &_resources {
-      @apply flex-col items-center  pr-20 pt-10 text-2xl md:flex md:flex-auto md:justify-center md:pt-0 lg:pl-10;
+      @apply flex-col items-center  pt-10 text-2xl md:flex md:flex-auto md:justify-center md:pt-0 md:pr-20 lg:pl-10;
       &_wrapper {
         @apply grid grid-cols-2 flex-col items-center md:flex;
       }
@@ -47,7 +47,7 @@
   }
 
   &_footer {
-    @apply py-10 lg:flex  lg:flex-row lg:items-center lg:justify-between lg:py-5 lg:px-10 lg:pl-5 2xl:py-10 2xl:pl-24;
+    @apply py-10 lg:flex  lg:flex-row lg:items-center lg:justify-between lg:py-5 lg:px-10 lg:pl-5 xl:py-10 2xl:py-5 2xl:pl-24 3xl:py-10;
 
     & .social-links {
       @apply pl-10;
