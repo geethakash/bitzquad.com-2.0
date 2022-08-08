@@ -27,10 +27,12 @@ function index() {
                   index % 2 == 1 ? '  text-left' : 'items-end text-right'
                 }`}
               >
-                <h3 className=" text-3xl font-semibold tracking-widest first-letter:capitalize">
+                <h3
+                  className={` text-4xl font-semibold tracking-widest first-letter:capitalize  `}
+                >
                   {project.name}
                 </h3>
-                <p className="mt-4 w-10/12 text-lg">{project.description}</p>
+                <p className="mt-4 w-10/12 text-xl">{project.description}</p>
               </div>
               <div className="relative aspect-[9/6] w-1/2">
                 <Link href={`/projects/${project.name}`}>

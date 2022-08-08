@@ -3,7 +3,7 @@ const projects = [
     name: 'livewire',
     description:
       'Livewire is a web application that allows you to create and share your own custom websites. You can create a website from scratch or use a template to get started.',
-    image: 'https://i.postimg.cc/sDKr884T/image.png',
+    image: 'https://i.postimg.cc/Gpn8jCZS/image.png',
     link: 'https://livewire.dev',
     primaryColor: 'text-gray-500',
   },
