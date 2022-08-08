@@ -14,7 +14,7 @@ function index() {
             by collaborating with new clients.
           </p>
         </div>
-        <div class="pt-32 pb-52">
+        <div className="pt-32 pb-52">
           {projects.map((project, index) => (
             <>
               <div
@@ -56,28 +56,3 @@ function index() {
 }
 
 export default index;
-
-// <div
-//               className={`${
-//                 index % 2 == 0 ? '  row-span-1' : ''
-//               } row-span-2 flex aspect-[5/4] flex-col items-center justify-center`}
-//             >
-//               <img
-//                 src={project.image}
-//                 className="w-full object-cover"
-//                 alt={project.name}
-//               />
-//             </div>
-//             <div
-//               className={`${
-//                 index % 2 == 0 ? 'row-span-1  bg-red-400' : ''
-//               } flex aspect-[5/3] flex-col items-center justify-center `}
-//             >
-//               <h3 className="text-2xl font-bold">{project.name}</h3>
-//               <p className="text-base">{project.description}</p>
-//               <a href={project.link} className="text-base">
-//                 <button className="rounded bg-blue-500 py-2 px-4 font-bold text-white hover:bg-blue-700">
-//                   Visit
-//                 </button>
-//               </a>
-//             </div>
