@@ -39,7 +39,7 @@ function index() {
                     <img
                       src={project.image}
                       data-scroll
-                      data-scroll-speed="0.75"
+                      data-scroll-speed="-2"
                       className=" absolute top-[-100px]  aspect-[4/5] w-full object-cover"
                       alt={project.name}
                     />
