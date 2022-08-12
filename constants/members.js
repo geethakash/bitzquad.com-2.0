@@ -18,7 +18,7 @@ export const members = [
         url: 'https://www.facebook.com/jeffdaylan',
       },
       {
-        name: 'Linked In',
+        name: 'LinkedIn',
         url: 'https://www.linkedin.com/in/jeffdaylan/',
       },
       {
@@ -46,7 +46,7 @@ export const members = [
         url: 'https://www.facebook.com/anne.debruijn',
       },
       {
-        name: 'Linked In',
+        name: 'LinkedIn',
         url: 'https://www.linkedin.com/in/anne-debruijn/',
       },
       {
@@ -74,7 +74,7 @@ export const members = [
         url: 'https://www.facebook.com/john.hancock',
       },
       {
-        name: 'Linked In',
+        name: 'LinkedIn',
         url: 'https://www.linkedin.com/in/john-hancock/',
       },
       {
@@ -103,7 +103,7 @@ export const members = [
         url: 'https://www.facebook.com/paul.mccartney',
       },
       {
-        name: 'Linked In',
+        name: 'LinkedIn',
 
         url: 'https://www.linkedin.com/in/paul-mccartney/',
       },
