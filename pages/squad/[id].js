@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { FounderRole } from '../../constants/images';
 
 export const getStaticPaths = async () => {
   const { members } = await import('../../constants/members');
@@ -22,12 +21,37 @@ export const getStaticProps = async (context) => {
   };
 };
 
+const socialLinksAnim = {
+  animate: {
+    transition: {
+      delayChildren: 0.6,
+      ease: [0.6, 0.01, -0.05, 0.95],
+      staggerChildren: 0.06,
+    },
+  },
+};
+
+const socialLinkAnim = {
+  initial: {
+    x: 50,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+    },
+  },
+};
+
 function index({ member }) {
   return (
-    <>
-      {/*   bg-gradient-to-tl from-purple-800/30 */}
-      <div className="relative flex h-screen overflow-hidden">
-        <div className="flex h-full flex-auto flex-col justify-between object-cover pr-20 pl-40">
+    <div className="bz-container mt-0 xl:max-w-none xl:px-0">
+      {/* bg-gradient-to-tl from-purple-800/30 */}
+
+      <div className="relative  flex flex-col-reverse overflow-hidden xl:h-screen xl:flex-row xl:overflow-y-scroll">
+        <div className="flex h-full flex-col object-cover pr-0 xl:flex-auto xl:justify-between xl:pr-20 xl:pl-20 2xl:pl-40">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -38,44 +62,50 @@ function index({ member }) {
             }}
             exit={{ opacity: 0 }}
           >
-            <h1 className="mt-40 text-6xl font-bold uppercase">
+            <h1 className=" mt-6 text-3xl font-bold uppercase xl:mt-20 xl:text-5xl 2xl:mt-40 3xl:text-6xl">
               {member.firstName} {member.lastName}
             </h1>
-            <h2 className="mt-2 text-4xl font-extralight text-gray-600">
+            <h2 className="text-lg font-extralight text-gray-600 xl:mt-1 xl:text-2xl 2xl:mt-2 3xl:text-4xl">
               {member.role.text}
             </h2>
-            <p className=" mt-10  text-4xl font-medium text-gray-500">
+            <p className=" mt-3 text-base font-medium text-gray-500 xl:mt-5  xl:text-xl 2xl:mt-10 3xl:text-4xl">
               {member.description}
             </p>
           </motion.div>
-          <div className="squad_social_links z-10 mt-20 inline-block rounded-full py-10  text-3xl ">
+          <motion.div
+            variants={socialLinksAnim}
+            initial="initial"
+            animate="animate"
+            className="squad_social_links z-10 grid grid-cols-2 rounded-full py-5 text-xl xl:mt-20 xl:inline-block xl:py-5 xl:text-xl 2xl:py-10  2xl:text-3xl "
+          >
             {member.social.map((social, index) => (
-              <span key={index} className="pr-10">
+              <motion.span
+                variants={socialLinkAnim}
+                key={index}
+                className=" pr-8 2xl:pr-10"
+              >
                 <a
                   href={social.url}
                   rel="noreferrer"
                   target="_blank"
-                  className="underline-link text-purple-500 hover:text-purple-700"
+                  className="underline-link text-purple-500 transition-colors duration-500 hover:text-purple-700"
                 >
                   {social.name}
                 </a>
-              </span>
+              </motion.span>
             ))}
-          </div>
+          </motion.div>
         </div>
         <Link href="/squad">
           <motion.div
-            className="relative flex aspect-video h-full w-1/3"
+            className="relative flex h-full xl:mt-0 xl:aspect-video xl:w-1/3"
             transition={{ duration: 1 }}
           >
-            <motion.div
-              initial={{ opacity: 1 }}
-              animate={{ opacity: 0 }}
-              transition={{ duration: 1 }}
-              className="absolute top-0 left-0 z-20 h-full w-full bg-white"
-            ></motion.div>
             <motion.img
-              className="z-10 w-full object-cover"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+              className="bottom-0 z-10  xl:absolute xl:right-0 xl:bottom-0  xl:aspect-square xl:h-full xl:w-auto xl:max-w-none xl:translate-x-[15%]"
               src={member?.img}
             />
           </motion.div>
@@ -88,11 +118,11 @@ function index({ member }) {
             duration: 1.6,
             ease: [0.65, 0.05, 0.36, 1],
           }}
-          className="absolute bottom-0 left-0 h-1/2 px-10"
-          src={FounderRole.src}
+          className="absolute bottom-0 left-0 hidden h-1/2 px-10 xl:block"
+          src={member.role.bgImg}
         />
       </div>
-    </>
+    </div>
   );
 }
 

@@ -1,12 +1,15 @@
+import { FounderRole, ArtDirectorRole, ManagementRole } from './images';
+
 export const members = [
   {
     id: 1,
     firstName: 'Jeff',
     lastName: 'Daylan',
-    role: { text: 'Head of Operational', bgText: '' },
+    role: { text: 'Head of Operational', bgImg: FounderRole.src },
     img: 'https://i.postimg.cc/hGS5S32W/member-1.png',
     team: 'Technical',
     bgColor: '#F5D6C3',
+
     description:
       'We are passionate to build new digital products for a better future by collaborating with new clients. If you have an idea to create a new digital product for your business needs or any other questions, inquire us. Our team/specialists are always available to help you.',
     social: [
@@ -32,7 +35,7 @@ export const members = [
     id: 2,
     firstName: 'Anne',
     lastName: 'deBruijn',
-    role: { text: 'Head of Management', bgText: '' },
+    role: { text: 'Head of Management', bgImg: ManagementRole.src },
     img: 'https://i.postimg.cc/rpw2hmXr/Rectangle-184.png',
     team: 'Technical',
     description:
@@ -60,7 +63,7 @@ export const members = [
     id: 3,
     firstName: 'John',
     lastName: 'Lennon',
-    role: { text: 'Art Director', bgText: '' },
+    role: { text: 'Art Director', bgImg: ArtDirectorRole.src },
     img: 'https://i.postimg.cc/q7RWs5yc/Rectangle-187.png',
     team: 'Operational',
     description:
@@ -88,7 +91,7 @@ export const members = [
     id: 4,
     firstName: 'Paula',
     lastName: 'McCartney',
-    role: { text: 'Art Director', bgText: '' },
+    role: { text: 'Art Director', bgImg: ArtDirectorRole.src },
     img: 'https://i.postimg.cc/d0wVJwMs/Rectangle-184.png',
     team: 'Operational',
 
