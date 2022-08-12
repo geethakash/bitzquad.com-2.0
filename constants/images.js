@@ -29,3 +29,5 @@ export { default as Partner_wowhomies } from '../assets/images/partners/partner-
 
 // squad roles-bg-text
 export { default as FounderRole } from '../assets/images/squad/role/founder-bg-text.svg';
+export { default as ArtDirectorRole } from '../assets/images/squad/role/art-director-bg-text.svg';
+export { default as ManagementRole } from '../assets/images/squad/role/management-bg-text.svg';
