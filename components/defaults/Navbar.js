@@ -1,10 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { LogoDark, Logo } from '../../constants/images';
 import { motion, AnimatePresence } from 'framer-motion';
 import SideMenu from './SideMenu';
+import { useLocomotiveScroll } from 'react-locomotive-scroll';
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = React.useState(false);
+  const { scroll } = useLocomotiveScroll();
+  useEffect(() => {
+    if (!scroll) {
+      return;
+    }
+    if (menuOpen) {
+      scroll.stop();
+    } else {
+      scroll.start();
+    }
+  }, [menuOpen]);
+
   return (
     <>
       <motion.nav
