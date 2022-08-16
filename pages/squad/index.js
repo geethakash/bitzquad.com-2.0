@@ -34,7 +34,7 @@ function index() {
             <span className="underline-link">Management</span>
           </div>
         </div>
-        <motion.div className="my-10 grid grid-cols-2 gap-y-3 gap-x-4 md:grid-cols-3 lg:mt-20 lg:gap-y-12  lg:gap-x-12 lg:px-10">
+        <motion.div className="mb-20 grid grid-cols-2 gap-y-3 gap-x-4 md:grid-cols-3 lg:mt-20 lg:gap-y-12  lg:gap-x-12 lg:px-10">
           {members.map((member, index) => (
             <MemberCard key={index} member={member} index={index} />
           ))}
