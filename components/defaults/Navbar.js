@@ -3,11 +3,11 @@ import { LogoDark, Logo } from '../../constants/images';
 import { motion, AnimatePresence } from 'framer-motion';
 import SideMenu from './SideMenu';
 import { useLocomotiveScroll } from 'react-locomotive-scroll';
+import Link from 'next/link';
 
 function Navbar({ animated = false }) {
   const [menuOpen, setMenuOpen] = React.useState(false);
   const { scroll } = useLocomotiveScroll();
-  console.log('animated', animated);
   useEffect(() => {
     if (!scroll) {
       return;
@@ -46,31 +46,37 @@ function Navbar({ animated = false }) {
         }
         className="navbar"
       >
-        <a className="navbar-brand" href="#">
+        <Link className="navbar-brand" href="/">
           <img className="h-10" src={LogoDark.src} alt="bz-logo" />
-        </a>
+        </Link>
         <div className="navbar-links">
-          <a
-            className="navbar-link underline-link"
-            href="#"
-            data-cursor="-opaque"
-          >
-            About
-          </a>
-          <a
-            className="navbar-link underline-link"
-            href="#services"
-            data-cursor="-opaque"
-          >
-            Services
-          </a>
-          <a
-            className="navbar-link underline-link"
-            href="#"
-            data-cursor="-opaque"
-          >
-            Contact
-          </a>
+          <Link href="/about">
+            <a
+              className="navbar-link underline-link"
+              href="#"
+              data-cursor="-opaque"
+            >
+              About
+            </a>
+          </Link>
+          <Link href="#services">
+            <a
+              className="navbar-link underline-link"
+              href="#"
+              data-cursor="-opaque"
+            >
+              Services
+            </a>
+          </Link>
+          <Link href="#contact">
+            <a
+              className="navbar-link underline-link"
+              href="#"
+              data-cursor="-opaque"
+            >
+              Contact
+            </a>
+          </Link>
           <button
             className="menu-button"
             data-cursor="-opaque"
