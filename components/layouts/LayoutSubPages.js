@@ -32,7 +32,7 @@ const Layout = ({
           data-scroll-container
           ref={containerRef}
         >
-          <Navbar animated={true} />
+          <Navbar animated={false} />
           {children}
           <Footer />
         </div>

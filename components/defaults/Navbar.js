@@ -4,9 +4,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import SideMenu from './SideMenu';
 import { useLocomotiveScroll } from 'react-locomotive-scroll';
 
-function Navbar() {
+function Navbar({ animated = false }) {
   const [menuOpen, setMenuOpen] = React.useState(false);
   const { scroll } = useLocomotiveScroll();
+  console.log('animated', animated);
   useEffect(() => {
     if (!scroll) {
       return;
@@ -22,19 +23,27 @@ function Navbar() {
     <>
       <motion.nav
         data-scroll-section
-        initial={{
-          opacity: 0,
-          y: -100,
-        }}
-        animate={{
-          opacity: 1,
-          y: 0,
-          transition: {
-            duration: 1,
-            delay: 2,
-            ease: 'easeInOut',
-          },
-        }}
+        initial={
+          animated
+            ? {
+                opacity: 0,
+                y: -100,
+              }
+            : {}
+        }
+        animate={
+          animated
+            ? {
+                opacity: 1,
+                y: 0,
+                transition: {
+                  duration: 1,
+                  delay: 2,
+                  ease: 'easeInOut',
+                },
+              }
+            : {}
+        }
         className="navbar"
       >
         <a className="navbar-brand" href="#">

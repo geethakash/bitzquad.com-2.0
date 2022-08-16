@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { CollaborateImg } from '../../constants/images';
-import { LayoutMain } from '../../components';
+import { LayoutSubPages } from '../../components';
 import Link from 'next/link';
 import { members } from '../../constants/members';
 
@@ -17,7 +17,7 @@ const cardColors = [
 
 function index() {
   return (
-    <LayoutMain>
+    <LayoutSubPages>
       <div
         data-scroll-section
         className="bz-container relative mx-auto mt-0 h-full w-full bg-gray-50 md:bg-transparent lg:mt-52"
@@ -40,7 +40,7 @@ function index() {
           ))}
         </motion.div>
       </div>
-    </LayoutMain>
+    </LayoutSubPages>
   );
 }
 
