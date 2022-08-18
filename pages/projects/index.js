@@ -1,11 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import { LayoutMain } from '../../components';
+import { LayoutSubPages } from '../../components';
 import projects from '../../constants/projects';
 
 function index() {
   return (
-    <LayoutMain>
+    <LayoutSubPages>
       <div
         className="bz-container relative mx-auto mt-0 h-full w-full bg-gray-50 md:bg-transparent lg:mt-52"
         data-scroll-section
@@ -67,7 +67,7 @@ function index() {
           ))}
         </div>
       </div>
-    </LayoutMain>
+    </LayoutSubPages>
   );
 }
 

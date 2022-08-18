@@ -1,10 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const sideMenuLinks = [
   {
     name: 'Home',
-    href: '#',
+    href: '/',
   },
   {
     name: 'Services',
@@ -12,15 +13,15 @@ const sideMenuLinks = [
   },
   {
     name: 'About Us',
-    href: '#about',
+    href: '/about',
   },
   {
     name: 'Projects',
-    href: '#projects',
+    href: '/projects',
   },
   {
     name: 'Team',
-    href: '#team',
+    href: '/squad',
   },
   {
     name: 'Contact',
@@ -154,9 +155,11 @@ function SideMenu({ MenuOpen, setMenuOpen }) {
         className="sidemenu__content_item"
         variants={sideMenuLinkAnim}
       >
-        <motion.a className="underline-link" href={href}>
-          {name}
-        </motion.a>
+        <Link href={href}>
+          <motion.a className="underline-link" href={href}>
+            {name}
+          </motion.a>
+        </Link>
       </motion.div>
     );
   };

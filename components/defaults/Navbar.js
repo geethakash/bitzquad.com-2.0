@@ -3,8 +3,9 @@ import { LogoDark, Logo } from '../../constants/images';
 import { motion, AnimatePresence } from 'framer-motion';
 import SideMenu from './SideMenu';
 import { useLocomotiveScroll } from 'react-locomotive-scroll';
+import Link from 'next/link';
 
-function Navbar() {
+function Navbar({ animated = false }) {
   const [menuOpen, setMenuOpen] = React.useState(false);
   const { scroll } = useLocomotiveScroll();
   useEffect(() => {
@@ -22,46 +23,60 @@ function Navbar() {
     <>
       <motion.nav
         data-scroll-section
-        initial={{
-          opacity: 0,
-          y: -100,
-        }}
-        animate={{
-          opacity: 1,
-          y: 0,
-          transition: {
-            duration: 1,
-            delay: 2,
-            ease: 'easeInOut',
-          },
-        }}
+        initial={
+          animated
+            ? {
+                opacity: 0,
+                y: -100,
+              }
+            : {}
+        }
+        animate={
+          animated
+            ? {
+                opacity: 1,
+                y: 0,
+                transition: {
+                  duration: 1,
+                  delay: 2,
+                  ease: 'easeInOut',
+                },
+              }
+            : {}
+        }
         className="navbar"
       >
-        <a className="navbar-brand" href="#">
+        <Link className="navbar-brand" href="/">
           <img className="h-10" src={LogoDark.src} alt="bz-logo" />
-        </a>
+        </Link>
         <div className="navbar-links">
-          <a
-            className="navbar-link underline-link"
-            href="#"
-            data-cursor="-opaque"
-          >
-            About
-          </a>
-          <a
-            className="navbar-link underline-link"
-            href="#services"
-            data-cursor="-opaque"
-          >
-            Services
-          </a>
-          <a
-            className="navbar-link underline-link"
-            href="#"
-            data-cursor="-opaque"
-          >
-            Contact
-          </a>
+          <Link href="/about">
+            <a
+              className="navbar-link underline-link"
+              href="#"
+              data-cursor="-opaque"
+            >
+              About
+            </a>
+          </Link>
+          <Link href="#services">
+            <a
+              className="navbar-link underline-link"
+              href="#"
+              data-cursor="-opaque"
+            >
+              Services
+            </a>
+          </Link>
+          <Link href="#contact">
+            <a
+              className="navbar-link underline-link"
+              href="#"
+              data-cursor="-opaque"
+            >
+              Contact
+            </a>
+          </Link>
           <button
             className="menu-button"
             data-cursor="-opaque"
