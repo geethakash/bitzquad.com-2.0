@@ -9,4 +9,20 @@
   .test-screens {
     @apply sm:bg-teal-200 md:bg-red-300 lg:bg-purple-300 xl:bg-orange-300 2xl:bg-pink-300 3xl:bg-cyan-300;
   }
+
+  .underline-link {
+    @apply relative no-underline;
+
+    &::before {
+      content: '';
+      transition: width 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+      @apply absolute bottom-0 right-0 h-[2px] w-0 bg-current no-underline;
+    }
+  }
+
+  @media (hover: hover) {
+    .underline-link:hover::before {
+      @apply left-0 right-0 w-full bg-current text-current no-underline;
+    }
+  }
 }

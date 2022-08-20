@@ -1,88 +1,91 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { ServicesImg } from '../../constants/images';
 
 function Services() {
   return (
-    <>
-      <ServiceCard
-        title={'Information Systems'}
-        description={
-          'We are passionate to build new digital products for a better future by collaborating with new clients. If you have an idea to create a new digital product for your business needs or any other questions, inquire us. Our team/specialists are always available to help you.'
-        }
-        buttonText={'Learn More'}
-        color={'green'}
-      />
-      <ServiceCard
-        title={'Business Process Re-engineering'}
-        description={
-          'The practice of rethinking and redesigning the way work is done to better support an organization&quot;s mission and reduce costs.'
-        }
-        buttonText={'Learn More'}
-        color={'purple'}
-      />
-    </>
-  );
-}
+    <div className="services_">
+      <div className="services__bgwrapper">
+        <div className="services__content_wrapper mt-0">
+          <motion.h3
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 0.8,
+                ease: 'easeInOut',
+              },
+            }}
+            viewport={{ once: true }}
+          >
+            <span>Explore Our</span>
+            <br />
+            SERVICES
+          </motion.h3>
 
-function ServiceCard({ title, description, buttonText, color }) {
-  return (
-    <div className="servicecard_ md:!max-w-full lg:!container">
-      <div className="servicecard__bgwrapper">
-        <motion.h3
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-            transition: {
-              duration: 0.8,
-              ease: 'easeInOut',
-            },
-          }}
-          viewport={{ once: true }}
-        >
-          {title}
-        </motion.h3>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-            transition: {
-              duration: 0.8,
-              ease: 'easeInOut',
-            },
-          }}
-          viewport={{ once: true }}
-          className="servicecard__content"
-        >
-          <div className="servicecard__content_text">
-            <p>{description}</p>
-            <button
-              className={`learn-btn border-green-500 border-${color}-700 text-${color}-700`}
-            >
-              {buttonText}
-            </button>
-          </div>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{
-            opacity: 0.5,
-            y: 0,
-            transition: {
-              duration: 0.8,
-              ease: 'easeInOut',
-            },
-          }}
-          viewport={{ once: true }}
-          className="servicecard__content_bigtxt"
-          style={{ WebkitTextStrokeColor: `${color}` }}
-        >
-          {' '}
-          SERVICES{' '}
-        </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 0.8,
+                ease: 'easeInOut',
+              },
+            }}
+            viewport={{ once: true }}
+            className="services__content"
+          >
+            <div className="services__content_grid">
+              <div className="card">
+                <h4 className="card_title">Information Systems</h4>
+                <p className="card_text">
+                  We provide end-to-end solutions for information systems
+                  development, management, and support. We can help you with any
+                  of the following:
+                </p>
+                <a href="#" className="card_button">
+                  see more
+                </a>
+              </div>
+              <div className="card">
+                <h4 className="card_title">Business Process Reengineering</h4>
+                <p className="card_text">
+                  We provide end-to-end solutions for information systems
+                  development, management, and support.
+                </p>
+                <a href="#" className="card_button">
+                  see more
+                </a>
+              </div>
+              <div className="card">
+                <h4 className="card_title">E-Business</h4>
+                <p className="card_text">
+                  We provide end-to-end solutions for information systems
+                  development, management, and support.
+                </p>
+                <a href="#" className="card_button">
+                  see more
+                </a>
+              </div>
+              <div className="card">
+                <h4 className="card_title">
+                  Brand Designing & Digital Marketing
+                </h4>
+                <p className="card_text">
+                  We provide end-to-end solutions for information systems
+                  development, management, and support.
+                </p>
+                <button className="card_button">see more</button>
+              </div>
+            </div>
+            <div className="services__content_image">
+              <motion.img src={ServicesImg.src} />
+            </div>
+          </motion.div>
+        </div>
       </div>
-      <div className="hidden border-green-700 "></div>
     </div>
   );
 }
