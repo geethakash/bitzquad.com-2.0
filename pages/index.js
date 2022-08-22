@@ -26,9 +26,9 @@ export default function Home() {
       <LayoutMain>
         <div data-scroll-section>
           <Landing loading={loading} />
+          <Services />
           <OurPartners />
-
-          {/* <Services /> */}
+          {/* projects */}
           <Testimonials />
           <Collaborate />
         </div>
