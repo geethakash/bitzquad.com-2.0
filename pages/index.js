@@ -12,6 +12,7 @@ import {
   Testimonials,
   Services,
   OurPartners,
+  ProjectSection,
 } from '../components';
 
 export default function Home() {
@@ -28,7 +29,7 @@ export default function Home() {
           <Landing loading={loading} />
           <Services />
           <OurPartners />
-          {/* projects */}
+          <ProjectSection />
           <Testimonials />
           <Collaborate />
         </div>

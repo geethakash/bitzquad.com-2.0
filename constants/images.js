@@ -13,6 +13,8 @@ export { default as CollaborateImg } from '../assets/images/collaborate-img.png'
 
 export { default as ServicesImg } from '../assets/images/services-exp.png';
 
+export { default as ProjectSectionBg } from '../assets/images/proj-sec-bg.png';
+
 // cover images
 export { default as Landingsm } from '../assets/images/landing-sm.webp';
 
