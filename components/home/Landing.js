@@ -77,11 +77,6 @@ function Landing({ loading }) {
               performance will generally be better at high altitude.
             </motion.p>
           </div>
-          {!loading && (
-            <Button className="w-full rounded-full border py-6 text-2xl md:hidden">
-              View Services
-            </Button>
-          )}
         </div>
         <div className="landing-logo">
           <motion.img
