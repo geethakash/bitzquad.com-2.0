@@ -24,7 +24,7 @@ function index() {
                                 background: "rgb(249, 250, 251)",
                                 background: "linear-gradient(90deg, rgba(249, 250, 251,1) 0%, rgba(249, 250, 251,1) 50%, rgba(255,255,255,0) 100%)",
                             }}
-                            className="relative z-10 flex h-80 flex-col pt-4 pb-14 md:z-auto md:h-auto  md:w-1/2 md:bg-none lg:mt-0 lg:pb-0  "
+                            className="relative z-10 flex h-auto min-h-[20rem] flex-col pt-4 pb-14 md:z-auto  md:w-1/2 md:bg-none lg:mt-0 lg:pb-0  "
                         >
                             <h3 className=" mb-2 text-xl font-semibold tracking-widest first-letter:capitalize lg:text-2xl 2xl:text-3xl ">We are a team of </h3>
                             <h3 className=" text-2xl font-semibold tracking-widest first-letter:capitalize lg:text-3xl 2xl:text-4xl ">Solutions</h3>
@@ -51,7 +51,7 @@ function index() {
                                 background: "rgb(249, 250, 251)",
                                 background: "linear-gradient(90deg, rgba(249, 250, 251,1) 0%, rgba(249, 250, 251,1) 50%, rgba(255,255,255,0) 100%)",
                             }}
-                            className="relative z-10 ml-0 flex h-80 flex-col pt-4 pb-14 md:z-auto  md:ml-10 md:h-auto md:w-1/2 md:bg-none  lg:mt-0 lg:pb-0"
+                            className="relative z-10 ml-0 flex h-auto min-h-[20rem] flex-col pt-4 pb-14  md:z-auto md:ml-10 md:w-1/2 md:bg-none  lg:mt-0 lg:pb-0"
                         >
                             <h3 className=" mb-2 text-xl font-semibold tracking-widest first-letter:capitalize lg:text-2xl 2xl:text-3xl ">We elevate your</h3>
                             <h3 className=" text-2xl font-semibold tracking-widest first-letter:capitalize lg:text-3xl 2xl:text-4xl ">Inspiration</h3>
@@ -69,7 +69,7 @@ function index() {
                             <div className="bottom-1/2 w-full overflow-hidden md:h-full lg:aspect-[8/7] lg:h-auto ">
                                 <img
                                     src="https://www.is2.de/wp-content/uploads/angular-kompetenzen-is2.jpg"
-                                    className="absolute left-auto right-0 h-80 w-7/12 object-cover sm:w-full md:relative md:h-full lg:aspect-[4/5] lg:h-auto"
+                                    className="absolute left-auto right-0 min-h-[20rem] w-7/12 object-cover sm:w-full md:relative md:h-full lg:aspect-[4/5] lg:h-auto"
                                 />
                             </div>
                         </div>
@@ -80,7 +80,7 @@ function index() {
                                 background: "rgb(249, 250, 251)",
                                 background: "linear-gradient(90deg, rgba(249, 250, 251,1) 0%, rgba(249, 250, 251,1) 50%, rgba(255,255,255,0) 100%)",
                             }}
-                            className="relative z-10 flex h-80 flex-col pt-4 pb-14 md:z-auto md:h-auto  md:w-1/2 md:bg-none lg:mt-0 lg:pb-0  "
+                            className="relative z-10 flex h-auto min-h-[20rem] flex-col pt-4 pb-14 md:z-auto  md:w-1/2 md:bg-none lg:mt-0 lg:pb-0  "
                         >
                             <h3 className=" mb-2 text-xl font-semibold tracking-widest first-letter:capitalize lg:text-2xl 2xl:text-3xl ">You may also be </h3>
                             <h3 className=" text-2xl font-semibold tracking-widest first-letter:capitalize lg:text-3xl 2xl:text-4xl ">Interested In...</h3>

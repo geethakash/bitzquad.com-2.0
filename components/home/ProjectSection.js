@@ -9,7 +9,7 @@ function ProjectSection() {
                 <div className="bz-container mt-0">
                     <h3>Projects</h3>
                     <p>
-                        Potrayed here are the work that we are proud to have carried out for our invaluable customers. These projects will help you to have a better understanding
+                        Portrayed here are the work that we are proud to have carried out for our invaluable customers. These projects will help you to have a better understanding
                         of what we do and how we do things.
                     </p>
                     <Button
