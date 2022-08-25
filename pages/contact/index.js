@@ -64,11 +64,12 @@ function index() {
                             <div className="mb-0 hidden w-full border-l border-gray-400 sm:w-1/2 md:block lg:mb-56">
                                 <div className="flex h-full flex-col justify-center gap-y-4 pl-8">
                                     <div className="felx-col flex ">
-                                        <PhoneIcon className="mr-2 h-5 w-5  text-purple-600" /> +1 (123) 456 789
+                                        <PhoneIcon className="mr-2 h-5 w-5  text-purple-600" />
+                                        <a href="tel:1234567890">1234567890</a>
                                     </div>
                                     <div className="felx-col flex ">
                                         <MailIcon className="mr-2 h-5 w-5  text-purple-600" />
-                                        <a href="mailto:abc@gmail.com">abc@gmail.com</a>
+                                        <a href="mailto:hello@bitzquad.com">hello@bitzquad.com</a>
                                     </div>
                                     <div className="felx-col flex ">
                                         <LocationMarkerIcon className="mr-2 h-5 w-5 text-purple-600" />

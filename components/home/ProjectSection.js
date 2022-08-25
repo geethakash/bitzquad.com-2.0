@@ -13,6 +13,7 @@ function ProjectSection() {
                         of what we do and how we do things.
                     </p>
                     <Button
+                        href="/projects"
                         className="focus:shadow-outline mt-4 flex flex-row rounded-full border-none bg-purple-500 px-5 py-3 text-base leading-6 tracking-wider text-white  "
                         parentClassName="px-0"
                     >

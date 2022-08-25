@@ -51,19 +51,19 @@ function Navbar({ animated = false }) {
                 </Link>
                 <div className="navbar-links">
                     <Link href="/about">
-                        <a className="navbar-link underline-link" data-cursor="-opaque">
+                        <span className="navbar-link underline-link" data-cursor="-opaque">
                             About
-                        </a>
+                        </span>
                     </Link>
                     <Link href="#services">
-                        <a className="navbar-link underline-link" data-cursor="-opaque">
+                        <span className="navbar-link underline-link" data-cursor="-opaque">
                             Services
-                        </a>
+                        </span>
                     </Link>
                     <Link href="/contact">
-                        <a className="navbar-link underline-link" data-cursor="-opaque">
+                        <span className="navbar-link underline-link" data-cursor="-opaque">
                             Contact
-                        </a>
+                        </span>
                     </Link>
                     <button className="menu-button" data-cursor="-opaque" onClick={() => setMenuOpen(true)}>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

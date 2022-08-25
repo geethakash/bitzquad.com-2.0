@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import { CollaborateImg } from "../../constants/images";
 import { Button } from "..";
-import Link from "next/link";
 
 function Collaborate() {
     return (
@@ -44,8 +43,7 @@ function Collaborate() {
                                 <br></br>Bitzquad has a capable team passionate about developing apt and innovative digital solutions through collaborations which take you through
                                 an unmatched digital journey.<br></br>Your query is one tap away.
                             </p>
-                            {/* <button className="talk-btn">Let&quot;s Talk</button> */}
-                            <Button className="talk-btn" parentClassName="px-0">
+                            <Button className="talk-btn" parentClassName="px-0" href="/contact">
                                 Let&apos;s Talk
                             </Button>
                         </div>

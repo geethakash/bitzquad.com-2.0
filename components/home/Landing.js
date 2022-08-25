@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 
 // local imports
 import { Logo, Landingsm, Shape1, Shape2, Shape3, Shape4, Shape5, Shape6, Shape7 } from "../../constants/images";
-import { Button } from "../../components";
 
 const textRevealAnimation = {
     initial: {
