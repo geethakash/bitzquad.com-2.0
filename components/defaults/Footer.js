@@ -1,6 +1,7 @@
 import React from "react";
 import { LogoDark, Logo } from "../../constants/images";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 function Footer() {
     return (
@@ -11,37 +12,75 @@ function Footer() {
                         <img className="w-full px-20 pb-6 sm:w-10/12  sm:px-0 sm:pb-0" src={LogoDark.src} alt="bz-logo" />
 
                         <div className="mt-3 flex flex-row flex-wrap justify-evenly gap-x-7 gap-y-4 px-14 text-center text-lg font-bold text-main-900 sm:w-10/12 sm:justify-between sm:gap-y-2.5 sm:px-0">
-                            <a href="https://www.facebook.com/bitzquad/" className="w-28 sm:w-auto">
+                            <motion.a
+                                href="https://www.facebook.com/bitzquad/"
+                                className="underline-link w-28 sm:w-auto"
+                                whileHover={{ scale: 1.05 }}
+                                transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}
+                            >
                                 Facebook
-                            </a>
-                            <a href="https://twitter.com/Bitzquad" className="w-28 sm:w-auto">
+                            </motion.a>
+                            <motion.a
+                                href="https://twitter.com/Bitzquad"
+                                className="underline-link w-28 sm:w-auto"
+                                whileHover={{ scale: 1.05 }}
+                                transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}
+                            >
                                 Twitter
-                            </a>
-                            <a href="https://www.instagram.com/bitzquad/" className="w-28 sm:w-auto">
+                            </motion.a>
+                            <motion.a
+                                href="https://www.instagram.com/bitzquad/"
+                                className="underline-link w-28 sm:w-auto"
+                                whileHover={{ scale: 1.05 }}
+                                transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}
+                            >
                                 Instagram
-                            </a>
-                            <a href="https://www.linkedin.com/company/bitzquad/" className="w-28 sm:w-auto">
+                            </motion.a>
+                            <motion.a
+                                href="https://www.linkedin.com/company/bitzquad/"
+                                className="underline-link w-28 sm:w-auto"
+                                whileHover={{ scale: 1.05 }}
+                                transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}
+                            >
                                 LinkedIn
-                            </a>
+                            </motion.a>
                         </div>
-                        <div className="mt-8 flex flex-row flex-wrap justify-evenly gap-x-7 gap-y-2.5 px-8 text-lg font-bold text-main-900 sm:mt-3 sm:justify-start sm:px-0">
-                            <a href="mailto:hello@bitzquad.com">hello@bitzquad.com</a>
+                        <div className=" mt-8 flex flex-row flex-wrap justify-evenly gap-x-7 gap-y-2.5 px-8 text-lg font-bold text-main-900 sm:mt-3 sm:justify-start sm:px-0">
+                            <motion.a href="mailto:hello@bitzquad.com" whileHover={{ scale: 1.05 }} transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}>
+                                hello@bitzquad.com
+                            </motion.a>
                         </div>
                     </div>
                 </div>
                 <div className="w-full sm:w-1/2">
                     <div className="relative ml-0 mr-auto flex w-full flex-row justify-evenly sm:w-9/12 lg:w-8/12">
                         <div className="mt-3 flex  flex-col flex-wrap gap-x-7 gap-y-2 text-center text-xl  sm:text-left lg:text-2xl">
-                            <Link href="#services">Services</Link>
-                            <Link href="/about">About</Link>
-                            <Link href="/projects">Projects</Link>
-                            <Link href="/squad">Squad</Link>
+                            <Link href="#services">
+                                <span className="underline-link w-fit">Services</span>
+                            </Link>
+                            <Link href="/about">
+                                <span className="underline-link w-fit">About</span>
+                            </Link>
+                            <Link href="/projects">
+                                <span className="underline-link w-fit">Projects</span>
+                            </Link>
+                            <Link href="/squad">
+                                <span className="underline-link w-fit">Squad</span>
+                            </Link>
                         </div>
                         <div className="mt-3 flex flex-col flex-wrap gap-x-7 gap-y-2 text-center text-xl sm:text-left lg:text-2xl">
-                            <Link href="#">Careers</Link>
-                            <Link href="#">Our Partners</Link>
-                            <Link href="/contact">Contact</Link>
-                            <Link href="#">Blog</Link>
+                            <Link href="#">
+                                <span className="underline-link w-fit">Careers</span>
+                            </Link>
+                            <Link href="#">
+                                <span className="underline-link w-fit">Our Partners</span>
+                            </Link>
+                            <Link href="/contact">
+                                <span className="underline-link w-fit">Contact</span>
+                            </Link>
+                            <Link href="#">
+                                <span className="underline-link w-fit">Blog</span>
+                            </Link>
                         </div>
                     </div>
                 </div>

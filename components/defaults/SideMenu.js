@@ -218,7 +218,15 @@ function SideMenu({ MenuOpen, setMenuOpen }) {
                         </motion.h4>
                         <div className="social-links_wrapper">
                             {sideMenuSocial.map((link, index) => (
-                                <motion.div key={index} className="social-links_item" variants={socialLinkAnim} animate="animate" initial="initial">
+                                <motion.div
+                                    key={index}
+                                    className="social-links_item"
+                                    variants={socialLinkAnim}
+                                    animate="animate"
+                                    initial="initial"
+                                    whileHover={{ scale: 1.05 }}
+                                    transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}
+                                >
                                     <a href={link.href} className="underline-link" target="_blank" rel="noreferrer">
                                         {link.name}
                                     </a>

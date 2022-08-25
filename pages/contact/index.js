@@ -5,6 +5,7 @@ import { LayoutSubPages } from "../../components";
 import { MailIcon, PhoneIcon, LocationMarkerIcon, ArrowRightIcon } from "@heroicons/react/outline";
 
 import { ContactBg, ContactBgSm } from "../../constants/images";
+import { motion } from "framer-motion";
 
 function index() {
     return (
@@ -24,10 +25,38 @@ function index() {
                                 Contact us directly or write to us.
                             </p>
                             <div className="mt-3 hidden flex-row flex-wrap gap-x-7  gap-y-4 px-14 text-center text-lg font-bold text-main-900 sm:w-10/12 sm:gap-y-2.5  sm:px-0 md:flex">
-                                <a href="https://www.facebook.com/bitzquad">Facebook</a>
-                                <a href="https://twitter.com/Bitzquad">Twitter</a>
-                                <a href="https://www.instagram.com/bitzquad/">Instagram</a>
-                                <a href="https://www.linkedin.com/company/bitzquad/">LinkedIn</a>
+                                <motion.a
+                                    href="https://www.facebook.com/bitzquad"
+                                    className="underline-link"
+                                    whileHover={{ scale: 1.05 }}
+                                    transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}
+                                >
+                                    Facebook
+                                </motion.a>
+                                <motion.a
+                                    href="https://twitter.com/Bitzquad"
+                                    className="underline-link"
+                                    whileHover={{ scale: 1.05 }}
+                                    transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}
+                                >
+                                    Twitter
+                                </motion.a>
+                                <motion.a
+                                    href="https://www.instagram.com/bitzquad/"
+                                    className="underline-link"
+                                    whileHover={{ scale: 1.05 }}
+                                    transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}
+                                >
+                                    Instagram
+                                </motion.a>
+                                <motion.a
+                                    href="https://www.linkedin.com/company/bitzquad/"
+                                    className="underline-link"
+                                    whileHover={{ scale: 1.05 }}
+                                    transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}
+                                >
+                                    LinkedIn
+                                </motion.a>
                             </div>
                         </div>
                     </div>
@@ -55,28 +84,39 @@ function index() {
                                         rows={7}
                                     />
                                     <div className="flex w-full items-center justify-center">
-                                        <button className="focus:shadow-outline mt-4 flex flex-row rounded-full bg-purple-500 px-5 py-3 text-base leading-6 text-white hover:bg-purple-600 focus:outline-none">
+                                        <motion.button
+                                            className="focus:shadow-outline mt-4 flex flex-row rounded-full bg-purple-500 px-5 py-3 text-base leading-6 text-white hover:bg-purple-600 focus:outline-none"
+                                            whileHover={{ scale: 1.05 }}
+                                            transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}
+                                        >
                                             Send Message <ArrowRightIcon className="ml-2 h-6" />
-                                        </button>
+                                        </motion.button>
                                     </div>
                                 </div>
                             </div>
                             <div className="mb-0 hidden w-full border-l border-gray-400 sm:w-1/2 md:block lg:mb-56">
-                                <div className="flex h-full flex-col justify-center gap-y-4 pl-8">
-                                    <div className="felx-col flex ">
+                                <div className="flex h-full flex-col justify-center gap-y-4 pl-8 text-base">
+                                    <motion.div className="felx-col flex " whileHover={{ scale: 1.05 }} transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}>
                                         <PhoneIcon className="mr-2 h-5 w-5  text-purple-600" />
-                                        <a href="tel:1234567890">1234567890</a>
-                                    </div>
-                                    <div className="felx-col flex ">
+                                        <a href="tel:1234567890" className="underline-link">
+                                            1234567890
+                                        </a>
+                                    </motion.div>
+                                    <motion.div className="felx-col flex " whileHover={{ scale: 1.05 }} transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}>
                                         <MailIcon className="mr-2 h-5 w-5  text-purple-600" />
-                                        <a href="mailto:hello@bitzquad.com">hello@bitzquad.com</a>
-                                    </div>
-                                    <div className="felx-col flex ">
+                                        <a href="mailto:hello@bitzquad.com" className="underline-link">
+                                            hello@bitzquad.com
+                                        </a>
+                                    </motion.div>
+                                    <motion.div className="felx-col flex" whileHover={{ scale: 1.05 }} transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}>
                                         <LocationMarkerIcon className="mr-2 h-5 w-5 text-purple-600" />
-                                        <a href="https://www.google.com/maps/place/BZ+Consulting/@-6.2147,106.845,17z/data=!3m1!4b1!4m5!3m4!1s0x2e69f0f8f8f8f8f8f:0x2e69f0f8f8f8f8f8f!8m2!3d-6.2147!4d106.847">
+                                        <a
+                                            href="https://www.google.com/maps/place/BZ+Consulting/@-6.2147,106.845,17z/data=!3m1!4b1!4m5!3m4!1s0x2e69f0f8f8f8f8f8f:0x2e69f0f8f8f8f8f8f!8m2!3d-6.2147!4d106.847"
+                                            className="underline-link"
+                                        >
                                             11AS1223, Colombo 07, Sri Lanka
                                         </a>
-                                    </div>
+                                    </motion.div>
                                 </div>
                             </div>
                         </div>

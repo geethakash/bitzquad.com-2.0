@@ -19,10 +19,16 @@ function index() {
                         We admire and respect professionalism, integrity, sportsmanship, transparency and modesty. And we aspire to cultivate these qualities within the work
                         environment as we grow.
                     </p>
-                    <div className="mt-5 flex gap-x-4 text-lg">
-                        <span className="underline">All</span>
-                        <span className="underline-link">Technical</span>
-                        <span className="underline-link">Management</span>
+                    <div className="mt-16 flex gap-x-6 text-2xl">
+                        <motion.span className="underline-link" data-cursor="-opaque" whileHover={{ scale: 1.05 }} transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}>
+                            All
+                        </motion.span>
+                        <motion.span className="underline-link" data-cursor="-opaque" whileHover={{ scale: 1.05 }} transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}>
+                            Technical
+                        </motion.span>
+                        <motion.span className="underline-link" data-cursor="-opaque" whileHover={{ scale: 1.05 }} transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}>
+                            Management
+                        </motion.span>
                     </div>
                 </div>
                 <motion.div className="mb-20 grid grid-cols-2 gap-y-3 gap-x-4 md:grid-cols-3 lg:mt-20 lg:gap-y-12  lg:gap-x-12 lg:px-10">
@@ -38,7 +44,7 @@ function index() {
 export const MemberCard = ({ member, index }) => {
     return (
         <Link href={`/squad/${member.id}`}>
-            <div>
+            <motion.div data-cursor-text="click" whileHover={{ scale: 1.05 }} transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}>
                 <motion.div
                     className="relative aspect-square object-cover"
                     style={{
@@ -55,7 +61,7 @@ export const MemberCard = ({ member, index }) => {
 
                     <h5 className=" text-sm text-gray-700 lg:text-xl">{member.role.text}</h5>
                 </div>
-            </div>
+            </motion.div>
         </Link>
     );
 };
