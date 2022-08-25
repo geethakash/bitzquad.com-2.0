@@ -61,25 +61,25 @@ function index() {
                         </div>
                     </div>
                 </div>
-                <div className=" bz-container relative mt-0 mb-0 max-w-5xl translate-y-0 bg-transparent px-0 shadow-none shadow-gray-200 md:bg-white md:shadow-xl lg:mb-10 lg:-translate-y-10">
-                    <img src={ContactBg.src} className="hidden w-full md:block" />
+                <div className=" bz-container relative mt-0 mb-0 max-w-5xl bg-transparent px-0 md:bg-white">
+                    <img src={ContactBg.src} className=" hidden w-full md:block " />
                     <div className="relative top-0 left-0 right-0 bottom-0 px-5 py-10 md:absolute md:px-10">
                         <div className="flex h-full flex-row">
                             <div className="w-full p-0 sm:w-1/2 md:pr-8">
                                 <div className="flex flex-col">
                                     <h1 className="text-xl font-semibold uppercase lg:text-3xl">Get In Touch</h1>
                                     <input
-                                        className="mt-5 w-full rounded-none border border-gray-400 bg-gray-100 px-5 py-3 text-base leading-6 placeholder-gray-500 focus:border-gray-500 focus:placeholder-gray-400 focus:outline-none"
+                                        className="mt-5 w-full rounded-none border border-gray-400 px-5 py-3 text-base leading-6 placeholder-gray-500 focus:border-gray-500 focus:placeholder-gray-400 focus:outline-none"
                                         type="text"
                                         placeholder="Your Name"
                                     />
                                     <input
-                                        className="mt-5 w-full rounded-none border border-gray-400 bg-gray-100 px-5 py-3 text-base leading-6 placeholder-gray-500 focus:border-gray-500 focus:placeholder-gray-400 focus:outline-none"
+                                        className="mt-5 w-full rounded-none border border-gray-400  px-5 py-3 text-base leading-6 placeholder-gray-500 focus:border-gray-500 focus:placeholder-gray-400 focus:outline-none"
                                         type="text"
                                         placeholder="Your Email Address"
                                     />
                                     <textarea
-                                        className="mt-5 w-full rounded-none border border-gray-400 bg-gray-100 px-5 py-3 text-base leading-6 placeholder-gray-500 focus:border-gray-500 focus:placeholder-gray-400 focus:outline-none"
+                                        className="mt-5 w-full rounded-none border border-gray-400  px-5 py-3 text-base leading-6 placeholder-gray-500 focus:border-gray-500 focus:placeholder-gray-400 focus:outline-none"
                                         placeholder="Message"
                                         rows={7}
                                     />
