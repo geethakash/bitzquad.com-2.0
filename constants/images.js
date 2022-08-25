@@ -35,6 +35,11 @@ export { default as ArtDirectorRole } from '../assets/images/squad/role/art-dire
 export { default as ManagementRole } from '../assets/images/squad/role/management-bg-text.svg';
 
 // about us images
-export { default as About1 } from '../assets/images/about/1.svg';
-export { default as About2 } from '../assets/images/about/2.svg';
-export { default as About3 } from '../assets/images/about/3.svg';
+export { default as About1 } from "../assets/images/about/1.svg";
+export { default as About2 } from "../assets/images/about/2.svg";
+export { default as About3 } from "../assets/images/about/3.svg";
+
+// contact us images
+export { default as ContactBg } from "../assets/images/contact/bg.svg";
+export { default as ContactBgSm } from "../assets/images/contact/bg-sm.svg";
+
