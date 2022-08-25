@@ -1,5 +1,6 @@
 import React from "react";
 import { LogoDark, Logo } from "../../constants/images";
+import Link from "next/link";
 
 function Footer() {
     return (
@@ -31,16 +32,16 @@ function Footer() {
                 <div className="w-full sm:w-1/2">
                     <div className="relative ml-0 mr-auto flex w-full flex-row justify-evenly sm:w-9/12 lg:w-8/12">
                         <div className="mt-3 flex  flex-col flex-wrap gap-x-7 gap-y-2 text-center text-xl  sm:text-left lg:text-2xl">
-                            <a href="#services">Services</a>
-                            <a href="/about">About</a>
-                            <a href="/projects">Projects</a>
-                            <a href="/squad">Squad</a>
+                            <Link href="#services">Services</Link>
+                            <Link href="/about">About</Link>
+                            <Link href="/projects">Projects</Link>
+                            <Link href="/squad">Squad</Link>
                         </div>
                         <div className="mt-3 flex flex-col flex-wrap gap-x-7 gap-y-2 text-center text-xl sm:text-left lg:text-2xl">
-                            <a href="#">Careers</a>
-                            <a href="#">Our Partners</a>
-                            <a href="/contact">Contact</a>
-                            <a href="#">Blog</a>
+                            <Link href="#">Careers</Link>
+                            <Link href="#">Our Partners</Link>
+                            <Link href="/contact">Contact</Link>
+                            <Link href="#">Blog</Link>
                         </div>
                     </div>
                 </div>
