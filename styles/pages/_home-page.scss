@@ -194,6 +194,29 @@
   }
 }
 
+// project section
+.project-section {
+  &-wrapper {
+    @apply relative overflow-hidden;
+  }
+  &-content {
+    @apply py-20 pb-32 lg:pb-52;
+    background: linear-gradient(
+      159.29deg,
+      #ffffff 25.86%,
+      rgba(255, 255, 255, 0) 77.78%
+    );
+
+    & h3 {
+      @apply text-3xl font-semibold md:text-4xl  lg:text-5xl 2xl:text-6xl;
+    }
+    & p {
+      line-height: 150% !important;
+      @apply w-full pt-8  text-lg text-slate-800 lg:w-1/2 lg:text-xl 2xl:text-3xl;
+    }
+  }
+}
+
 // partners section
 .partners {
   &_container {

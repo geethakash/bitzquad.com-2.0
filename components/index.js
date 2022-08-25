@@ -18,3 +18,4 @@ export { default as Testimonials } from './home/Testimonials';
 export { default as Collaborate } from './home/Collaborate';
 export { default as Services } from './home/Services';
 export { default as OurPartners } from './home/OurPartners';
+export { default as ProjectSection } from './home/ProjectSection';
