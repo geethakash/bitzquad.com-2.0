@@ -15,7 +15,7 @@ function index() {
                     <div className="bz-container relative mx-auto mt-0 h-auto w-full max-w-7xl py-8 md:py-16 lg:py-28 ">
                         <div className=" py-10 lg:py-0">
                             <h1 className="text-3xl font-semibold uppercase lg:text-5xl">CONTACT US</h1>
-                            <p className="mt-4 text-sm font-semibold leading-6 tracking-widest text-gray-500 lg:mt-5 lg:text-xl xl:w-8/12">
+                            <p className="mt-4 text-sm font-semibold leading-6 tracking-widest text-gray-700 lg:mt-5 lg:text-xl xl:w-8/12">
                                 Here you are!<br></br>
                                 It was well worth the wait. Let&lsquo;s get started.
                                 <br></br>

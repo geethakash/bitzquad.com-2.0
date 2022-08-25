@@ -47,7 +47,7 @@ function Footer() {
                 </div>
             </div>
             <div className="flex flex-col items-center justify-center border-t border-gray-400 py-5">
-                <p className="text-center text-gray-500">
+                <p className="text-center text-gray-700">
                     © {new Date().getFullYear()}{" "}
                     <a href="https://bitzquad.com" className="text-sm text-blue-600">
                         Bitzquad

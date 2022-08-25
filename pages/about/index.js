@@ -9,7 +9,7 @@ function index() {
             <div className="bz-container relative mx-auto mt-0 h-full w-full bg-gray-50 md:bg-transparent lg:mt-52" data-scroll-section>
                 <div className=" py-10 lg:py-0">
                     <h1 className="text-3xl font-semibold uppercase lg:text-5xl">About Us</h1>
-                    <p className="mt-4 text-sm font-semibold leading-6 tracking-widest text-gray-500 lg:mt-5 lg:text-xl xl:w-10/12">
+                    <p className="mt-4 text-sm font-semibold leading-6 tracking-widest text-gray-700 lg:mt-5 lg:text-xl xl:w-10/12">
                         We are a booming start-up in the tech ecosystem, based in Sri Lanka, focusing on providing diverse solutions in information systems, business process
                         re-engineering, Branding and Digital Marketing and E-Business services in both local and international markets.<br></br> <br></br>
                         Our passionate and competent team is keen to bring futuristic and pragmatic solutions that transcend your expectations. We believe our purpose is to upscale

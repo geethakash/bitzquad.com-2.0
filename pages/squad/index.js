@@ -13,7 +13,7 @@ function index() {
             <div data-scroll-section className="bz-container relative mx-auto mt-0 h-full w-full bg-gray-50 md:bg-transparent lg:mt-52">
                 <div className=" py-10 lg:px-10 lg:py-0">
                     <h1 className="text-3xl font-semibold lg:text-5xl">Our Squad</h1>
-                    <p className="mt-4 text-sm font-semibold leading-6 tracking-widest text-gray-500 lg:mt-5 lg:text-xl xl:w-7/12">
+                    <p className="mt-4 text-sm font-semibold leading-6 tracking-widest text-gray-700 lg:mt-5 lg:text-xl xl:w-7/12">
                         Meet our squad that makes your digital experience better with solutions beyond technology. <br></br>
                         <br></br>
                         We admire and respect professionalism, integrity, sportsmanship, transparency and modesty. And we aspire to cultivate these qualities within the work
@@ -53,7 +53,7 @@ export const MemberCard = ({ member, index }) => {
                         {member.firstName} {member.lastName}
                     </h3>
 
-                    <h5 className=" text-sm text-gray-500 lg:text-xl">{member.role.text}</h5>
+                    <h5 className=" text-sm text-gray-700 lg:text-xl">{member.role.text}</h5>
                 </div>
             </div>
         </Link>
