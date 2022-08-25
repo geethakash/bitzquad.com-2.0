@@ -55,7 +55,7 @@ function Services() {
                             </div>
                             <div className="card">
                                 <h4 className="card_title">Brand Designing & Digital Marketing</h4>
-                                <p className="card_text">The aesthetic representation of a brand's positioning and personality is found in its visual identity.</p>
+                                <p className="card_text">The aesthetic representation of a brand&apos;s positioning and personality is found in its visual identity.</p>
                                 <button className="card_button">read more</button>
                             </div>
                         </div>

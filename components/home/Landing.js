@@ -64,7 +64,7 @@ function Landing({ loading }) {
                             <br></br>
                             <br></br>
                             We strive to provide sustaining digital solutions in Information Systems, Business Process Re-engineering, Branding and Digital Marketing, and
-                            E-Business services that serve our stakeholders' best interests.
+                            E-Business services that serve our stakeholders&apos; best interests.
                         </motion.p>
                     </div>
                 </div>
