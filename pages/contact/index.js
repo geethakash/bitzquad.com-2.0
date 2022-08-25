@@ -36,17 +36,17 @@ function index() {
                                 <div className="flex flex-col">
                                     <h1 className="text-xl font-semibold uppercase lg:text-3xl">Get In Touch</h1>
                                     <input
-                                        className="mt-5 w-full rounded-none bg-gray-100 px-5 py-3 text-base leading-6 placeholder-gray-500 focus:border-gray-500 focus:placeholder-gray-400 focus:outline-none"
+                                        className="mt-5 w-full rounded-none border border-gray-400 bg-gray-100 px-5 py-3 text-base leading-6 placeholder-gray-500 focus:border-gray-500 focus:placeholder-gray-400 focus:outline-none"
                                         type="text"
                                         placeholder="Your Name"
                                     />
                                     <input
-                                        className="mt-5 w-full rounded-none bg-gray-100 px-5 py-3 text-base leading-6 placeholder-gray-500 focus:border-gray-500 focus:placeholder-gray-400 focus:outline-none"
+                                        className="mt-5 w-full rounded-none border border-gray-400 bg-gray-100 px-5 py-3 text-base leading-6 placeholder-gray-500 focus:border-gray-500 focus:placeholder-gray-400 focus:outline-none"
                                         type="text"
                                         placeholder="Your Email Address"
                                     />
                                     <textarea
-                                        className="mt-5 w-full rounded-none bg-gray-100 px-5 py-3 text-base leading-6 placeholder-gray-500 focus:border-gray-500 focus:placeholder-gray-400 focus:outline-none"
+                                        className="mt-5 w-full rounded-none border border-gray-400 bg-gray-100 px-5 py-3 text-base leading-6 placeholder-gray-500 focus:border-gray-500 focus:placeholder-gray-400 focus:outline-none"
                                         placeholder="Message"
                                         rows={7}
                                     />
