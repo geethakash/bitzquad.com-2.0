@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import { LayoutSubPages } from "../../components";
-import about from "../../constants/about";
 
 import { MailIcon, PhoneIcon, LocationMarkerIcon, ArrowRightIcon } from "@heroicons/react/outline";
 
@@ -16,14 +15,19 @@ function index() {
                     <div className="bz-container relative mx-auto mt-0 h-auto w-full max-w-7xl py-8 md:py-16 lg:py-28 ">
                         <div className=" py-10 lg:py-0">
                             <h1 className="text-3xl font-semibold uppercase lg:text-5xl">CONTACT US</h1>
-                            <p className="mt-4 text-sm font-semibold leading-6 tracking-widest text-gray-500 lg:mt-5 lg:text-xl xl:w-7/12">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt consectetur
+                            <p className="mt-4 text-sm font-semibold leading-6 tracking-widest text-gray-500 lg:mt-5 lg:text-xl xl:w-8/12">
+                                Here you are!<br></br>
+                                It was well worth the wait. Let&lsquo;s get started.
+                                <br></br>
+                                <br></br>
+                                Want to inquire about your new project or get to know us better?<br></br>
+                                Contact us directly or write to us.
                             </p>
                             <div className="mt-3 hidden flex-row flex-wrap gap-x-7  gap-y-4 px-14 text-center text-lg font-bold text-main-900 sm:w-10/12 sm:gap-y-2.5  sm:px-0 md:flex">
-                                <a href="#">Facebook</a>
-                                <a href="#">Twitter</a>
-                                <a href="#">Instagram</a>
-                                <a href="#">LinkedIn</a>
+                                <a href="https://www.facebook.com/bitzquad">Facebook</a>
+                                <a href="https://twitter.com/Bitzquad">Twitter</a>
+                                <a href="https://www.instagram.com/bitzquad/">Instagram</a>
+                                <a href="https://www.linkedin.com/company/bitzquad/">LinkedIn</a>
                             </div>
                         </div>
                     </div>
