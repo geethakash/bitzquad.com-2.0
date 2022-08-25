@@ -24,10 +24,10 @@ function index() {
                                 Contact us directly or write to us.
                             </p>
                             <div className="mt-3 hidden flex-row flex-wrap gap-x-7  gap-y-4 px-14 text-center text-lg font-bold text-main-900 sm:w-10/12 sm:gap-y-2.5  sm:px-0 md:flex">
-                                <a href="#">Facebook</a>
-                                <a href="#">Twitter</a>
-                                <a href="#">Instagram</a>
-                                <a href="#">LinkedIn</a>
+                                <a href="https://www.facebook.com/bitzquad">Facebook</a>
+                                <a href="https://twitter.com/Bitzquad">Twitter</a>
+                                <a href="https://www.instagram.com/bitzquad/">Instagram</a>
+                                <a href="https://www.linkedin.com/company/bitzquad/">LinkedIn</a>
                             </div>
                         </div>
                     </div>

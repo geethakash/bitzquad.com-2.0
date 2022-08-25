@@ -4,7 +4,7 @@ import { ServicesImg } from "../../constants/images";
 
 function Services() {
     return (
-        <div className="services_">
+        <div className="services_" id="services">
             <div className="services__bgwrapper">
                 <div className="services__content_wrapper mt-0">
                     <motion.h3
