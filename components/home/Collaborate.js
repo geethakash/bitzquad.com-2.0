@@ -40,8 +40,9 @@ function Collaborate() {
                     >
                         <div className="collaborate__content_text">
                             <p>
-                                We are passionate to build new digital products for a better future by collaborating with new clients. If you have an idea to create a new digital
-                                product for your business needs or any other questions, inquire us. Our team/specialists are always available to help you.
+                                Got an innovative idea? Need tech support to make it a reality?<br></br>We got you.<br></br>
+                                <br></br>Bitzquad has a capable team passionate about developing apt and innovative digital solutions through collaborations which take you through
+                                an unmatched digital journey.<br></br>Your query is one tap away.
                             </p>
                             {/* <button className="talk-btn">Let&quot;s Talk</button> */}
                             <Button className="talk-btn" parentClassName="px-0">
