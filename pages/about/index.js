@@ -1,73 +1,124 @@
-import React from 'react';
-import Link from 'next/link';
-import { LayoutSubPages } from '../../components';
-import about from '../../constants/about';
+import React from "react";
+import Link from "next/link";
+import { LayoutSubPages } from "../../components";
+import { About1, About2, About3 } from "../../constants/images";
 
 function index() {
-  return (
-    <LayoutSubPages>
-      <div
-        className="bz-container relative mx-auto mt-0 h-full w-full bg-gray-50 md:bg-transparent lg:mt-52"
-        data-scroll-section
-      >
-        <div className=" py-10 lg:py-0">
-          <h1 className="text-3xl font-semibold uppercase lg:text-5xl">
-            About Us
-          </h1>
-          <p className="mt-4 text-sm font-semibold leading-6 tracking-widest text-gray-500 lg:mt-5 lg:text-xl xl:w-7/12">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt consectetur
-          </p>
-        </div>
-        <div className="py-10 lg:pb-52 lg:pt-32">
-          {about.map((project, index) => (
-            <div
-              key={index}
-              className={`mb-10 flex  w-full flex-col-reverse  lg:mb-24 ${
-                index % 2 == 1 ? 'md:flex-row-reverse' : 'md:flex-row'
-              }`}
-            >
-              <div
-                style={{
-                  background: 'rgb(249, 250, 251)',
-                  background:
-                    'linear-gradient(90deg, rgba(249, 250, 251,1) 0%, rgba(249, 250, 251,1) 50%, rgba(255,255,255,0) 100%)',
-                }}
-                className={`relative z-10 flex h-80 flex-col pt-4 pb-14 md:z-auto md:h-auto  md:w-1/2 md:bg-none lg:mt-0 lg:pb-0  ${
-                  index % 2 == 1 ? 'ml-0 md:ml-10' : ''
-                }`}
-              >
-                <h3 className=" mb-2 text-xl font-semibold tracking-widest first-letter:capitalize lg:text-2xl 2xl:text-3xl ">
-                  {project.t1}
-                </h3>
-                <h3 className=" text-2xl font-semibold tracking-widest first-letter:capitalize lg:text-3xl 2xl:text-4xl  ">
-                  {project.t2}
-                </h3>
-                <p className="mt-1 mr-auto text-sm md:mr-4 md:text-lg lg:mt-2 lg:w-10/12 2xl:mt-4 2xl:text-xl">
-                  {project.description}
-                </p>
-
-                <img
-                  src={project.imgtxt}
-                  className="absolute bottom-4 w-8/12  md:left-8 md:w-auto md:scale-x-110"
-                  alt={project.name}
-                />
-              </div>
-              <div className="relative md:w-1/2 lg:aspect-[9/6]">
-                <div className="bottom-1/2 w-full overflow-hidden md:h-full lg:aspect-[8/7] lg:h-auto  ">
-                  <img
-                    src={project.image}
-                    className="absolute left-auto right-0 h-80  w-7/12 object-cover sm:w-full md:relative md:h-full lg:aspect-[4/5] lg:h-auto"
-                    alt={project.name}
-                  />
+    return (
+        <LayoutSubPages>
+            <div className="bz-container relative mx-auto mt-0 h-full w-full bg-gray-50 md:bg-transparent lg:mt-52" data-scroll-section>
+                <div className=" py-10 lg:py-0">
+                    <h1 className="text-3xl font-semibold uppercase lg:text-5xl">About Us</h1>
+                    <p className="mt-4 text-sm font-semibold leading-6 tracking-widest text-gray-500 lg:mt-5 lg:text-xl xl:w-10/12">
+                        We are a booming start-up in the tech ecosystem, based in Sri Lanka, focusing on providing diverse solutions in information systems, business process
+                        re-engineering, Branding and Digital Marketing and E-Business services in both local and international markets.<br></br> <br></br>
+                        Our passionate and competent team is keen to bring futuristic and pragmatic solutions that transcend your expectations. We believe our purpose is to upscale
+                        the value of ideas of our clients and prospects. <br></br> <br></br>
+                        Our solution-oriented strategies support us in gathering the right resources at the right time for the right purpose.
+                    </p>
                 </div>
-              </div>
+                <div className="py-10 lg:pb-52 lg:pt-32">
+                    <div className="mb-10 flex  w-full flex-col-reverse  md:flex-row lg:mb-24">
+                        <div
+                            style={{
+                                background: "rgb(249, 250, 251)",
+                                background: "linear-gradient(90deg, rgba(249, 250, 251,1) 0%, rgba(249, 250, 251,1) 50%, rgba(255,255,255,0) 100%)",
+                            }}
+                            className="relative z-10 flex h-80 flex-col pt-4 pb-14 md:z-auto md:h-auto  md:w-1/2 md:bg-none lg:mt-0 lg:pb-0  "
+                        >
+                            <h3 className=" mb-2 text-xl font-semibold tracking-widest first-letter:capitalize lg:text-2xl 2xl:text-3xl ">We are a team of </h3>
+                            <h3 className=" text-2xl font-semibold tracking-widest first-letter:capitalize lg:text-3xl 2xl:text-4xl ">Solutions</h3>
+                            <p className="mt-1 mr-auto text-sm text-gray-700 md:mr-4 md:text-lg lg:mt-2 lg:w-10/12 2xl:mt-4 2xl:text-xl">
+                                Team Bitzquad has a shared vision to deliver satisfactory tech solutions which create value for our clients and prospects.<br></br> <br></br>
+                                The team&apos;s cultural diversity, skills, knowledge, sense of work ethics, and ability to think outside the box don&apos;t fail to bring unique
+                                perspectives to the table to provide viable solutions for your tech needs. <br></br> <br></br>
+                                As a team with a clear vision, we value the power of unity, learning and growth, and revelling small steps of the journey ahead.
+                            </p>
+                            <img src={About1.src} className="absolute bottom-4 w-8/12 md:left-8 md:w-auto md:scale-x-110" />
+                        </div>
+                        <div className="relative md:w-1/2 lg:aspect-[9/6]">
+                            <div className="bottom-1/2 w-full overflow-hidden md:h-full lg:aspect-[8/7] lg:h-auto ">
+                                <img
+                                    src="https://images.news18.com/ibnlive/uploads/2022/01/office-2-16430115503x2.jpg?impolicy=website&amp;width=510&amp;height=356"
+                                    className="absolute left-auto right-0 h-80 w-7/12 object-cover sm:w-full md:relative md:h-full lg:aspect-[4/5] lg:h-auto"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="mb-10 flex  w-full flex-col-reverse  md:flex-row-reverse lg:mb-24">
+                        <div
+                            style={{
+                                background: "rgb(249, 250, 251)",
+                                background: "linear-gradient(90deg, rgba(249, 250, 251,1) 0%, rgba(249, 250, 251,1) 50%, rgba(255,255,255,0) 100%)",
+                            }}
+                            className="relative z-10 ml-0 flex h-80 flex-col pt-4 pb-14 md:z-auto  md:ml-10 md:h-auto md:w-1/2 md:bg-none  lg:mt-0 lg:pb-0"
+                        >
+                            <h3 className=" mb-2 text-xl font-semibold tracking-widest first-letter:capitalize lg:text-2xl 2xl:text-3xl ">We elevate your</h3>
+                            <h3 className=" text-2xl font-semibold tracking-widest first-letter:capitalize lg:text-3xl 2xl:text-4xl ">Inspiration</h3>
+                            <p className="mt-1 mr-auto text-sm text-gray-700 md:mr-4 md:text-lg lg:mt-2 lg:w-10/12 2xl:mt-4 2xl:text-xl">
+                                We elevate your abstract concept into a reality with an agile mindset. And we use the latest technologies and tools to make the products better,
+                                reliable, faster, and secure in the rapidly changing technological environment. <br></br> <br></br>
+                                Scrum directs team Bitzquad to deliver a high-quality output that ensures the meeting of minds of our clients. We tailor the framework to assure the
+                                smooth functioning of the entire project, enhancing our products&apos; efficiency and effectiveness while actively engaging the client throughout
+                                the journey. Along with the scrum, we use the following latest technologies and tools to build our products recognized by professionals in the
+                                industry:
+                            </p>
+                            <img src={About2.src} className="absolute bottom-4 w-8/12 md:left-8 md:w-auto md:scale-x-110" />
+                        </div>
+                        <div className="relative md:w-1/2 lg:aspect-[9/6]">
+                            <div className="bottom-1/2 w-full overflow-hidden md:h-full lg:aspect-[8/7] lg:h-auto ">
+                                <img
+                                    src="https://www.is2.de/wp-content/uploads/angular-kompetenzen-is2.jpg"
+                                    className="absolute left-auto right-0 h-80 w-7/12 object-cover sm:w-full md:relative md:h-full lg:aspect-[4/5] lg:h-auto"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="mb-10 flex  w-full flex-col-reverse  md:flex-row lg:mb-24">
+                        <div
+                            style={{
+                                background: "rgb(249, 250, 251)",
+                                background: "linear-gradient(90deg, rgba(249, 250, 251,1) 0%, rgba(249, 250, 251,1) 50%, rgba(255,255,255,0) 100%)",
+                            }}
+                            className="relative z-10 flex h-80 flex-col pt-4 pb-14 md:z-auto md:h-auto  md:w-1/2 md:bg-none lg:mt-0 lg:pb-0  "
+                        >
+                            <h3 className=" mb-2 text-xl font-semibold tracking-widest first-letter:capitalize lg:text-2xl 2xl:text-3xl ">You may also be </h3>
+                            <h3 className=" text-2xl font-semibold tracking-widest first-letter:capitalize lg:text-3xl 2xl:text-4xl ">Interested In...</h3>
+                            <p className="mt-1 mr-auto flex flex-col text-sm text-gray-700 md:mr-4 md:text-lg lg:mt-2 lg:w-10/12 2xl:mt-4 2xl:text-xl">
+                                <span className="mb-1 font-semibold">Sustainability</span>
+                                Bitzquad focuses on providing the services while being conscious of the effect of our products on the ecology, environment and society, which are
+                                three pillars of sustainability. We strive to create digital solutions that sustain better conditions for future generations.<br></br>
+                                <br></br>
+                                <span className="mb-1 font-semibold">Agility</span>
+                                We aim to persevere with the changes in both internal and external environments and move on quickly with collective decisions.<br></br> <br></br>
+                                <span className="mb-1 font-semibold">Customer-Centric Culture</span>
+                                Bitzquad prioritizes the best processes and practices for our clients and prospects to create a positive and flourishing experience for them.
+                                <br></br> <br></br>
+                                <span className="mb-1 font-semibold">Passion</span>
+                                Our team is a passion-driven team, where we are assertive in the work we are involved in, which empowers us to create tremendous value for the
+                                company.<br></br> <br></br>
+                                <span className="mb-1 font-semibold">Collaboration</span>
+                                As a team, we value the active participation and inclusiveness of our partners and clients in our projects because it leverages the value of the
+                                outcome through their skills, experience and perspectives.<br></br> <br></br>
+                                <span className="mb-1 font-semibold">Innovation</span>
+                                The core of the Bitzquad is to differentiate the processes using the latest technologies and tools to make the product&apos;s user experience
+                                positive and closer to them.
+                            </p>
+                            <img src={About3.src} className="absolute bottom-4 w-8/12 md:left-8 md:w-auto md:scale-x-110" />
+                        </div>
+                        <div className="relative md:w-1/2 lg:aspect-[9/6]">
+                            <div className="bottom-1/2 w-full overflow-hidden md:h-full lg:aspect-[8/7] lg:h-auto ">
+                                <img
+                                    src="https://userneeds.com/wp-content/uploads/2020/06/U_Plus_Profile_user.jpg"
+                                    className="absolute left-auto right-0 h-80 w-7/12 object-cover sm:w-full md:relative md:h-full lg:aspect-[4/5] lg:h-auto"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          ))}
-        </div>
-      </div>
-    </LayoutSubPages>
-  );
+        </LayoutSubPages>
+    );
 }
 
 export default index;
