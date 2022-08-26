@@ -6,7 +6,7 @@ import { About1, About2, About3 } from "../../constants/images";
 function index() {
     return (
         <LayoutSubPages>
-            <div className="bz-container relative mx-auto mt-0 h-full w-full bg-gray-50 md:bg-transparent lg:mt-52" data-scroll-section>
+            <div className="bz-container relative mx-auto mt-0 h-full w-full bg-gray-50 md:bg-transparent lg:mt-44" data-scroll-section>
                 <div className=" py-10 lg:py-0">
                     <h1 className="text-3xl font-semibold uppercase lg:text-5xl">About Us</h1>
                     <p className="mt-4 text-sm font-semibold leading-6 tracking-widest text-gray-700 lg:mt-5 lg:text-xl xl:w-10/12">
@@ -17,7 +17,7 @@ function index() {
                         Our solution-oriented strategies support us in gathering the right resources at the right time for the right purpose.
                     </p>
                 </div>
-                <div className="py-10 lg:pb-52 lg:pt-32">
+                <div className="mb-20 pt-10 lg:pt-32  ">
                     <div className="mb-10 flex  w-full flex-col-reverse  md:flex-row lg:mb-24">
                         <div
                             style={{

@@ -76,14 +76,16 @@ function index({ member }) {
                     >
                         {member.social.map((social, index) => (
                             <motion.span variants={socialLinkAnim} key={index} className=" pr-8 2xl:pr-10">
-                                <a
+                                <motion.a
                                     href={social.url}
                                     rel="noreferrer"
                                     target="_blank"
                                     className="underline-link text-purple-500 transition-colors duration-500 hover:text-purple-700"
+                                    whileHover={{ scale: 1.05 }}
+                                    transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}
                                 >
                                     {social.name}
-                                </a>
+                                </motion.a>
                             </motion.span>
                         ))}
                     </motion.div>
