@@ -61,9 +61,9 @@ function index() {
                         </div>
                     </div>
                 </div>
-                <div className=" bz-container relative mt-0 mb-0 max-w-5xl bg-transparent px-0 md:bg-white">
-                    <img src={ContactBg.src} className=" hidden w-full md:block " />
-                    <div className="relative top-0 left-0 right-0 bottom-0 px-5 py-10 md:absolute md:px-10">
+                <div className=" relative mt-0 mb-20 bg-transparent px-0 md:bg-white lg:mb-0">
+                    <img src={ContactBg.src} className=" absolute top-0 left-0 hidden w-full md:block " />
+                    <div className="bz-container relative mt-0 mb-0 max-w-7xl px-5 md:px-10 md:pt-20 lg:py-20">
                         <div className="flex h-full flex-row">
                             <div className="w-full p-0 sm:w-1/2 md:pr-8">
                                 <div className="flex flex-col">
