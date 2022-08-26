@@ -46,7 +46,7 @@ function Services() {
                                 </motion.button>
                             </div>
                             <div className="card">
-                                <h4 className="card_title">Business Process Reengineering</h4>
+                                <h4 className="card_title">Business Process Re-Engineering</h4>
                                 <p className="card_text">Processes that are simple and optimized are preferable to those that are convoluted and complex.</p>
                                 <motion.button className="card_button" whileHover={{ scale: 1.05 }} transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}>
                                     read more

@@ -11,7 +11,7 @@ function index() {
     return (
         <LayoutSubPages>
             <div data-scroll-section className="bz-container relative mx-auto mt-0 h-full w-full bg-gray-50 md:bg-transparent lg:mt-44">
-                <div className=" py-10 lg:px-10 lg:py-0">
+                <div className=" py-10 lg:px-5 lg:py-0">
                     <h1 className="text-3xl font-semibold lg:text-5xl">Our Squad</h1>
                     <p className="mt-4 text-sm font-semibold leading-6 tracking-widest text-gray-700 lg:mt-5 lg:text-xl xl:w-7/12">
                         Meet our squad that makes your digital experience better with solutions beyond technology. <br></br>
