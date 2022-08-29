@@ -55,11 +55,11 @@ function Navbar({ animated = false }) {
                             About
                         </span>
                     </Link>
-                    <Link href="#services">
-                        <span className="navbar-link underline-link" data-cursor="-opaque">
-                            Services
-                        </span>
-                    </Link>
+
+                    <a href="#services" data-scroll-to className="navbar-link underline-link" data-cursor="-opaque">
+                        Services
+                    </a>
+
                     <Link href="/contact">
                         <span className="navbar-link underline-link" data-cursor="-opaque">
                             Contact
