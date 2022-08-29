@@ -13,7 +13,7 @@ const types = [
     { name: "Management", value: 1 },
 ];
 
-function index() {
+const Index = () => {
     const [selCat, setSelCat] = useState(-1);
     return (
         <LayoutSubPages>
@@ -29,6 +29,7 @@ function index() {
                     <div className="mt-16 flex gap-x-6 text-2xl">
                         {types.map((v) => (
                             <motion.span
+                                key={v.value}
                                 className={v.value == selCat ? "underline" : "underline-link"}
                                 data-cursor="-opaque"
                                 whileHover={{ scale: 1.05 }}
@@ -50,7 +51,7 @@ function index() {
             </div>
         </LayoutSubPages>
     );
-}
+};
 
 export const MemberCard = ({ member, index }) => {
     return (
@@ -77,4 +78,4 @@ export const MemberCard = ({ member, index }) => {
     );
 };
 
-export default index;
+export default Index;
