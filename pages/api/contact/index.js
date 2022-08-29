@@ -3,6 +3,7 @@ import mongodb from "../../../middleware/mongodb";
 import Contact from "../../../constants/schemas/contact";
 import Transmit from "../../../constants/Transmit";
 import request from "../../../middleware/request";
+import queryparser from "../../../middleware/queryparser";
 
 /*  API Route Handler    */
 export default async function handler(req, res) {

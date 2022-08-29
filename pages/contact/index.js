@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, Fragment } from "react";
+import { Dialog, Transition } from "@headlessui/react";
 import Link from "next/link";
 import { LayoutSubPages } from "../../components";
 
-import { MailIcon, PhoneIcon, LocationMarkerIcon, ArrowRightIcon } from "@heroicons/react/outline";
+import { MailIcon, PhoneIcon, LocationMarkerIcon, ArrowRightIcon, CheckIcon } from "@heroicons/react/outline";
 
 import { ContactBg, ContactBgSm } from "../../constants/images";
 import { motion } from "framer-motion";
@@ -16,12 +17,18 @@ const Index = () => {
 
     const [showSuccess, setShowSuccess] = useState(false);
     const [showError, setShowError] = useState(false);
+    const [loading, setLoading] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const res = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/contact`, { name: Name, email: Email, message: Msg });
+        setLoading(true);
+        const res = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/contact`, { data: { name: Name, email: Email, message: Msg } });
         setShowSuccess(res.status >= 200 && res.status < 300);
         setShowError(!(res.status >= 200 && res.status < 300));
+        setLoading(false);
+        setName("");
+        setEmail("");
+        setMsg("");
     };
 
     return (
@@ -151,6 +158,116 @@ const Index = () => {
                     </div>
                 </div>
             </LayoutSubPages>
+            <Transition.Root show={showSuccess} as={Fragment}>
+                <Dialog as="div" className="relative z-10" onClose={setShowSuccess}>
+                    <Transition.Child
+                        as={Fragment}
+                        enter="ease-out duration-300"
+                        enterFrom="opacity-0"
+                        enterTo="opacity-100"
+                        leave="ease-in duration-200"
+                        leaveFrom="opacity-100"
+                        leaveTo="opacity-0"
+                    >
+                        <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+                    </Transition.Child>
+
+                    <div className="fixed inset-0 z-10 overflow-y-auto">
+                        <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                            <Transition.Child
+                                as={Fragment}
+                                enter="ease-out duration-300"
+                                enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                                enterTo="opacity-100 translate-y-0 sm:scale-100"
+                                leave="ease-in duration-200"
+                                leaveFrom="opacity-100 translate-y-0 sm:scale-100"
+                                leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                            >
+                                <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-sm sm:p-6">
+                                    <div>
+                                        <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-gray-100">
+                                            <CheckIcon className="h-6 w-6 text-gray-600" aria-hidden="true" />
+                                        </div>
+                                        <div className="mt-3 text-center sm:mt-5">
+                                            <Dialog.Title as="h3" className="text-lg font-medium leading-6 text-gray-900">
+                                                Details Sent!
+                                            </Dialog.Title>
+                                            <div className="mt-2">
+                                                <p className="text-sm text-gray-500">One of our team member will contact you within 24 hours.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="mt-5 sm:mt-6">
+                                        <button
+                                            disabled={loading}
+                                            type="button"
+                                            className="inline-flex w-full justify-center rounded-md border border-transparent bg-black px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 sm:text-sm"
+                                            onClick={() => setShowSuccess(false)}
+                                        >
+                                            Done
+                                        </button>
+                                    </div>
+                                </Dialog.Panel>
+                            </Transition.Child>
+                        </div>
+                    </div>
+                </Dialog>
+            </Transition.Root>
+            <Transition.Root show={showError} as={Fragment}>
+                <Dialog as="div" className="relative z-10" onClose={setShowError}>
+                    <Transition.Child
+                        as={Fragment}
+                        enter="ease-out duration-300"
+                        enterFrom="opacity-0"
+                        enterTo="opacity-100"
+                        leave="ease-in duration-200"
+                        leaveFrom="opacity-100"
+                        leaveTo="opacity-0"
+                    >
+                        <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+                    </Transition.Child>
+
+                    <div className="fixed inset-0 z-10 overflow-y-auto">
+                        <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                            <Transition.Child
+                                as={Fragment}
+                                enter="ease-out duration-300"
+                                enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                                enterTo="opacity-100 translate-y-0 sm:scale-100"
+                                leave="ease-in duration-200"
+                                leaveFrom="opacity-100 translate-y-0 sm:scale-100"
+                                leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                            >
+                                <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-sm sm:p-6">
+                                    <div>
+                                        <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-gray-100">
+                                            <CheckIcon className="h-6 w-6 text-gray-600" aria-hidden="true" />
+                                        </div>
+                                        <div className="mt-3 text-center sm:mt-5">
+                                            <Dialog.Title as="h3" className="text-lg font-medium leading-6 text-gray-900">
+                                                Failed To Send Details!
+                                            </Dialog.Title>
+                                            <div className="mt-2">
+                                                <p className="text-sm text-gray-500">Make sure you have a proper internet connection and try again.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="mt-5 sm:mt-6">
+                                        <button
+                                            disabled={loading}
+                                            type="button"
+                                            className="inline-flex w-full justify-center rounded-md border border-transparent bg-black px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-700 focus:ring-offset-2 sm:text-sm"
+                                            onClick={() => setShowError(false)}
+                                        >
+                                            Got it
+                                        </button>
+                                    </div>
+                                </Dialog.Panel>
+                            </Transition.Child>
+                        </div>
+                    </div>
+                </Dialog>
+            </Transition.Root>
         </>
     );
 };
