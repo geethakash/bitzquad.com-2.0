@@ -51,7 +51,7 @@ function Navbar({ animated = false }) {
                 </Link>
                 <div className="navbar-links">
                     <Link href="/about">
-                        <span className="navbar-link underline-link" data-cursor="-opaque">
+                        <span className="navbar-link underline-link cursor-pointer" data-cursor="-opaque">
                             About
                         </span>
                     </Link>
@@ -61,7 +61,7 @@ function Navbar({ animated = false }) {
                     </a>
 
                     <Link href="/contact">
-                        <span className="navbar-link underline-link" data-cursor="-opaque">
+                        <span className="navbar-link underline-link cursor-pointer" data-cursor="-opaque">
                             Contact
                         </span>
                     </Link>

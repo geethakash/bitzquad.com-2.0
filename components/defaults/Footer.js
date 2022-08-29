@@ -54,32 +54,32 @@ function Footer() {
                 </div>
                 <div className="w-full sm:w-1/2">
                     <div className="relative ml-0 mr-auto flex w-full flex-row justify-evenly sm:w-9/12 lg:w-8/12">
-                        <div className="mt-3 flex  flex-col flex-wrap gap-x-7 gap-y-2 text-center text-xl  sm:text-left lg:text-2xl">
-                            <Link href="#services">
-                                <span className="underline-link w-fit">Services</span>
-                            </Link>
+                        <div className="mt-3 flex  flex-col flex-wrap gap-x-7 gap-y-2 text-center text-xl  sm:text-left lg:text-2xl ">
+                            <a href="#services" className="underline-link w-fit cursor-pointer" data-scroll-to>
+                                Services
+                            </a>
                             <Link href="/about">
-                                <span className="underline-link w-fit">About</span>
+                                <span className="underline-link w-fit cursor-pointer">About</span>
                             </Link>
                             <Link href="/projects">
-                                <span className="underline-link w-fit">Projects</span>
+                                <span className="underline-link w-fit cursor-pointer">Projects</span>
                             </Link>
                             <Link href="/squad">
-                                <span className="underline-link w-fit">Squad</span>
+                                <span className="underline-link w-fit cursor-pointer">Squad</span>
                             </Link>
                         </div>
                         <div className="mt-3 flex flex-col flex-wrap gap-x-7 gap-y-2 text-center text-xl sm:text-left lg:text-2xl">
                             <Link href="#">
-                                <span className="underline-link w-fit">Careers</span>
+                                <span className="underline-link w-fit cursor-pointer">Careers</span>
                             </Link>
                             <Link href="#">
-                                <span className="underline-link w-fit">Our Partners</span>
+                                <span className="underline-link w-fit cursor-pointer">Our Partners</span>
                             </Link>
                             <Link href="/contact">
-                                <span className="underline-link w-fit">Contact</span>
+                                <span className="underline-link w-fit cursor-pointer">Contact</span>
                             </Link>
                             <Link href="#">
-                                <span className="underline-link w-fit">Blog</span>
+                                <span className="underline-link w-fit cursor-pointer">Blog</span>
                             </Link>
                         </div>
                     </div>
@@ -88,7 +88,7 @@ function Footer() {
             <div className="flex flex-col items-center justify-center border-t border-gray-400 py-5">
                 <p className="text-center text-gray-700">
                     © {new Date().getFullYear()}{" "}
-                    <a href="https://bitzquad.com" className="text-sm text-blue-600">
+                    <a href="https://bitzquad.com" className="cursor-pointer text-sm text-blue-600">
                         Bitzquad
                     </a>
                     , All rights reserved.

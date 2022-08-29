@@ -7,9 +7,9 @@ function index() {
     return (
         <LayoutSubPages>
             <div className="bz-container relative mx-auto mt-0 h-full w-full bg-gray-50 md:bg-transparent lg:mt-44" data-scroll-section>
-                <div className=" py-10 lg:py-0">
+                <div className=" py-10 px-5 lg:py-0">
                     <h1 className="text-3xl font-semibold uppercase lg:text-5xl">About Us</h1>
-                    <p className="mt-4 text-sm font-semibold leading-6 tracking-widest text-gray-700 lg:mt-5 lg:text-xl xl:w-10/12">
+                    <p className="mt-4 text-sm  tracking-widest text-gray-700 lg:mt-5 lg:text-xl xl:w-10/12">
                         We are a booming start-up in the tech ecosystem, based in Sri Lanka, focusing on providing diverse solutions in information systems, business process
                         re-engineering, Branding and Digital Marketing and E-Business services in both local and international markets.<br></br> <br></br>
                         Our passionate and competent team is keen to bring futuristic and pragmatic solutions that transcend your expectations. We believe our purpose is to upscale
@@ -17,7 +17,7 @@ function index() {
                         Our solution-oriented strategies support us in gathering the right resources at the right time for the right purpose.
                     </p>
                 </div>
-                <div className="mb-20 pt-10 lg:pt-32  ">
+                <div className="mb-20 px-5 pt-10 lg:pt-32 ">
                     <div className="mb-10 flex  w-full flex-col-reverse  md:flex-row lg:mb-24">
                         <div
                             style={{

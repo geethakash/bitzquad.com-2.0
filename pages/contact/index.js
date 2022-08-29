@@ -36,59 +36,58 @@ const Index = () => {
             <LayoutSubPages>
                 <div data-scroll-section>
                     <img src={ContactBgSm.src} className="absolute left-0 right-0 block w-full -translate-y-28 md:hidden" />
-                    <div className=" mt-0 bg-transparent md:bg-gray-100 lg:mt-44">
-                        <div className="bz-container relative mx-auto mt-0 h-auto w-full max-w-7xl py-8 md:py-16 lg:py-28 ">
-                            <div className=" py-10 lg:py-0">
-                                <h1 className="text-3xl font-semibold uppercase lg:text-5xl">CONTACT US</h1>
-                                <p className="mt-4 text-sm font-semibold leading-6 tracking-widest text-gray-700 lg:mt-5 lg:text-xl xl:w-8/12">
-                                    Here you are!<br></br>
-                                    It was well worth the wait. Let&lsquo;s get started.
-                                    <br></br>
-                                    <br></br>
-                                    Want to inquire about your new project or get to know us better?<br></br>
-                                    Contact us directly or write to us.
-                                </p>
-                                <div className="mt-3 hidden flex-row flex-wrap gap-x-7  gap-y-4 px-14 text-center text-lg font-bold text-main-900 sm:w-10/12 sm:gap-y-2.5  sm:px-0 md:flex">
-                                    <motion.a
-                                        href="https://www.facebook.com/bitzquad"
-                                        className="underline-link"
-                                        whileHover={{ scale: 1.05 }}
-                                        transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}
-                                    >
-                                        Facebook
-                                    </motion.a>
-                                    <motion.a
-                                        href="https://twitter.com/Bitzquad"
-                                        className="underline-link"
-                                        whileHover={{ scale: 1.05 }}
-                                        transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}
-                                    >
-                                        Twitter
-                                    </motion.a>
-                                    <motion.a
-                                        href="https://www.instagram.com/bitzquad/"
-                                        className="underline-link"
-                                        whileHover={{ scale: 1.05 }}
-                                        transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}
-                                    >
-                                        Instagram
-                                    </motion.a>
-                                    <motion.a
-                                        href="https://www.linkedin.com/company/bitzquad/"
-                                        className="underline-link"
-                                        whileHover={{ scale: 1.05 }}
-                                        transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}
-                                    >
-                                        LinkedIn
-                                    </motion.a>
-                                </div>
+
+                    <div className="bz-container relative mx-auto mt-0 h-full w-full bg-transparent lg:mt-44">
+                        <div className="mx-0 py-10 md:mx-5  lg:py-0">
+                            <h1 className="text-3xl font-semibold uppercase lg:text-5xl">CONTACT US</h1>
+                            <p className="mt-4 text-sm tracking-widest text-gray-700 lg:mt-5 lg:text-xl xl:w-8/12">
+                                Here you are!<br></br>
+                                It was well worth the wait. Let&lsquo;s get started.
+                                <br></br>
+                                <br></br>
+                                Want to inquire about your new project or get to know us better?<br></br>
+                                Contact us directly or write to us.
+                            </p>
+                            <div className="mt-3 hidden flex-row flex-wrap gap-x-7 gap-y-4 px-14 pb-5 text-center text-lg font-bold text-main-900 sm:w-10/12 sm:gap-y-2.5  sm:px-0 md:flex">
+                                <motion.a
+                                    href="https://www.facebook.com/bitzquad"
+                                    className="underline-link"
+                                    whileHover={{ scale: 1.05 }}
+                                    transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}
+                                >
+                                    Facebook
+                                </motion.a>
+                                <motion.a
+                                    href="https://twitter.com/Bitzquad"
+                                    className="underline-link"
+                                    whileHover={{ scale: 1.05 }}
+                                    transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}
+                                >
+                                    Twitter
+                                </motion.a>
+                                <motion.a
+                                    href="https://www.instagram.com/bitzquad/"
+                                    className="underline-link"
+                                    whileHover={{ scale: 1.05 }}
+                                    transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}
+                                >
+                                    Instagram
+                                </motion.a>
+                                <motion.a
+                                    href="https://www.linkedin.com/company/bitzquad/"
+                                    className="underline-link"
+                                    whileHover={{ scale: 1.05 }}
+                                    transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}
+                                >
+                                    LinkedIn
+                                </motion.a>
                             </div>
                         </div>
                     </div>
                     <div className=" relative mt-0 mb-20 bg-transparent px-0 md:bg-white lg:mb-0">
                         <img src={ContactBg.src} className=" absolute top-0 left-0 hidden w-full md:block " />
-                        <div className="bz-container relative mt-0 mb-0 max-w-7xl px-5 md:px-10 md:pt-20 lg:py-20">
-                            <div className="flex h-full flex-row">
+                        <div className="bz-container relative mt-5 mb-0 max-w-7xl px-5 md:px-10 md:pt-20 lg:py-20">
+                            <div className="mx-0 flex h-full flex-row  md:mx-5">
                                 <div className="w-full p-0 sm:w-1/2 md:pr-8">
                                     <form className="flex flex-col" onSubmit={handleSubmit}>
                                         <h1 className="text-xl font-semibold uppercase lg:text-3xl">Get In Touch</h1>
@@ -148,7 +147,7 @@ const Index = () => {
                                                 href="https://www.google.com/maps/place/BZ+Consulting/@-6.2147,106.845,17z/data=!3m1!4b1!4m5!3m4!1s0x2e69f0f8f8f8f8f8f:0x2e69f0f8f8f8f8f8f!8m2!3d-6.2147!4d106.847"
                                                 className="underline-link"
                                             >
-                                                11AS1223, Colombo 07, Sri Lanka
+                                                275/2 Katuwana Road, Homagama,<br></br> Colombo, Sri Lanka 10200
                                             </a>
                                         </motion.div>
                                     </div>
