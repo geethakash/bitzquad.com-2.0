@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { LayoutSubPages } from "../../components";
 
@@ -9,13 +9,13 @@ import { motion } from "framer-motion";
 
 import axios from "axios";
 
-function index() {
-    const [Name, setName] = React.useState("");
-    const [Email, setEmail] = React.useState("");
-    const [Msg, setMsg] = React.useState("");
+const Index = () => {
+    const [Name, setName] = useState("");
+    const [Email, setEmail] = useState("");
+    const [Msg, setMsg] = useState("");
 
-    const [showSuccess, setShowSuccess] = React.useState(false);
-    const [showError, setShowError] = React.useState(false);
+    const [showSuccess, setShowSuccess] = useState(false);
+    const [showError, setShowError] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -153,6 +153,6 @@ function index() {
             </LayoutSubPages>
         </>
     );
-}
+};
 
-export default index;
+export default Index;
