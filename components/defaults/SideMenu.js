@@ -40,11 +40,11 @@ const sideMenuResources = [
     },
     {
         name: "Blog",
-        href: "https://blog.bitzquad.com",
+        href: "/comingsoon",
     },
     {
         name: "Academy",
-        href: "https://academy.bitzquad.com",
+        href: "/comingsoon",
     },
 ];
 
