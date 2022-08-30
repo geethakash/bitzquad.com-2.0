@@ -20,7 +20,7 @@ export default function Soon() {
                 <div className="mx-auto max-w-xl pb-24 pt-10 sm:pb-24">
                     <div className="text-center">
                         <h1 className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">Coming Soon...</h1>
-                        <p className="mt-2 text-lg text-gray-500">The page you are looking for will be publish soon.</p>
+                        <p className="mt-2 text-lg text-gray-500">The page you are looking for will be published soon.</p>
                     </div>
                     <div className="mt-12">
                         <h2 className="text-base font-semibold text-gray-500">Popular pages</h2>
