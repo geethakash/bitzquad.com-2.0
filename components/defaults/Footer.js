@@ -69,7 +69,7 @@ function Footer() {
                             </Link>
                         </div>
                         <div className="mt-3 flex flex-col flex-wrap gap-x-7 gap-y-2 text-center text-xl sm:text-left lg:text-2xl">
-                            <Link href="#">
+                            <Link href="/comingsoon">
                                 <span className="underline-link w-fit cursor-pointer">Careers</span>
                             </Link>
                             <Link href="#">
@@ -78,7 +78,7 @@ function Footer() {
                             <Link href="/contact">
                                 <span className="underline-link w-fit cursor-pointer">Contact</span>
                             </Link>
-                            <Link href="#">
+                            <Link href="/comingsoon">
                                 <span className="underline-link w-fit cursor-pointer">Blog</span>
                             </Link>
                         </div>

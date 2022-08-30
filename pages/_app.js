@@ -22,11 +22,9 @@ function MyApp({ Component, pageProps }) {
                             })(window,document,'script','dataLayer','GTM-5F2DCX6');`,
                         }}
                     />
-                    <noscript
-                        dangerouslySetInnerHTML={{
-                            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5F2DCX6" height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
-                        }}
-                    ></noscript>
+                    <noscript>
+                        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5F2DCX6" height="0" width="0" className="hidden"></iframe>
+                    </noscript>
                 </React.Fragment>
                 {/* Google Analytics */}
                 <React.Fragment>
@@ -40,6 +38,26 @@ function MyApp({ Component, pageProps }) {
                         }}
                     />
                     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXCP4D567W" />
+                </React.Fragment>
+                {/* Meta Pixel */}
+                <React.Fragment>
+                    <script
+                        dangerouslySetInnerHTML={{
+                            __html: `!function(f,b,e,v,n,t,s)
+                            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+                            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+                            n.queue=[];t=b.createElement(e);t.async=!0;
+                            t.src=v;s=b.getElementsByTagName(e)[0];
+                            s.parentNode.insertBefore(t,s)}(window, document,'script',
+                            'https://connect.facebook.net/en_US/fbevents.js');
+                            fbq('init', '1244588742973071');
+                            fbq('track', 'PageView');`,
+                        }}
+                    />
+                    <noscript>
+                        <img height="1" width="1" className="hidden" src="https://www.facebook.com/tr?id=1244588742973071&ev=PageView&noscript=1" />
+                    </noscript>
                 </React.Fragment>
             </Head>
             <AnimatePresence>

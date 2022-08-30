@@ -3,15 +3,14 @@ import { FounderRole, ArtDirectorRole, ManagementRole } from "./images";
 export const members = [
     {
         id: 1,
-        firstName: "Jeff",
-        lastName: "Daylan",
-        role: { text: "Head of Operational", bgImg: FounderRole.src },
-        img: "https://i.postimg.cc/hGS5S32W/member-1.png",
-        team: "Technical",
+        firstName: "Kesara",
+        lastName: "Karannagoda",
+        role: { text: "Founder, CEO", bgImg: FounderRole.src },
+        img: "/assets/img/squad/kesara.jpg",
         bgColor: "#F5D6C3",
-        type: 1,
+        type: [1, 2],
         description:
-            "We are passionate to build new digital products for a better future by collaborating with new clients. If you have an idea to create a new digital product for your business needs or any other questions, inquire us. Our team/specialists are always available to help you.",
+            "Imagination plays an important role in creativity. Discipline & Consistency will keep you in the run but the Execution & Passion is the key to ultimate reward. Once you keep all of these in check, you'll be on your own path towards success.",
         social: [
             {
                 name: "Facebook",
@@ -33,26 +32,25 @@ export const members = [
     },
     {
         id: 2,
-        firstName: "Anne",
-        lastName: "deBruijn",
-        role: { text: "Head of Management", bgImg: ManagementRole.src },
-        img: "https://i.postimg.cc/rpw2hmXr/Rectangle-184.png",
-        team: "Technical",
-        type: 0,
-        description:
-            "We're a team of UI/UX designers who are passionate about building products that are easy to use and easy to understand. We're always looking for new ideas to build new products and we're always looking for new ways to make our products better. If you have an idea to create a new digital product for your business needs or any other questions, inquire us. Our team/specialists are always available to help you.",
+        firstName: "Harindu",
+        lastName: "Wijesinghe",
+        role: { text: "Co-Founder", bgImg: ManagementRole.src },
+        img: "/assets/img/squad/harindu.jpg",
+        bgColor: "#F5D6C3",
+        type: [1, 2],
+        description: "Never give up on your efforts, pursue your dreams, follow your passions, and don't let anyone tell you what to do.",
         social: [
             {
                 name: "Facebook",
-                url: "https://www.facebook.com/anne.debruijn",
+                url: "https://www.facebook.com/jeffdaylan",
             },
             {
                 name: "LinkedIn",
-                url: "https://www.linkedin.com/in/anne-debruijn/",
+                url: "https://www.linkedin.com/in/jeffdaylan/",
             },
             {
                 name: "Instagram",
-                url: "https://www.instagram.com/anne.debruijn/",
+                url: "https://www.instagram.com/jeffdaylan/",
             },
             {
                 name: "Github",
@@ -62,26 +60,25 @@ export const members = [
     },
     {
         id: 3,
-        firstName: "John",
-        lastName: "Lennon",
-        role: { text: "Art Director", bgImg: ArtDirectorRole.src },
-        img: "https://i.postimg.cc/q7RWs5yc/Rectangle-187.png",
-        team: "Operational",
-        type: 1,
-        description:
-            "We're a team of UI/UX designers who are passionate about building products that are easy to use and easy to understand. We're always looking for new ideas to build new products and we're always looking for new ways to make our products better. If you have an idea to create a new digital product for your business needs or any other questions, inquire us. Our team/specialists are always available to help you.",
+        firstName: "Akash",
+        lastName: "Geethanjana",
+        role: { text: "Co-Founder", bgImg: ManagementRole.src },
+        img: "/assets/img/squad/akash.jpg",
+        bgColor: "#F5D6C3",
+        type: [1, 2],
+        description: "You could do a lot of things in life the right way. But the best time of your life begins on the day you start doing the right thing.",
         social: [
             {
                 name: "Facebook",
-                url: "https://www.facebook.com/john.hancock",
+                url: "https://www.facebook.com/jeffdaylan",
             },
             {
                 name: "LinkedIn",
-                url: "https://www.linkedin.com/in/john-hancock/",
+                url: "https://www.linkedin.com/in/jeffdaylan/",
             },
             {
                 name: "Instagram",
-                url: "https://www.instagram.com/john.hancock/",
+                url: "https://www.instagram.com/jeffdaylan/",
             },
             {
                 name: "Github",
@@ -91,27 +88,167 @@ export const members = [
     },
     {
         id: 4,
-        firstName: "Paula",
-        lastName: "McCartney",
-        role: { text: "Art Director", bgImg: ArtDirectorRole.src },
-        img: "https://i.postimg.cc/d0wVJwMs/Rectangle-184.png",
-        team: "Operational",
-        type: 0,
+        firstName: "Hasindu",
+        lastName: "Lanka",
+        role: { text: "Co-Founder, CTO", bgImg: ManagementRole.src },
+        img: "/assets/img/squad/hasindu.jpg",
+        bgColor: "#F5D6C3",
+        type: [1, 2],
         description:
-            "We're a team of UI/UX designers who are passionate about building products that are easy to use and easy to understand. We're always looking for new ideas to build new products and we're always looking for new ways to make our products better. If you have an idea to create a new digital product for your business needs or any other questions, inquire us. Our team/specialists are always available to help you.",
+            "At Bitzquad, we go against the tide and select the best technology to ensure your product is reliable, scalable and sustainable. You will enjoy it the same tomorrow as well in 10 years.",
         social: [
             {
                 name: "Facebook",
-                url: "https://www.facebook.com/paul.mccartney",
+                url: "https://www.facebook.com/jeffdaylan",
             },
             {
                 name: "LinkedIn",
-
-                url: "https://www.linkedin.com/in/paul-mccartney/",
+                url: "https://www.linkedin.com/in/jeffdaylan/",
             },
             {
                 name: "Instagram",
-                url: "https://www.instagram.com/paul.mccartney/",
+                url: "https://www.instagram.com/jeffdaylan/",
+            },
+            {
+                name: "Github",
+                url: "",
+            },
+        ],
+    },
+    {
+        id: 5,
+        firstName: "Ridmi",
+        lastName: "Rathnayake",
+        role: { text: "Secretory", bgImg: ManagementRole.src },
+        img: "/assets/img/squad/ridmi.jpg",
+        bgColor: "#F5D6C3",
+        type: [1],
+        description:
+            "I believe Bitzquad has a team that challenges and inspires me to bring out the best of myself. It's exciting to think of greater heights we can achieve together.",
+        social: [
+            {
+                name: "Facebook",
+                url: "https://www.facebook.com/jeffdaylan",
+            },
+            {
+                name: "LinkedIn",
+                url: "https://www.linkedin.com/in/jeffdaylan/",
+            },
+            {
+                name: "Instagram",
+                url: "https://www.instagram.com/jeffdaylan/",
+            },
+            {
+                name: "Github",
+                url: "",
+            },
+        ],
+    },
+    {
+        id: 8,
+        firstName: "Ashane",
+        lastName: "Gunarathne",
+        role: { text: "Project Manager", bgImg: ManagementRole.src },
+        img: "/assets/img/squad/ashene.jpg",
+        bgColor: "#F5D6C3",
+        type: [1],
+        description: "Stay true to yourself! If you hold your vision and trust the process, you will slowly, but surely reach your destination. ",
+        social: [
+            {
+                name: "Facebook",
+                url: "https://www.facebook.com/jeffdaylan",
+            },
+            {
+                name: "LinkedIn",
+                url: "https://www.linkedin.com/in/jeffdaylan/",
+            },
+            {
+                name: "Instagram",
+                url: "https://www.instagram.com/jeffdaylan/",
+            },
+            {
+                name: "Github",
+                url: "",
+            },
+        ],
+    },
+    {
+        id: 6,
+        firstName: "Isuru",
+        lastName: "Harischandra",
+        role: { text: "Frontend Developer", bgImg: ManagementRole.src },
+        img: "/assets/img/squad/isuru.jpg",
+        bgColor: "#F5D6C3",
+        type: [1, 2],
+        description: " ",
+        social: [
+            {
+                name: "Facebook",
+                url: "https://www.facebook.com/jeffdaylan",
+            },
+            {
+                name: "LinkedIn",
+                url: "https://www.linkedin.com/in/jeffdaylan/",
+            },
+            {
+                name: "Instagram",
+                url: "https://www.instagram.com/jeffdaylan/",
+            },
+            {
+                name: "Github",
+                url: "",
+            },
+        ],
+    },
+    {
+        id: 7,
+        firstName: "Harsha",
+        lastName: "Abeyvickrama",
+        role: { text: "Agile Coach, Frontend Developer", bgImg: ManagementRole.src },
+        img: "/assets/img/squad/harsha.jpg",
+        bgColor: "#F5D6C3",
+        type: [1, 2],
+        description: "Prioritize the significant milestones to achieve your goals & be consistent on them. Success will follow .",
+        social: [
+            {
+                name: "Facebook",
+                url: "https://www.facebook.com/jeffdaylan",
+            },
+            {
+                name: "LinkedIn",
+                url: "https://www.linkedin.com/in/jeffdaylan/",
+            },
+            {
+                name: "Instagram",
+                url: "https://www.instagram.com/jeffdaylan/",
+            },
+            {
+                name: "Github",
+                url: "",
+            },
+        ],
+    },
+    {
+        id: 8,
+        firstName: "Sanjana",
+        lastName: "Navarathne",
+        role: { text: "Product Owner", bgImg: ManagementRole.src },
+        img: "/assets/img/squad/sanjana.jpg",
+        bgColor: "#F5D6C3",
+        type: [1, 2],
+        description: "Great innovations emerge from self organizing teams!",
+        social: [
+            {
+                name: "Facebook",
+                url: "https://www.facebook.com/jeffdaylan",
+            },
+            {
+                name: "LinkedIn",
+                url: "https://www.linkedin.com/in/jeffdaylan/",
+            },
+            {
+                name: "Instagram",
+                url: "https://www.instagram.com/jeffdaylan/",
             },
             {
                 name: "Github",

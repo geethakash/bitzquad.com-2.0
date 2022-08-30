@@ -9,8 +9,9 @@ const cardColors = ["#9FD0FB", "#E6CAA4", "#98A8FF", "#F5F5F5", "#C9DBCC", "#F5F
 
 const types = [
     { name: "All", value: -1 },
-    { name: "Technical", value: 0 },
     { name: "Management", value: 1 },
+    { name: "Development", value: 2 },
+    { name: "Design", value: 3 },
 ];
 
 const Index = () => {
@@ -41,9 +42,9 @@ const Index = () => {
                         ))}
                     </div>
                 </div>
-                <motion.div className="mb-28 grid grid-cols-2 gap-y-3 gap-x-4 md:grid-cols-3 lg:mt-20 lg:gap-y-12  lg:gap-x-12 lg:px-10">
+                <motion.div className="mb-28 grid grid-cols-2 gap-y-3 gap-x-4 md:grid-cols-3  lg:mt-20 lg:grid-cols-4 lg:gap-y-12  lg:gap-x-12 lg:px-10">
                     {members
-                        .filter((f) => (selCat == -1 ? true : f.type == selCat))
+                        .filter((f) => (selCat == -1 ? true : f.type.includes(selCat)))
                         .map((member, index) => (
                             <MemberCard key={index} member={member} index={index} />
                         ))}
