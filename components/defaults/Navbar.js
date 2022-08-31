@@ -3,8 +3,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import SideMenu from "./SideMenu";
 import { useLocomotiveScroll } from "react-locomotive-scroll";
 import Link from "next/link";
+import { Router, useRouter } from "next/router";
 
 function Navbar({ animated = false }) {
+    const router = useRouter();
     const [menuOpen, setMenuOpen] = React.useState(false);
     const { scroll } = useLocomotiveScroll();
     useEffect(() => {
@@ -54,10 +56,11 @@ function Navbar({ animated = false }) {
                             About
                         </span>
                     </Link>
-
-                    <a href="#services" data-scroll-to className="navbar-link underline-link" data-cursor="-opaque">
-                        Services
-                    </a>
+                    {router.asPath == "/" && (
+                        <a href="#services" data-scroll-to className="navbar-link underline-link" data-cursor="-opaque">
+                            Services
+                        </a>
+                    )}
 
                     <Link href="/contact">
                         <span className="navbar-link underline-link cursor-pointer" data-cursor="-opaque">

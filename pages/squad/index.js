@@ -39,7 +39,7 @@ const Index = () => {
                         We admire and respect professionalism, integrity, sportsmanship, transparency and modesty. And we aspire to cultivate these qualities within the work
                         environment as we grow.
                     </p>
-                    <div className="mt-16 flex gap-x-6 text-2xl">
+                    <div className="mt-16 flex flex-row flex-wrap gap-x-6 text-2xl">
                         {types.map((v) => (
                             <motion.span
                                 key={v.value}
