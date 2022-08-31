@@ -14,6 +14,7 @@ function Footer() {
                             <motion.a
                                 href="https://www.facebook.com/bitzquad/"
                                 target="_blank"
+                                rel="noreferrer"
                                 className="underline-link w-28 sm:w-auto"
                                 whileHover={{ scale: 1.05 }}
                                 transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}
@@ -23,6 +24,7 @@ function Footer() {
                             <motion.a
                                 href="https://twitter.com/Bitzquad"
                                 target="_blank"
+                                rel="noreferrer"
                                 className="underline-link w-28 sm:w-auto"
                                 whileHover={{ scale: 1.05 }}
                                 transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}
@@ -32,6 +34,7 @@ function Footer() {
                             <motion.a
                                 href="https://www.instagram.com/bitzquad/"
                                 target="_blank"
+                                rel="noreferrer"
                                 className="underline-link w-28 sm:w-auto"
                                 whileHover={{ scale: 1.05 }}
                                 transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}
@@ -41,6 +44,7 @@ function Footer() {
                             <motion.a
                                 href="https://www.linkedin.com/company/bitzquad/"
                                 target="_blank"
+                                rel="noreferrer"
                                 className="underline-link w-28 sm:w-auto"
                                 whileHover={{ scale: 1.05 }}
                                 transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}
