@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { CollaborateImg } from "../../constants/images";
 import { LayoutSubPages } from "../../components";
 import Link from "next/link";
 import { members } from "../../constants/members";

@@ -1,6 +1,5 @@
 import { ChevronRightIcon } from "@heroicons/react/solid";
 import { PhoneIcon, InformationCircleIcon, UserGroupIcon } from "@heroicons/react/outline";
-import { LogoDark } from "../constants/images";
 import Link from "next/link";
 import { Footer } from "../components";
 
@@ -15,7 +14,7 @@ export default function Soon() {
         <div className="bg-white">
             <main className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="flex-shrink-0 pt-16">
-                    <img className="mx-auto h-28 w-auto" src={LogoDark.src} alt="bitzquad solution beyond technology" />
+                    <img className="mx-auto h-28 w-auto" src="/logo-dark.png" alt="Bitzquad - Software Compnay - Logo Dark" />
                 </div>
                 <div className="mx-auto max-w-xl pb-24 pt-10 sm:pb-24">
                     <div className="text-center">

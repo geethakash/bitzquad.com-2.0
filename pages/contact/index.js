@@ -5,7 +5,6 @@ import { LayoutSubPages } from "../../components";
 
 import { MailIcon, PhoneIcon, LocationMarkerIcon, ArrowRightIcon, CheckIcon } from "@heroicons/react/outline";
 
-import { ContactBg, ContactBgSm } from "../../constants/images";
 import { motion } from "framer-motion";
 
 import axios from "axios";
@@ -35,7 +34,7 @@ const Index = () => {
         <>
             <LayoutSubPages>
                 <div data-scroll-section>
-                    <img src={ContactBgSm.src} className="absolute left-0 right-0 block w-full -translate-y-28 md:hidden" />
+                    <img src="/assets/img/contact/bg-sm.svg" className="absolute left-0 right-0 block w-full -translate-y-28 md:hidden" />
 
                     <div className="bz-container relative mx-auto mt-0 h-full w-full bg-transparent lg:mt-44">
                         <div className="mx-0 py-10 md:mx-5  lg:py-0">
@@ -85,7 +84,7 @@ const Index = () => {
                         </div>
                     </div>
                     <div className=" relative mt-0 mb-20 bg-transparent px-0 md:bg-white lg:mb-0">
-                        <img src={ContactBg.src} className=" absolute top-0 left-0 hidden w-full md:block " />
+                        <img src="/assets/img/contact/bg.svg" className=" absolute top-0 left-0 hidden w-full md:block " />
                         <div className="bz-container relative mt-5 mb-0 max-w-7xl px-5 md:px-10 md:pt-20 lg:py-20">
                             <div className="mx-0 flex h-full flex-row  md:mx-5">
                                 <div className="w-full p-0 sm:w-1/2 md:pr-8">

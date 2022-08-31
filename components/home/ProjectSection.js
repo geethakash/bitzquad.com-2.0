@@ -1,5 +1,4 @@
 import React from "react";
-import { ProjectSectionBg } from "../../constants/images";
 import Button from "../elements/Button";
 
 function ProjectSection() {
@@ -22,7 +21,7 @@ function ProjectSection() {
                 </div>
             </div>
             <div className="absolute top-0 left-0 -z-10 h-full w-full   ">
-                <img className="absolute z-20 h-full w-auto object-cover md:h-auto md:w-full" data-scroll data-scroll-speed="-3" src={ProjectSectionBg.src} />
+                <img className="absolute z-20 h-full w-auto object-cover md:h-auto md:w-full" data-scroll data-scroll-speed="-3" src="/proj-sec-bg.png" />
             </div>
         </div>
     );

@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import { LayoutSubPages } from "../../components";
-import { About1, About2, About3 } from "../../constants/images";
 
 function index() {
     return (
@@ -34,7 +33,7 @@ function index() {
                                 perspectives to the table to provide viable solutions for your tech needs. <br></br> <br></br>
                                 As a team with a clear vision, we value the power of unity, learning and growth, and revelling small steps of the journey ahead.
                             </p>
-                            <img src={About1.src} className="absolute bottom-4 w-8/12 md:left-8 md:w-auto md:scale-x-110" />
+                            <img src="/assets/img/about/1.svg" className="absolute bottom-4 w-8/12 md:left-8 md:w-auto md:scale-x-110" />
                         </div>
                         <div className="relative md:w-1/2 lg:aspect-[9/6]">
                             <div className="bottom-1/2 w-full overflow-hidden md:h-full lg:aspect-[8/7] lg:h-auto ">
@@ -63,7 +62,7 @@ function index() {
                                 the journey. Along with the scrum, we use the following latest technologies and tools to build our products recognized by professionals in the
                                 industry:
                             </p>
-                            <img src={About2.src} className="absolute bottom-4 w-8/12 md:left-8 md:w-auto md:scale-x-110" />
+                            <img src="/assets/img/about/2.svg" className="absolute bottom-4 w-8/12 md:left-8 md:w-auto md:scale-x-110" />
                         </div>
                         <div className="relative md:w-1/2 lg:aspect-[9/6]">
                             <div className="bottom-1/2 w-full overflow-hidden md:h-full lg:aspect-[8/7] lg:h-auto ">
@@ -104,7 +103,7 @@ function index() {
                                 The core of the Bitzquad is to differentiate the processes using the latest technologies and tools to make the product&apos;s user experience
                                 positive and closer to them.
                             </p>
-                            <img src={About3.src} className="absolute bottom-4 w-8/12 md:left-8 md:w-auto md:scale-x-110" />
+                            <img src="/assets/img/about/3.svg" className="absolute bottom-4 w-8/12 md:left-8 md:w-auto md:scale-x-110" />
                         </div>
                         <div className="relative md:w-1/2 lg:aspect-[9/6]">
                             <div className="bottom-1/2 w-full overflow-hidden md:h-full lg:aspect-[8/7] lg:h-auto ">

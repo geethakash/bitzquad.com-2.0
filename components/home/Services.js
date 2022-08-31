@@ -1,6 +1,5 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ServicesImg } from "../../constants/images";
 
 function Services() {
     return (
@@ -68,7 +67,7 @@ function Services() {
                             </div>
                         </div>
                         <div className="services__content_image">
-                            <motion.img src={ServicesImg.src} />
+                            <motion.img src="/services-exp.png" alt="Bitzquad Services Explain Image" />
                         </div>
                     </motion.div>
                 </div>

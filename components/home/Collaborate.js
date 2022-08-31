@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
-import { CollaborateImg } from "../../constants/images";
 import { Button } from "..";
 
 function Collaborate() {
@@ -48,7 +46,7 @@ function Collaborate() {
                             </Button>
                         </div>
                         <div className="collaborate__content_image">
-                            <motion.img src={CollaborateImg.src} layoutId="userImg" />
+                            <motion.img src="/collaborate-img.png" layoutId="userImg" alt="Bitzquad Colloborate With Us Section Image" />
                         </div>
                     </motion.div>
                 </div>

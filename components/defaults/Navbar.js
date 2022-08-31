@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { LogoDark, Logo } from "../../constants/images";
 import { motion, AnimatePresence } from "framer-motion";
 import SideMenu from "./SideMenu";
 import { useLocomotiveScroll } from "react-locomotive-scroll";
@@ -47,7 +46,7 @@ function Navbar({ animated = false }) {
                 className="navbar"
             >
                 <Link className="navbar-brand" href="/">
-                    <img className="h-10" src={LogoDark.src} alt="bz-logo" />
+                    <img className="h-10" src="/logo-dark.png" alt="Bitzquad - Solutions Beyond Technology - IT Service Compnay - Logo Dark" />
                 </Link>
                 <div className="navbar-links">
                     <Link href="/about">
