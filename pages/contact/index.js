@@ -61,6 +61,7 @@ const Index = () => {
                             <div className="mt-3 hidden flex-row flex-wrap gap-x-7 gap-y-4 px-14 pb-5 text-center text-lg font-bold text-main-900 sm:w-10/12 sm:gap-y-2.5  sm:px-0 md:flex">
                                 <motion.a
                                     href="https://www.facebook.com/bitzquad"
+                                    target="_blank"
                                     className="underline-link"
                                     whileHover={{ scale: 1.05 }}
                                     transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}
@@ -69,6 +70,7 @@ const Index = () => {
                                 </motion.a>
                                 <motion.a
                                     href="https://twitter.com/Bitzquad"
+                                    target="_blank"
                                     className="underline-link"
                                     whileHover={{ scale: 1.05 }}
                                     transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}
@@ -77,6 +79,7 @@ const Index = () => {
                                 </motion.a>
                                 <motion.a
                                     href="https://www.instagram.com/bitzquad/"
+                                    target="_blank"
                                     className="underline-link"
                                     whileHover={{ scale: 1.05 }}
                                     transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}
@@ -85,6 +88,7 @@ const Index = () => {
                                 </motion.a>
                                 <motion.a
                                     href="https://www.linkedin.com/company/bitzquad/"
+                                    target="_blank"
                                     className="underline-link"
                                     whileHover={{ scale: 1.05 }}
                                     transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}
@@ -156,6 +160,7 @@ const Index = () => {
                                             <a
                                                 href="https://www.google.com/maps/place/BZ+Consulting/@-6.2147,106.845,17z/data=!3m1!4b1!4m5!3m4!1s0x2e69f0f8f8f8f8f8f:0x2e69f0f8f8f8f8f8f!8m2!3d-6.2147!4d106.847"
                                                 className="underline-link"
+                                                target="_blank"
                                             >
                                                 275/2 Katuwana Road, Homagama,<br></br> Colombo, Sri Lanka 10200
                                             </a>
