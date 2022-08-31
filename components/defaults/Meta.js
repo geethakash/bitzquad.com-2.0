@@ -5,6 +5,7 @@ export default function Meta(props) {
             <meta charSet="utf-8" />
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             <link rel="canonical" href={props.url}></link>
+            <link href="/favicon.ico" rel="icon shortcut" type="image/x-icon"></link>
             <title>{props.title}</title>
             {/* Google */}
             <meta name="title" content={props.title} />
