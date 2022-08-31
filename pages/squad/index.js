@@ -7,38 +7,57 @@ import { members } from "../../constants/members";
 
 const cardColors = ["#9FD0FB", "#E6CAA4", "#98A8FF", "#F5F5F5", "#C9DBCC", "#F5F5F5", "#9FD0FB"];
 
-function index() {
+const types = [
+    { name: "All", value: -1 },
+    { name: "Management", value: 1 },
+    { name: "Development", value: 2 },
+    { name: "Design", value: 3 },
+];
+
+const Index = () => {
+    const [selCat, setSelCat] = useState(-1);
     return (
         <LayoutSubPages>
-            <div data-scroll-section className="bz-container relative mx-auto mt-0 h-full w-full bg-gray-50 md:bg-transparent lg:mt-52">
-                <div className=" py-10 lg:px-10 lg:py-0">
+            <div data-scroll-section className="bz-container relative mx-auto mt-0 h-full w-full bg-gray-50 md:bg-transparent lg:mt-44">
+                <div className=" py-10 lg:px-5 lg:py-0">
                     <h1 className="text-3xl font-semibold lg:text-5xl">Our Squad</h1>
-                    <p className="mt-4 text-sm font-semibold leading-6 tracking-widest text-gray-500 lg:mt-5 lg:text-xl xl:w-7/12">
+                    <p className="mt-4 text-sm  tracking-widest text-gray-700 lg:mt-5 lg:text-xl xl:w-7/12">
                         Meet our squad that makes your digital experience better with solutions beyond technology. <br></br>
                         <br></br>
                         We admire and respect professionalism, integrity, sportsmanship, transparency and modesty. And we aspire to cultivate these qualities within the work
                         environment as we grow.
                     </p>
-                    <div className="mt-5 flex gap-x-4 text-lg">
-                        <span className="underline">All</span>
-                        <span className="underline-link">Technical</span>
-                        <span className="underline-link">Management</span>
+                    <div className="mt-16 flex gap-x-6 text-2xl">
+                        {types.map((v) => (
+                            <motion.span
+                                key={v.value}
+                                className={v.value == selCat ? "underline" : "underline-link"}
+                                data-cursor="-opaque"
+                                whileHover={{ scale: 1.05 }}
+                                transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}
+                                onClick={() => setSelCat(v.value)}
+                            >
+                                {v.name}
+                            </motion.span>
+                        ))}
                     </div>
                 </div>
-                <motion.div className="mb-20 grid grid-cols-2 gap-y-3 gap-x-4 md:grid-cols-3 lg:mt-20 lg:gap-y-12  lg:gap-x-12 lg:px-10">
-                    {members.map((member, index) => (
-                        <MemberCard key={index} member={member} index={index} />
-                    ))}
+                <motion.div className="mb-28 grid grid-cols-2 gap-y-3 gap-x-4 md:grid-cols-3  lg:mt-20 lg:grid-cols-4 lg:gap-y-12  lg:gap-x-12 lg:px-10">
+                    {members
+                        .filter((f) => (selCat == -1 ? true : f.type.includes(selCat)))
+                        .map((member, index) => (
+                            <MemberCard key={index} member={member} index={index} />
+                        ))}
                 </motion.div>
             </div>
         </LayoutSubPages>
     );
-}
+};
 
 export const MemberCard = ({ member, index }) => {
     return (
         <Link href={`/squad/${member.id}`}>
-            <div>
+            <motion.div data-cursor-text="click" whileHover={{ scale: 1.05 }} transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}>
                 <motion.div
                     className="relative aspect-square object-cover"
                     style={{
@@ -53,11 +72,11 @@ export const MemberCard = ({ member, index }) => {
                         {member.firstName} {member.lastName}
                     </h3>
 
-                    <h5 className=" text-sm text-gray-500 lg:text-xl">{member.role.text}</h5>
+                    <h5 className=" text-sm text-gray-700 lg:text-xl">{member.role.text}</h5>
                 </div>
-            </div>
+            </motion.div>
         </Link>
     );
 };
 
-export default index;
+export default Index;

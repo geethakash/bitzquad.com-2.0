@@ -41,22 +41,30 @@ function Services() {
                             <div className="card">
                                 <h4 className="card_title">Information Systems</h4>
                                 <p className="card_text">Upgrade your processes with the best technology that helps your business grow.</p>
-                                <button className="card_button">read more</button>
+                                <motion.button className="card_button" whileHover={{ scale: 1.05 }} transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}>
+                                    read more
+                                </motion.button>
                             </div>
                             <div className="card">
-                                <h4 className="card_title">Business Process Reengineering</h4>
+                                <h4 className="card_title">Business Process Re-Engineering</h4>
                                 <p className="card_text">Processes that are simple and optimized are preferable to those that are convoluted and complex.</p>
-                                <button className="card_button">read more</button>
+                                <motion.button className="card_button" whileHover={{ scale: 1.05 }} transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}>
+                                    read more
+                                </motion.button>
                             </div>
                             <div className="card">
                                 <h4 className="card_title">E-Business</h4>
                                 <p className="card_text">Utilize digital information and advanced communication technologies to streamline different business processes.</p>
-                                <button className="card_button">read more</button>
+                                <motion.button className="card_button" whileHover={{ scale: 1.05 }} transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}>
+                                    read more
+                                </motion.button>
                             </div>
                             <div className="card">
                                 <h4 className="card_title">Brand Designing & Digital Marketing</h4>
                                 <p className="card_text">The aesthetic representation of a brand&apos;s positioning and personality is found in its visual identity.</p>
-                                <button className="card_button">read more</button>
+                                <motion.button className="card_button" whileHover={{ scale: 1.05 }} transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}>
+                                    read more
+                                </motion.button>
                             </div>
                         </div>
                         <div className="services__content_image">

@@ -51,19 +51,19 @@ function Navbar({ animated = false }) {
                 </Link>
                 <div className="navbar-links">
                     <Link href="/about">
-                        <a className="navbar-link underline-link" data-cursor="-opaque">
+                        <span className="navbar-link underline-link cursor-pointer" data-cursor="-opaque">
                             About
-                        </a>
+                        </span>
                     </Link>
-                    <Link href="#services">
-                        <a className="navbar-link underline-link" data-cursor="-opaque">
-                            Services
-                        </a>
-                    </Link>
+
+                    <a href="#services" data-scroll-to className="navbar-link underline-link" data-cursor="-opaque">
+                        Services
+                    </a>
+
                     <Link href="/contact">
-                        <a className="navbar-link underline-link" data-cursor="-opaque">
+                        <span className="navbar-link underline-link cursor-pointer" data-cursor="-opaque">
                             Contact
-                        </a>
+                        </span>
                     </Link>
                     <button className="menu-button" data-cursor="-opaque" onClick={() => setMenuOpen(true)}>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -75,7 +75,7 @@ function Navbar({ animated = false }) {
                 <div className="block lg:hidden">
                     <button
                         onClick={() => setMenuOpen(true)}
-                        className="flex items-center gap-x-2 font-bold text-gray-600 transition-all duration-300 hover:-translate-x-2 hover:text-black"
+                        className="flex items-center gap-x-2 font-bold text-gray-700 transition-all duration-300 hover:-translate-x-2 hover:text-black"
                     >
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M10 19L3 12M3 12L10 5M3 12H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
