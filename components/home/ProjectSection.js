@@ -21,7 +21,13 @@ function ProjectSection() {
                 </div>
             </div>
             <div className="absolute top-0 left-0 -z-10 h-full w-full   ">
-                <img className="absolute z-20 h-full w-auto object-cover md:h-auto md:w-full" data-scroll data-scroll-speed="-3" src="/proj-sec-bg.png" />
+                <img
+                    className="absolute z-20 h-full w-auto object-cover md:h-auto md:w-full"
+                    data-scroll
+                    data-scroll-speed="-3"
+                    src="/proj-sec-bg.png"
+                    alt="Bitzquad project section background"
+                />
             </div>
         </div>
     );

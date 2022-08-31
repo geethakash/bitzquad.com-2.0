@@ -140,7 +140,7 @@ function CustomerFeedback() {
                                 },
                             }}
                             src={selectedTestimonial?.img}
-                            alt="testimonial"
+                            alt="Bitzquad testimonial section background"
                         />
                     </AnimatePresence>
                 </div>
@@ -172,6 +172,7 @@ function CustomerFeedback() {
                                         }}
                                         className="w-full object-cover "
                                         src={selectedTestimonial?.img}
+                                        alt="Bitzquad testimonial section"
                                     />
                                 </AnimatePresence>
                             </motion.div>
