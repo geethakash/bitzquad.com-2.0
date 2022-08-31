@@ -1,6 +1,7 @@
+import Head from "next/head";
 export default function Meta(props) {
     return (
-        <>
+        <Head>
             <meta charSet="utf-8" />
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             <link rel="canonical" href={props.url}></link>
@@ -12,7 +13,7 @@ export default function Meta(props) {
 
             {/* Facebook */}
             <meta property="og:type" content={props.type ? props.type : "website"} />
-            <meta property="og:site_name" content="DEInclusive"></meta>
+            <meta property="og:site_name" content="Bitzquad"></meta>
             <meta property="og:url" content={props.url} />
             <meta property="og:title" content={props.title} />
             <meta property="og:description" content={props.description} />
@@ -29,6 +30,6 @@ export default function Meta(props) {
             <meta name="twitter:description" content={props.description} />
             <meta name="twitter:image" content={props.imagetw ? props.imagetw : props.imagefb} />
             <meta name="twitter:image:alt" content={props.alt} />
-        </>
+        </Head>
     );
 }

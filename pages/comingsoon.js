@@ -2,7 +2,8 @@ import { ChevronRightIcon } from "@heroicons/react/solid";
 import { PhoneIcon, InformationCircleIcon, UserGroupIcon } from "@heroicons/react/outline";
 import Link from "next/link";
 import { Footer } from "../components";
-
+import Meta from "../components/defaults/Meta";
+import { useRouter } from "next/router";
 const links = [
     { title: "Contact", description: "Learn how to integrate our tools with your app", href: "/contact", icon: PhoneIcon },
     { title: "About", description: "A complete API reference for our libraries", href: "/about", icon: InformationCircleIcon },
@@ -10,8 +11,21 @@ const links = [
 ];
 
 export default function Soon() {
+    const router = useRouter();
     return (
         <div className="bg-white">
+            <Meta
+                title="Bitzquad | Solutions Beyond Technology | Software Company"
+                description="We are a team of thinkers, engineers, designers, and marketers who represent different cultures worldwide, working together to build better solutions
+                            for a better world.  We strive to provide sustaining digital solutions in Information Systems, Business Process Re-engineering, Branding and Digital Marketing, and
+                            E-Business services that serve our stakeholders' best interests."
+                keywords="Bitzquad, Solutions Beyond Technology, Software Company, Information Systems, Business Process Re-engineering, Branding, Digital Marketing, E-Business services"
+                url={`${process.env.NEXT_PUBLIC_API_URL}${router.asPath}`}
+                imagefb="/logo-dark.png"
+                alt="We are a team of thinkers, engineers, designers, and marketers who represent different cultures worldwide, working together to build better solutions
+                    for a better world.  We strive to provide sustaining digital solutions in Information Systems, Business Process Re-engineering, Branding and Digital Marketing, and
+                    E-Business services that serve our stakeholders' best interests."
+            />
             <main className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="flex-shrink-0 pt-16">
                     <img className="mx-auto h-28 w-auto" src="/logo-dark.png" alt="Bitzquad - Software Compnay - Logo Dark" />

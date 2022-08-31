@@ -1,10 +1,24 @@
 import React from "react";
 import Link from "next/link";
 import { LayoutSubPages } from "../../components";
-
-function index() {
+import Meta from "../../components/defaults/Meta";
+import { useRouter } from "next/router";
+function Index() {
+    const router = useRouter();
     return (
         <LayoutSubPages>
+            <Meta
+                title="Bitzquad | About Us"
+                description="We are a booming start-up in the tech ecosystem, based in Sri Lanka, focusing on providing diverse solutions in information systems, business process
+                re-engineering, Branding and Digital Marketing and E-Business services in both local and international markets. Our passionate and competent team is keen to bring futuristic and pragmatic solutions that transcend your expectations. We believe our purpose is to upscale
+                the value of ideas of our clients and prospects."
+                keywords="About Bitzquad, Bitzquad, Solutions Beyond Technology, Software Company, Information Systems, Business Process Re-engineering, Branding, Digital Marketing, E-Business services"
+                url={`${process.env.NEXT_PUBLIC_API_URL}/${router.asPath}`}
+                imagefb="/logo-dark.png"
+                alt="We are a booming start-up in the tech ecosystem, based in Sri Lanka, focusing on providing diverse solutions in information systems, business process
+                re-engineering, Branding and Digital Marketing and E-Business services in both local and international markets. Our passionate and competent team is keen to bring futuristic and pragmatic solutions that transcend your expectations. We believe our purpose is to upscale
+                the value of ideas of our clients and prospects."
+            />
             <div className="bz-container relative mx-auto mt-0 h-full w-full bg-gray-50 md:bg-transparent lg:mt-44" data-scroll-section>
                 <div className=" py-10 px-5 lg:py-0">
                     <h1 className="text-3xl font-semibold uppercase lg:text-5xl">About Us</h1>
@@ -120,4 +134,4 @@ function index() {
     );
 }
 
-export default index;
+export default Index;

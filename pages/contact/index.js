@@ -9,7 +9,10 @@ import { motion } from "framer-motion";
 
 import axios from "axios";
 
+import Meta from "../../components/defaults/Meta";
+import { useRouter } from "next/router";
 const Index = () => {
+    const router = useRouter();
     const [Name, setName] = useState("");
     const [Email, setEmail] = useState("");
     const [Msg, setMsg] = useState("");
@@ -33,6 +36,14 @@ const Index = () => {
     return (
         <>
             <LayoutSubPages>
+                <Meta
+                    title="Bitzquad | Contact Us"
+                    description="Want to inquire about your new project or get to know us better? Contact us directly or write to us."
+                    keywords="Bitzquad, Contact Bitzquad,  Solutions Beyond Technology, Software Company, Information Systems, Business Process Re-engineering, Branding, Digital Marketing, E-Business services"
+                    url={`${process.env.NEXT_PUBLIC_API_URL}${router.asPath}`}
+                    imagefb="/logo-dark.png"
+                    alt="Want to inquire about your new project or get to know us better? Contact us directly or write to us."
+                />
                 <div data-scroll-section>
                     <img src="/assets/img/contact/bg-sm.svg" className="absolute left-0 right-0 block w-full -translate-y-28 md:hidden" />
 

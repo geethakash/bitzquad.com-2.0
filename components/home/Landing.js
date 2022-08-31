@@ -53,7 +53,7 @@ function Landing({ loading }) {
                                 delay: 1.8,
                                 duration: 1,
                             }}
-                            className="text-gray-700"
+                            className="text-lg text-gray-700"
                         >
                             We are a team of thinkers, engineers, designers, and marketers who represent different cultures worldwide, working together to build better solutions
                             for a better world.
