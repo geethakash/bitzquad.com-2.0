@@ -7,7 +7,7 @@ function Collaborate() {
         <div className="collaborate_">
             <div className="collaborate__bgwrapper">
                 <div className="collaborate__content_wrapper">
-                    <motion.h3
+                    <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{
                             opacity: 1,
@@ -20,7 +20,7 @@ function Collaborate() {
                         viewport={{ once: true }}
                     >
                         Collaborate with Us
-                    </motion.h3>
+                    </motion.h2>
 
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}

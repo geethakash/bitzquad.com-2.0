@@ -45,7 +45,7 @@ function Landing({ loading }) {
                     />
                     <div className="px-5">
                         {!loading && <AnimatedTitle landingTitle="Solutions Beyond Technology" />}
-                        <motion.h1
+                        <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={!loading ? { opacity: 1, y: 0 } : {}}
                             transition={{
@@ -53,15 +53,17 @@ function Landing({ loading }) {
                                 delay: 1.8,
                                 duration: 1,
                             }}
-                            className="text-lg text-gray-700"
+                            className="text-xl text-gray-700"
                         >
                             We are a team of thinkers, engineers, designers, and marketers who represent different cultures worldwide, working together to build better solutions
                             for a better world.
                             <br></br>
                             <br></br>
-                            We strive to provide sustaining digital solutions in Information Systems, Business Process Re-engineering, Branding and Digital Marketing, and
-                            E-Business services that serve our stakeholders&apos; best interests.
-                        </motion.h1>
+                            <h1 className="text-xl text-gray-700">
+                                We strive to provide sustaining digital solutions in Information Systems, Business Process Re-engineering, Branding and Digital Marketing, and
+                                E-Business services that serve our stakeholders&apos; best interests.
+                            </h1>
+                        </motion.div>
                     </div>
                 </div>
                 <div className="landing-logo">

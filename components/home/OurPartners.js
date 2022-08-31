@@ -29,7 +29,7 @@ function OurPartners() {
             viewport={{ once: true }}
             className="partners_container"
         >
-            <h3>Our partners</h3>
+            <h2>Our partners</h2>
             <div className="partners_card_container">
                 {partnerList.map((partner, index) => (
                     <motion.div className="partners_card" key={index} whileHover={{ scale: 1.05 }} transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}>

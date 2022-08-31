@@ -36,7 +36,7 @@
 // testimonials section
 .testimonials_ {
     @apply bz-container;
-    & h3 {
+    & h2 {
         @apply text-3xl font-semibold md:text-4xl  lg:text-5xl 2xl:text-6xl;
     }
 
@@ -74,7 +74,7 @@
 
 .collaborate_ {
     @apply mt-20 lg:mx-auto;
-    & h3 {
+    & h2 {
         @apply text-3xl font-semibold md:text-4xl  lg:text-5xl 2xl:text-6xl;
     }
     &_bgwrapper {
@@ -146,7 +146,7 @@
 
 .services_ {
     @apply mt-20 lg:mx-auto  2xl:mt-0;
-    & h3 {
+    & h2 {
         @apply text-3xl font-semibold md:text-4xl  lg:text-5xl 2xl:text-6xl;
 
         & span {
@@ -203,7 +203,7 @@
         @apply py-5 pb-32 lg:py-20 lg:pb-52;
         background: linear-gradient(159.29deg, #ffffff 25.86%, rgba(255, 255, 255, 0) 77.78%);
 
-        & h3 {
+        & h2 {
             @apply text-3xl font-semibold md:text-4xl  lg:text-5xl 2xl:text-6xl;
         }
         & p {
@@ -218,7 +218,7 @@
     &_container {
         @apply bz-container;
 
-        & h3 {
+        & h2 {
             @apply text-3xl font-semibold md:text-4xl  lg:text-5xl 2xl:text-6xl;
         }
     }

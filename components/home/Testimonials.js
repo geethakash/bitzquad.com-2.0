@@ -44,7 +44,7 @@ const contentAnimMobile = {
 function CustomerFeedback() {
     const [testimonials] = useState([
         {
-            name: "Bobby Singer",
+            name: "Bobby Mala",
             role: "CEO of ABC Holdings",
             text: "Bitzquad is a great company to work with. They are very responsive and always provide a great service. I highly recommend them to anyone looking for a great company to work with.",
             img: "/testimonial-1.jpg",
@@ -91,7 +91,7 @@ function CustomerFeedback() {
 
     return (
         <div className="testimonials_ ">
-            <motion.h3
+            <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{
                     opacity: 1,
@@ -104,7 +104,7 @@ function CustomerFeedback() {
                 viewport={{ once: true }}
             >
                 Testimonials
-            </motion.h3>
+            </motion.h2>
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{

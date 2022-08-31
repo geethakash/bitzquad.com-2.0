@@ -6,7 +6,7 @@ function ProjectSection() {
         <div className="project-section-wrapper">
             <div className="project-section-content">
                 <div className="bz-container mt-0">
-                    <h3>Projects</h3>
+                    <h2>Projects</h2>
                     <p>
                         Portrayed here are the work that we are proud to have carried out for our invaluable customers. These projects will help you to have a better understanding
                         of what we do and how we do things.
