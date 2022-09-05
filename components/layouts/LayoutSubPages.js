@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
             <LocomotiveScrollProvider
                 innerRef={containerRef}
                 options={{
-                    smooth: true,
+                    smooth: false,
                 }}
                 watch={[]}
             >
