@@ -1,11 +1,24 @@
 import React from "react";
 import Link from "next/link";
 import { LayoutSubPages } from "../../components";
-import { About1, About2, About3 } from "../../constants/images";
-
-function index() {
+import Meta from "../../components/defaults/Meta";
+import { useRouter } from "next/router";
+function Index() {
+    const router = useRouter();
     return (
         <LayoutSubPages>
+            <Meta
+                title="Bitzquad | About Us"
+                description="We are a booming start-up in the tech ecosystem, based in Sri Lanka, focusing on providing diverse solutions in information systems, business process
+                re-engineering, Branding and Digital Marketing and E-Business services in both local and international markets. Our passionate and competent team is keen to bring futuristic and pragmatic solutions that transcend your expectations. We believe our purpose is to upscale
+                the value of ideas of our clients and prospects."
+                keywords="About Bitzquad, Bitzquad, Solutions Beyond Technology, Software Company, Information Systems, Business Process Re-engineering, Branding, Digital Marketing, E-Business services"
+                url={`${process.env.NEXT_PUBLIC_API_URL}/${router.asPath}`}
+                imagefb="/logo-dark.png"
+                alt="We are a booming start-up in the tech ecosystem, based in Sri Lanka, focusing on providing diverse solutions in information systems, business process
+                re-engineering, Branding and Digital Marketing and E-Business services in both local and international markets. Our passionate and competent team is keen to bring futuristic and pragmatic solutions that transcend your expectations. We believe our purpose is to upscale
+                the value of ideas of our clients and prospects."
+            />
             <div className="bz-container relative mx-auto mt-0 h-full w-full bg-gray-50 md:bg-transparent lg:mt-44" data-scroll-section>
                 <div className=" py-10 px-5 lg:py-0">
                     <h1 className="text-3xl font-semibold uppercase lg:text-5xl">About Us</h1>
@@ -34,7 +47,7 @@ function index() {
                                 perspectives to the table to provide viable solutions for your tech needs. <br></br> <br></br>
                                 As a team with a clear vision, we value the power of unity, learning and growth, and revelling small steps of the journey ahead.
                             </p>
-                            <img src={About1.src} className="absolute bottom-4 w-8/12 md:left-8 md:w-auto md:scale-x-110" />
+                            <img src="/assets/img/about/1.svg" className="absolute bottom-4 w-8/12 md:left-8 md:w-auto md:scale-x-110" />
                         </div>
                         <div className="relative md:w-1/2 lg:aspect-[9/6]">
                             <div className="bottom-1/2 w-full overflow-hidden md:h-full lg:aspect-[8/7] lg:h-auto ">
@@ -63,7 +76,7 @@ function index() {
                                 the journey. Along with the scrum, we use the following latest technologies and tools to build our products recognized by professionals in the
                                 industry:
                             </p>
-                            <img src={About2.src} className="absolute bottom-4 w-8/12 md:left-8 md:w-auto md:scale-x-110" />
+                            <img src="/assets/img/about/2.svg" className="absolute bottom-4 w-8/12 md:left-8 md:w-auto md:scale-x-110" />
                         </div>
                         <div className="relative md:w-1/2 lg:aspect-[9/6]">
                             <div className="bottom-1/2 w-full overflow-hidden md:h-full lg:aspect-[8/7] lg:h-auto ">
@@ -104,7 +117,7 @@ function index() {
                                 The core of the Bitzquad is to differentiate the processes using the latest technologies and tools to make the product&apos;s user experience
                                 positive and closer to them.
                             </p>
-                            <img src={About3.src} className="absolute bottom-4 w-8/12 md:left-8 md:w-auto md:scale-x-110" />
+                            <img src="/assets/img/about/3.svg" className="absolute bottom-4 w-8/12 md:left-8 md:w-auto md:scale-x-110" />
                         </div>
                         <div className="relative md:w-1/2 lg:aspect-[9/6]">
                             <div className="bottom-1/2 w-full overflow-hidden md:h-full lg:aspect-[8/7] lg:h-auto ">
@@ -121,4 +134,4 @@ function index() {
     );
 }
 
-export default index;
+export default Index;

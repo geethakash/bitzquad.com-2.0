@@ -1,7 +1,21 @@
-import { LogoDark } from "../constants/images";
+import Meta from "../components/defaults/Meta";
+import { useRouter } from "next/router";
 const FOF = () => {
+    const router = useRouter();
     return (
         <div className="min-h-full bg-white px-4 py-16 sm:px-6 sm:py-24 md:grid md:place-items-center lg:px-8">
+            <Meta
+                title="Bitzquad | Page Not Found"
+                description="We are a team of thinkers, engineers, designers, and marketers who represent different cultures worldwide, working together to build better solutions
+                            for a better world.  We strive to provide sustaining digital solutions in Information Systems, Business Process Re-engineering, Branding and Digital Marketing, and
+                            E-Business services that serve our stakeholders' best interests."
+                keywords="Bitzquad, Solutions Beyond Technology, Software Company, Information Systems, Business Process Re-engineering, Branding, Digital Marketing, E-Business services"
+                url={`${process.env.NEXT_PUBLIC_API_URL}${router.asPath}`}
+                imagefb="/logo-dark.png"
+                alt="We are a team of thinkers, engineers, designers, and marketers who represent different cultures worldwide, working together to build better solutions
+                    for a better world.  We strive to provide sustaining digital solutions in Information Systems, Business Process Re-engineering, Branding and Digital Marketing, and
+                    E-Business services that serve our stakeholders' best interests."
+            />
             <div className="mx-auto max-w-max">
                 <main className="sm:flex">
                     <p className="text-4xl font-bold tracking-tight text-indigo-600 sm:text-5xl">404</p>

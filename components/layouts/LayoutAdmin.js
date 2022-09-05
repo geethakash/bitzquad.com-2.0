@@ -3,7 +3,6 @@ import { Fragment, useState } from "react";
 import { Dialog, Transition, Disclosure } from "@headlessui/react";
 import { XIcon, MenuIcon, ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/outline";
 import { useRouter } from "next/router";
-import { LogoDark, Logo } from "../../constants/images";
 import Head from "next/head";
 import { getMenu } from "../../constants/hooks/getMenu";
 import useUserStore from "../../constants/stores/userStore";
@@ -73,7 +72,7 @@ const Layout = ({ children }) => {
                                 </Transition.Child>
                                 <div className="h-0 flex-1 overflow-y-auto pt-5 pb-4">
                                     <div className="flex flex-shrink-0 items-center justify-center px-4" onClick={() => router.push("/")}>
-                                        <img className="h-8 w-auto" src={LogoDark.src} alt="Workflow" />
+                                        <img className="h-8 w-auto" src="/logo-dark.png" alt="Bitzquad" />
                                     </div>
                                     <nav className="mt-5 space-y-1 px-2">
                                         {navigation.map((item) => (
@@ -123,7 +122,7 @@ const Layout = ({ children }) => {
                 <div className="flex min-h-0 flex-1 flex-col border-r border-gray-200 bg-white">
                     <div className="flex flex-1 flex-col overflow-x-hidden pt-5 pb-4">
                         <div className="flex flex-shrink-0 items-center justify-center px-4">
-                            <img className="h-8 w-auto" src={sidebarCollapse ? Logo.src : LogoDark.src} alt="Workflow" onClick={() => router.push("/")} />
+                            <img className="h-8 w-auto" src={sidebarCollapse ? "/logo.webp" : "/logo-dark.png"} alt="Workflow" onClick={() => router.push("/")} />
                             {sidebarCollapse ? (
                                 <ArrowRightIcon
                                     className="absolute -right-4 h-8 w-8 rounded-full border border-gray-200 bg-white p-1 text-gray-500 hover:text-gray-700"

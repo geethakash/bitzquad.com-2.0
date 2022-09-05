@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/router";
-
+import Meta from "../../components/defaults/Meta";
 export const getStaticPaths = async () => {
     const { members } = await import("../../constants/members");
     const paths = members.map((member) => ({
@@ -45,11 +45,23 @@ const socialLinkAnim = {
     },
 };
 
-function index({ member }) {
+function Index({ member }) {
+    const router = useRouter();
     return (
         <div className="bz-container mt-0 xl:max-w-none xl:px-0">
             {/* bg-gradient-to-tl from-purple-800/30 */}
-
+            <Meta
+                title={`${member.firstName} ${member.lastName} - ${member.role.text} - Bitzquad`}
+                description="We admire and respect professionalism, integrity, sportsmanship, transparency and modesty. And we aspire to cultivate these qualities within the work
+                environment as we grow.  We strive to provide sustaining digital solutions in Information Systems, Business Process Re-engineering, Branding and Digital Marketing, and
+                            E-Business services that serve our stakeholders' best interests."
+                keywords={`${member.firstName} ${member.lastName}, ${member.role.text} of Bitzquad, Bitzquad, Bitzquad Members, Bitzquad Team, Solutions Beyond Technology, Software Company, Information Systems, Business Process Re-engineering, Branding, Digital Marketing, E-Business services`}
+                url={`${process.env.NEXT_PUBLIC_API_URL}${router.asPath}`}
+                imagefb="/logo-dark.png"
+                alt="We admire and respect professionalism, integrity, sportsmanship, transparency and modesty. And we aspire to cultivate these qualities within the work
+                environment as we grow.  We strive to provide sustaining digital solutions in Information Systems, Business Process Re-engineering, Branding and Digital Marketing, and
+                            E-Business services that serve our stakeholders' best interests."
+            />
             <div className="relative  flex flex-col-reverse overflow-hidden xl:h-screen xl:flex-row xl:overflow-y-scroll">
                 <div className="flex h-full flex-col object-cover pr-0 xl:flex-auto xl:justify-between xl:pr-20 xl:pl-20 2xl:pl-40">
                     <motion.div
@@ -117,4 +129,4 @@ function index({ member }) {
     );
 }
 
-export default index;
+export default Index;

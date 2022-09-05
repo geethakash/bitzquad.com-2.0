@@ -1,9 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-// local imports
-import { Logo, Landingsm, Shape1, Shape2, Shape3, Shape4, Shape5, Shape6, Shape7 } from "../../constants/images";
-
 const textRevealAnimation = {
     initial: {
         y: 200,
@@ -42,13 +39,13 @@ function Landing({ loading }) {
                                   }
                                 : {}
                         }
-                        src={Landingsm.src}
+                        src="/landing-sm.webp"
                         alt="cover-img"
                         className="h-auto w-full md:hidden"
                     />
                     <div className="px-5">
                         {!loading && <AnimatedTitle landingTitle="Solutions Beyond Technology" />}
-                        <motion.p
+                        <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={!loading ? { opacity: 1, y: 0 } : {}}
                             transition={{
@@ -56,21 +53,23 @@ function Landing({ loading }) {
                                 delay: 1.8,
                                 duration: 1,
                             }}
-                            className="text-gray-700"
+                            className="text-xl text-gray-700"
                         >
                             We are a team of thinkers, engineers, designers, and marketers who represent different cultures worldwide, working together to build better solutions
                             for a better world.
                             <br></br>
                             <br></br>
-                            We strive to provide sustaining digital solutions in Information Systems, Business Process Re-engineering, Branding and Digital Marketing, and
-                            E-Business services that serve our stakeholders&apos; best interests.
-                        </motion.p>
+                            <h1 className="text-xl text-gray-700">
+                                We strive to provide sustaining digital solutions in Information Systems, Business Process Re-engineering, Branding and Digital Marketing, and
+                                E-Business services that serve our stakeholders&apos; best interests.
+                            </h1>
+                        </motion.div>
                     </div>
                 </div>
                 <div className="landing-logo">
                     <motion.img
                         className=""
-                        src={Logo.src}
+                        src="/logo.webp"
                         alt="bz-logo"
                         layoutId="landing-logo-image"
                         transition={{
@@ -110,24 +109,24 @@ export default Landing;
 const ShapesContainer = () => {
     const shapes = [
         {
-            src: Shape1.src,
-            alt: Shape1.alt,
+            src: "/assets/img/shapes/shape-1.png",
+            alt: "Landing Antimation Object 1",
         },
         {
-            src: Shape2.src,
-            alt: Shape2.alt,
+            src: "/assets/img/shapes/shape-2.png",
+            alt: "Landing Antimation Object 2",
         },
         {
-            src: Shape3.src,
-            alt: Shape3.alt,
+            src: "/assets/img/shapes/shape-3.png",
+            alt: "Landing Antimation Object 3",
         },
         {
-            src: Shape4.src,
-            alt: Shape4.alt,
+            src: "/assets/img/shapes/shape-4.png",
+            alt: "Landing Antimation Object 4",
         },
         {
-            src: Shape5.src,
-            alt: Shape5.alt,
+            src: "/assets/img/shapes/shape-5.png",
+            alt: "Landing Antimation Object 5",
         },
     ];
 

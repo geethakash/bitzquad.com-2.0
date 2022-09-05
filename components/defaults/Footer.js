@@ -1,5 +1,4 @@
 import React from "react";
-import { LogoDark, Logo } from "../../constants/images";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -9,11 +8,13 @@ function Footer() {
             <div className="flex flex-col items-center justify-center py-14 pt-6 sm:flex-row sm:py-28">
                 <div className="w-full sm:w-1/2">
                     <div className="felx relative mr-0 ml-auto w-full flex-row justify-center border-r border-gray-700 py-7 sm:w-9/12 lg:w-8/12">
-                        <img className="w-full px-20 pb-6 sm:w-10/12  sm:px-0 sm:pb-0" src={LogoDark.src} alt="bz-logo" />
+                        <img className="w-full px-20 pb-6 sm:w-10/12  sm:px-0 sm:pb-0" src="/logo-dark.png" alt="Bitzquad - Software Compnay - Logo Dark" />
 
                         <div className="mt-3 flex flex-row flex-wrap justify-evenly gap-x-7 gap-y-4 px-14 text-center text-lg font-bold text-main-900 sm:w-10/12 sm:justify-between sm:gap-y-2.5 sm:px-0">
                             <motion.a
                                 href="https://www.facebook.com/bitzquad/"
+                                target="_blank"
+                                rel="noreferrer"
                                 className="underline-link w-28 sm:w-auto"
                                 whileHover={{ scale: 1.05 }}
                                 transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}
@@ -22,6 +23,8 @@ function Footer() {
                             </motion.a>
                             <motion.a
                                 href="https://twitter.com/Bitzquad"
+                                target="_blank"
+                                rel="noreferrer"
                                 className="underline-link w-28 sm:w-auto"
                                 whileHover={{ scale: 1.05 }}
                                 transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}
@@ -30,6 +33,8 @@ function Footer() {
                             </motion.a>
                             <motion.a
                                 href="https://www.instagram.com/bitzquad/"
+                                target="_blank"
+                                rel="noreferrer"
                                 className="underline-link w-28 sm:w-auto"
                                 whileHover={{ scale: 1.05 }}
                                 transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}
@@ -38,6 +43,8 @@ function Footer() {
                             </motion.a>
                             <motion.a
                                 href="https://www.linkedin.com/company/bitzquad/"
+                                target="_blank"
+                                rel="noreferrer"
                                 className="underline-link w-28 sm:w-auto"
                                 whileHover={{ scale: 1.05 }}
                                 transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}

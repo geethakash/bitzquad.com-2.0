@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { Router, useRouter } from "next/router";
 
 const sideMenuLinks = [
     {
@@ -10,6 +11,28 @@ const sideMenuLinks = [
     {
         name: "Services",
         href: "#services",
+    },
+    {
+        name: "About Us",
+        href: "/about",
+    },
+    {
+        name: "Projects",
+        href: "/projects",
+    },
+    {
+        name: "Team",
+        href: "/squad",
+    },
+    {
+        name: "Contact",
+        href: "/contact",
+    },
+];
+const sideMenuLinks1 = [
+    {
+        name: "Home",
+        href: "/",
     },
     {
         name: "About Us",
@@ -148,6 +171,7 @@ const socialLinkAnim = {
 };
 
 function SideMenu({ MenuOpen, setMenuOpen }) {
+    const router = useRouter();
     // menuLink
     const SideMenuLink = ({ href, name }) => {
         return (
@@ -196,7 +220,7 @@ function SideMenu({ MenuOpen, setMenuOpen }) {
                 </div>
                 <div className="sidemenu__content">
                     <motion.div className="sidemenu__content_items" variants={sideMenuLinksAnim} initial="initial" animate="animate">
-                        {sideMenuLinks.map((link, index) => (
+                        {(router.asPath == "/" ? sideMenuLinks : sideMenuLinks1).map((link, index) => (
                             <SideMenuLink href={link.href} name={link.name} key={index} />
                         ))}
                     </motion.div>
