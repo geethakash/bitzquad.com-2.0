@@ -176,11 +176,15 @@ function SideMenu({ MenuOpen, setMenuOpen }) {
     const SideMenuLink = ({ href, name }) => {
         return (
             <motion.div className="sidemenu__content_item" variants={sideMenuLinkAnim}>
-                <Link href={href}>
-                    <motion.a className="underline-link" href={href}>
-                        {name}
-                    </motion.a>
-                </Link>
+                <motion.a
+                    className="underline-link"
+                    onClick={() => {
+                        setMenuOpen(false);
+                        router.push(href);
+                    }}
+                >
+                    {name}
+                </motion.a>
             </motion.div>
         );
     };

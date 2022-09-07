@@ -9,7 +9,7 @@
         @apply md:w-8/12 lg:pl-12 xl:w-1/2 xl:pl-28;
 
         & .landing-title-wrapper {
-            @apply overflow-y-auto py-5 pb-5 pr-10 lg:mb-5 2xl:pr-20;
+            @apply overflow-y-auto py-5 pb-5 pr-0 sm:pr-10 lg:mb-5 2xl:pr-20;
         }
 
         & .landing-title,
