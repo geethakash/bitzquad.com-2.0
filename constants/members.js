@@ -116,8 +116,8 @@ export const members = [
     {
         id: 5,
         firstName: "Ridmi",
-        lastName: "Rathnayake",
-        role: { text: "Secretory", bgImg: "/assets/img/squad/role/management.svg" },
+        lastName: "Ratnayake",
+        role: { text: "Secretary", bgImg: "/assets/img/squad/role/management.svg" },
         img: "/assets/img/squad/ridmi.png",
         bgColor: "#F5D6C3",
         type: [1],
