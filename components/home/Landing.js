@@ -44,7 +44,9 @@ function Landing({ loading }) {
                         className="h-auto w-full md:hidden"
                     />
                     <div className="px-5">
+                        <div className="hidden sm:block">
                         {!loading && <AnimatedTitle className="hidden sm:block" landingTitle="Solutions Beyond Technology" />}
+                        </div>
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={!loading ? { opacity: 1, y: 0 } : {}}
