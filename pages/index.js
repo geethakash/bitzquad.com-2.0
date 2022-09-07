@@ -34,7 +34,7 @@ export default function Home() {
                     <Services />
                     <OurPartners />
                     <ProjectSection />
-                    <Testimonials />
+                    {/* <Testimonials /> */}
                     <Collaborate />
                 </div>
             </LayoutMain>
