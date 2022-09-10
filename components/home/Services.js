@@ -67,7 +67,7 @@ function Services() {
                             </div>
                         </div>
                         <div className="services__content_image">
-                            <motion.img src="/services-exp.png" alt="Bitzquad Services Explain Image" />
+                            <motion.img src="/services-exp.webp" alt="Bitzquad Services Explain Image" />
                         </div>
                     </motion.div>
                 </div>

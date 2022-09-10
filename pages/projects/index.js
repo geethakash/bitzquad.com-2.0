@@ -16,7 +16,7 @@ function Index() {
                             environment as we grow."
                 keywords="Bitzquad, Projects done by Bitzquad, Solutions Beyond Technology, Software Company, Information Systems, Business Process Re-engineering, Branding, Digital Marketing, E-Business services"
                 url={`${process.env.NEXT_PUBLIC_API_URL}${router.asPath}`}
-                imagefb="/logo-dark.png"
+                imagefb="/logo-dark.webp"
                 alt=" Potrayed here are the work that we are proud to have carried out for our invaluable customers. These projects will help you to have a better understanding
                 of what we do and how we do things.  We strive to provide sustaining digital solutions in Information Systems, Business Process Re-engineering, Branding and Digital Marketing, and
                     E-Business services that serve our stakeholders' best interests. We admire and respect professionalism, integrity, sportsmanship, transparency and modesty. And we aspire to cultivate these qualities within the work

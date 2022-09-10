@@ -25,7 +25,7 @@ function ProjectSection() {
                     className="absolute z-20 h-full w-auto object-cover md:h-auto md:w-full"
                     data-scroll
                     data-scroll-speed="-3"
-                    src="/proj-sec-bg.png"
+                    src="/proj-sec-bg.webp"
                     alt="Bitzquad project section background"
                 />
             </div>
