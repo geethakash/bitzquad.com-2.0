@@ -41,7 +41,7 @@ const Index = () => {
                     description="Want to inquire about your new project or get to know us better? Contact us directly or write to us."
                     keywords="Bitzquad, Contact Bitzquad,  Solutions Beyond Technology, Software Company, Information Systems, Business Process Re-engineering, Branding, Digital Marketing, E-Business services"
                     url={`${process.env.NEXT_PUBLIC_API_URL}${router.asPath}`}
-                    imagefb="/logo-dark.png"
+                    imagefb="/logo-dark.webp"
                     alt="Want to inquire about your new project or get to know us better? Contact us directly or write to us."
                 />
                 <div data-scroll-section>

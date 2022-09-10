@@ -25,7 +25,7 @@ const Index = () => {
                             E-Business services that serve our stakeholders' best interests."
                 keywords="Bitzquad, Bitzquad Members, Bitzquad Team, Solutions Beyond Technology, Software Company, Information Systems, Business Process Re-engineering, Branding, Digital Marketing, E-Business services"
                 url={`${process.env.NEXT_PUBLIC_API_URL}${router.asPath}`}
-                imagefb="/logo-dark.png"
+                imagefb="/logo-dark.webp"
                 alt="We admire and respect professionalism, integrity, sportsmanship, transparency and modesty. And we aspire to cultivate these qualities within the work
                 environment as we grow.  We strive to provide sustaining digital solutions in Information Systems, Business Process Re-engineering, Branding and Digital Marketing, and
                             E-Business services that serve our stakeholders' best interests."
