@@ -108,7 +108,7 @@ function Index({ member }) {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 1 }}
-                            className="bottom-0 z-10  xl:absolute xl:right-0 xl:bottom-0  xl:aspect-square xl:h-full xl:w-auto xl:max-w-none xl:translate-x-[15%]"
+                            className="bottom-0 z-10  xl:absolute xl:right-0 xl:bottom-0  w-full lg:w-auto xl:h-full xl:w-auto xl:max-w-none "
                             src={member?.img}
                         />
                     </motion.div>
