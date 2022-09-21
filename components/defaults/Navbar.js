@@ -48,7 +48,7 @@ function Navbar({ animated = false }) {
                 className="navbar"
             >
                 <Link className="navbar-brand" href="/">
-                    <img className="h-10" src="/logo-dark.png" alt="Bitzquad - Solutions Beyond Technology - IT Service Compnay - Logo Dark" />
+                    <img className="h-10" src="/logo-dark.webp" alt="Bitzquad - Solutions Beyond Technology - IT Service Compnay - Logo Dark" />
                 </Link>
                 <div className="navbar-links">
                     <Link href="/about">

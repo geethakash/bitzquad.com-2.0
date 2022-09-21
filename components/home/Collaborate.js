@@ -46,7 +46,7 @@ function Collaborate() {
                             </Button>
                         </div>
                         <div className="collaborate__content_image">
-                            <motion.img src="/collaborate-img.png" layoutId="userImg" alt="Bitzquad Colloborate With Us Section Image" />
+                            <motion.img src="/collaborate-img.webp" layoutId="userImg" alt="Bitzquad Colloborate With Us Section Image" />
                         </div>
                     </motion.div>
                 </div>

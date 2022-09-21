@@ -109,23 +109,23 @@ export default Landing;
 const ShapesContainer = () => {
     const shapes = [
         {
-            src: "/assets/img/shapes/shape-1.png",
+            src: "/assets/img/shapes/shape-1.webp",
             alt: "Landing Antimation Object 1",
         },
         {
-            src: "/assets/img/shapes/shape-2.png",
+            src: "/assets/img/shapes/shape-2.webp",
             alt: "Landing Antimation Object 2",
         },
         {
-            src: "/assets/img/shapes/shape-3.png",
+            src: "/assets/img/shapes/shape-3.webp",
             alt: "Landing Antimation Object 3",
         },
         {
-            src: "/assets/img/shapes/shape-4.png",
+            src: "/assets/img/shapes/shape-4.webp",
             alt: "Landing Antimation Object 4",
         },
         {
-            src: "/assets/img/shapes/shape-5.png",
+            src: "/assets/img/shapes/shape-5.webp",
             alt: "Landing Antimation Object 5",
         },
     ];

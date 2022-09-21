@@ -57,7 +57,7 @@ function Index({ member }) {
                             E-Business services that serve our stakeholders' best interests."
                 keywords={`${member.firstName} ${member.lastName}, ${member.role.text} of Bitzquad, Bitzquad, Bitzquad Members, Bitzquad Team, Solutions Beyond Technology, Software Company, Information Systems, Business Process Re-engineering, Branding, Digital Marketing, E-Business services`}
                 url={`${process.env.NEXT_PUBLIC_API_URL}${router.asPath}`}
-                imagefb="/logo-dark.png"
+                imagefb="/logo-dark.webp"
                 alt="We admire and respect professionalism, integrity, sportsmanship, transparency and modesty. And we aspire to cultivate these qualities within the work
                 environment as we grow.  We strive to provide sustaining digital solutions in Information Systems, Business Process Re-engineering, Branding and Digital Marketing, and
                             E-Business services that serve our stakeholders' best interests."
@@ -108,7 +108,7 @@ function Index({ member }) {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 1 }}
-                            className="bottom-0 z-10  xl:absolute xl:right-0 xl:bottom-0  xl:aspect-square xl:h-full xl:w-auto xl:max-w-none xl:translate-x-[15%]"
+                            className="bottom-0 z-10  xl:absolute xl:right-0 xl:bottom-0  w-full lg:w-auto xl:h-full xl:w-auto xl:max-w-none "
                             src={member?.img}
                         />
                     </motion.div>

@@ -47,31 +47,31 @@ function CustomerFeedback() {
             name: "Bobby Mala",
             role: "CEO of ABC Holdings",
             text: "Bitzquad is a great company to work with. They are very responsive and always provide a great service. I highly recommend them to anyone looking for a great company to work with.",
-            img: "/testimonial-1.jpg",
+            img: "/testimonial-1.webp",
         },
         {
             name: "Dean Winchester",
             role: "Product Manager at Winchester Groups",
             text: "A customer review is a reflection of a customer's experience with your company's products or services. Reviews can be found on sites such as Google Reviews, Amazon, Yelp, and Facebook.",
-            img: "/testimonial-2.jpg",
+            img: "/testimonial-2.webp",
         },
         {
             name: "Anne Hathaway",
             role: "CEO of Annie Company (pvt) LTD",
             text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas, leo at mattis elementum, lacus enim facilisis tellus, ac pretium enim libero eget massa. Curabitur metus felis, pulvinar sed finibus nec, suscipit at urna. Donec rutrum elementum massa, sit amet tempus diam condimentum eget.",
-            img: "/testimonial-3.jpg",
+            img: "/testimonial-3.webp",
         },
         {
             name: "Deboro Desmond",
             role: "CTO of Desmond Holdings",
             text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas, leo at mattis elementum, lacus enim facilisis tellus, ac pretium enim libero eget massa. Curabitur metus felis, pulvinar sed finibus nec, suscipit at urna. Donec rutrum elementum massa, sit amet tempus diam condimentum eget.",
-            img: "/testimonial-4.jpg",
+            img: "/testimonial-4.webp",
         },
         {
             name: "Angie Holan",
             role: "Product Manager at Amazon",
             text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas, leo at mattis elementum, lacus enim facilisis tellus, ac pretium enim libero eget massa. Curabitur metus felis, pulvinar sed finibus nec, suscipit at urna. Donec rutrum elementum massa, sit amet tempus diam condimentum eget.",
-            img: "/testimonial-5.jpg",
+            img: "/testimonial-5.webp",
         },
     ]);
     const [selectedTestimonial, setSelectedTestimonial] = useState(testimonials[0]);
