@@ -149,8 +149,8 @@ const Index = () => {
                                     <div className="flex h-full flex-col justify-center gap-y-4 pl-8 text-base">
                                         <motion.div className="felx-col flex " whileHover={{ scale: 1.05 }} transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}>
                                             <PhoneIcon className="mr-2 h-5 w-5  text-purple-600" />
-                                            <a href="tel:1234567890" className="underline-link">
-                                                1234567890
+                                            <a href="tel:+94778813384" className="underline-link">
+                                                +94778813384
                                             </a>
                                         </motion.div>
                                         <motion.div className="felx-col flex " whileHover={{ scale: 1.05 }} transition={{ duration: 0.4, ease: [0.65, 0.05, 0.36, 1] }}>
