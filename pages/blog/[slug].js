@@ -131,16 +131,12 @@ function PostPage({ frontmatter: meta, content, slug }) {
   return (
     <LayoutSubPages>
       <Meta
-        title="Bitzquad | Blog"
-        description="We are a booming start-up in the tech ecosystem, based in Sri Lanka, focusing on providing diverse solutions in INFORMATION SYSTEMS, BUSINESS PROCESS
-                RE-ENGINEERING, BRANDING AND DIGITAL MARKETING and E-BUSINESS services in both local and international markets. Our passionate and competent team is keen to bring futuristic and pragmatic solutions that transcend your expectations. We believe our purpose is to upscale
-                the value of ideas of our clients and prospects."
+        title={`Bitzquad | Blog - ${meta.title}`}
+        description={meta.excerpt}
         keywords="Blog Bitzquad, Bitzquad, Solutions Beyond Technology, Software Company, Information Systems, Business Process Re-engineering, Branding, Digital Marketing, E-Business services"
         url={`${process.env.NEXT_PUBLIC_API_URL}/${router.asPath}`}
-        imagefb="/logo-dark.webp"
-        alt="We are a booming start-up in the tech ecosystem, based in Sri Lanka, focusing on providing diverse solutions in information systems, business process
-                re-engineering, Branding and Digital Marketing and E-Business services in both local and international markets. Our passionate and competent team is keen to bring futuristic and pragmatic solutions that transcend your expectations. We believe our purpose is to upscale
-                the value of ideas of our clients and prospects."
+        imagefb={meta.main_image}
+        alt={meta.excerpt}
       />
       <div className="mx-auto w-full font-['Raleway'] lg:mt-36 2xl:mt-44 ">
         <motion.div className="progress-bar" style={{ scaleX }} />
