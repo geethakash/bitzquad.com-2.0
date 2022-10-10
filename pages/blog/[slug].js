@@ -131,11 +131,11 @@ function PostPage({ frontmatter: meta, content, slug, sections }) {
                         <span className="block text-lg font-semibold uppercase">In This Article</span>
                         <div className="mt-3">
                             {sections.map((section, index) => (
-                                <div className="">
+                                <div className="" key={index}>
                                     <span className="mr-1 text-lg text-gray-500">{index + 1}.</span>
                                     {section.text}
                                     {section.subtexts?.map((ssection, index1) => (
-                                        <div className="ml-5">
+                                        <div className="ml-5" key={index1}>
                                             <span className="mr-1 text-lg text-gray-500">
                                                 {index + 1}.{index1 + 1}.
                                             </span>
