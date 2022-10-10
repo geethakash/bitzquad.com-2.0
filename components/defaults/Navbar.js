@@ -1,24 +1,24 @@
 import React, { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import SideMenu from "./SideMenu";
-import { useLocomotiveScroll } from "react-locomotive-scroll";
+
 import Link from "next/link";
 import { Router, useRouter } from "next/router";
 
 function Navbar({ animated = false }) {
     const router = useRouter();
     const [menuOpen, setMenuOpen] = React.useState(false);
-    const { scroll } = useLocomotiveScroll();
-    useEffect(() => {
-        if (!scroll) {
-            return;
-        }
-        if (menuOpen) {
-            scroll.stop();
-        } else {
-            scroll.start();
-        }
-    }, [menuOpen]);
+    // const { scroll } = useLocomotiveScroll();
+    // useEffect(() => {
+    //     if (!scroll) {
+    //         return;
+    //     }
+    //     if (menuOpen) {
+    //         scroll.stop();
+    //     } else {
+    //         scroll.start();
+    //     }
+    // }, [menuOpen]);
 
     return (
         <>
