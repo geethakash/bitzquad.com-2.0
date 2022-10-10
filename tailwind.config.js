@@ -13,7 +13,9 @@ module.exports = {
                 },
                 main: {
                     900: "#151550",
-                },
+                },purple: {
+                    custom:"#B798FF"
+                }
             },
             screens: {
                 "3xl": "1780px",

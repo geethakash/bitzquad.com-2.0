@@ -3,86 +3,32 @@ import Link from "next/link";
 import { LayoutSubPages } from "../../components";
 import Meta from "../../components/defaults/Meta";
 import { useRouter } from "next/router";
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
 
-const blogs = [
-  {
-    title: "Things You must know about Tailwind CSS",
-    utitle: "things-you-must-know-about-tailwind-css",
-    mainImg: "https://i.postimg.cc/Z5sBkW28/image.png",
-    coverImg: "https://i.postimg.cc/Z5sBkW28/image.png",
-    category: "Design Ideas",
-    readingDuration: "10min reading",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et dapibus dolor. Suspendisse sodales a lectus in cursus. In scelerisque, dolor ut venenatis feugia...",
-    writer: {
-      name: "Akash Geethanajna",
-      avatar: "/assets/img/squad/akash.webp",
-    },
-    publishDate: Date.now(),
-  },
-  {
-    title: "Why You should try Mongo DB",
-    utitle: "why-you-should-try-mongo-db",
-    mainImg: "https://i.postimg.cc/d0vngyKW/image.png",
-    coverImg: "https://i.postimg.cc/d0vngyKW/image.png",
-    category: "Design Ideas",
-    readingDuration: "3min reading",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et dapibus dolor. Suspendisse sodales a lectus in cursus. In scelerisque, dolor ut venenatis feugia...",
-    writer: {
-      name: "Hasindu Lanka",
-      avatar: "/assets/img/squad/hasindu.webp",
-    },
-    publishDate: Date.now(),
-  },
-  {
-    title: "Coding Best Practices",
-    utitle: "coding-best-practices",
-    mainImg: "https://i.postimg.cc/6qnTnT1Z/image.png",
-    coverImg: "https://i.postimg.cc/6qnTnT1Z/image.png",
-    category: "Design Ideas",
-    readingDuration: "3min reading",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et dapibus dolor. Suspendisse sodales a lectus in cursus. In scelerisque, dolor ut venenatis feugia...",
-    writer: {
-      name: "Kesara Karannagoda",
-      avatar: "/assets/img/squad/kesara.webp",
-    },
-    publishDate: Date.now(),
-  },
-  {
-    title: "Cloudflare Workers Top Secrets",
-    utitle: "clodflare-workers",
-    mainImg: "https://i.postimg.cc/hPv5Dx6h/image.png",
-    coverImg: "https://i.postimg.cc/hPv5Dx6h/image.png",
-    category: "Design Ideas",
-    readingDuration: "3min reading",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et dapibus dolor. Suspendisse sodales a lectus in cursus. In scelerisque, dolor ut venenatis feugia...",
-    writer: {
-      name: "Harindu Wijeshinghe",
-      avatar: "/assets/img/squad/harindu.webp",
-    },
-    publishDate: Date.now(),
-  },
-  {
-    title: "How Serverless improve your business",
-    utitle: "serverless-business",
-    mainImg: "https://i.postimg.cc/MGYkLBv5/image.png",
-    coverImg: "https://i.postimg.cc/MGYkLBv5/image.png",
-    category: "Design Ideas",
-    readingDuration: "3min reading",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et dapibus dolor. Suspendisse sodales a lectus in cursus. In scelerisque, dolor ut venenatis feugia...",
-    writer: {
-      name: "Hasindu Lanka",
-      avatar: "/assets/img/squad/hasindu.webp",
-    },
-    publishDate: Date.now(),
-  },
-];
+export async function getStaticProps() {
+  const files = fs.readdirSync(path.join("posts"));
 
-function Index() {
+  console.log(files);
+  const posts = files.map((fileName) => {
+    const slug = fileName.replace(".md", "");
+    const markDownWithMeta = fs.readFileSync(
+      path.join("posts", fileName),
+      "utf-8"
+    );
+    const { data: frontmatter } = matter(markDownWithMeta);
+    return { slug, frontmatter };
+  });
+
+  return {
+    props: {
+      posts: posts,
+    },
+  };
+}
+
+function Index({ posts }) {
   const router = useRouter();
   return (
     <LayoutSubPages>
@@ -110,60 +56,54 @@ function Index() {
           </p>
         </div>
         <div className=" mb-20 grid grid-cols-1 gap-y-16 gap-x-10 pt-10 md:grid-cols-2 lg:pt-20 xl:grid-cols-3 2xl:px-20">
-          {blogs.slice(0, 1).map((blog, index) => (
+          {posts.slice(0, 1).map(({ frontmatter: blog, slug }, index) => (
             <>
-              <Link href={`/blog/${blog.utitle}`}>
+              <Link href={`/blog/${slug}`}>
                 <div key={index} className="blog_card_large group">
                   <div className="blog_card_large_img">
-                    <img src={blog.mainImg} alt={blog.title} className="" />
+                    <img src={blog.main_image} alt={blog.title} className="" />
                   </div>
                   <div className="blog_card_large_content">
                     <div className="sub_details">
                       <div className="category">{blog.category}</div>
-                      <div className="duration">{blog.readingDuration}</div>
+                      <div className="duration">{blog.read_duration}</div>
                     </div>
 
                     <h4 className="title">{blog.title}</h4>
-                    <p className="paragraph">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Fusce et dapibus dolor. Suspendisse sodales a lectus in
-                      cursus. In scelerisque, dolor ut venenatis feugiat, dui
-                      quam dictum libero, sit amet semper neque lacus vila nolan
-                      homaltm...
-                    </p>
+                    <p className="paragraph">{blog.excerpt}</p>
                     <div className="writer">
                       <div className="image">
-                        <img src={blog.writer.avatar} alt={blog.writer.name} />
+                        <img src={blog.writer_avatar} alt={blog.writer} />
                       </div>
                       <div>
-                        <span className="name">{blog.writer.name}</span>
+                        <span className="name">{blog.writer}</span>
                         <span className="publish_date">
-                          {new Date(blog.publishDate).toDateString()}
+                          {new Date(blog.date).toDateString()}
                         </span>
                       </div>
                     </div>
                   </div>
                 </div>
               </Link>
-              <Link href={`/blog/${blog.utitle}`}>
+              <Link href={`/blog/${slug}`}>
                 <div key={index} className="blog_card group lg:hidden">
                   <div className="blog_card_image">
-                    <img src={blog.mainImg} alt={blog.title} />
-                    <div className="duration">{blog.readingDuration}</div>
+                    <img src={blog.main_image} alt={blog.title} />
+                    <div className="duration">{blog.rading_duration}</div>
                   </div>
                   <div className="blog_card_content">
                     <h4 className="title" title={blog.title}>
                       {blog.title}
                     </h4>
-                    <p className="paragraph">{blog.content}</p>
+                    <p className="paragraph">{blog.excerpt}</p>
                     <div className="writer">
                       <div className="image">
-                        <img src={blog.writer.avatar} alt={blog.writer.name} />
+                        <img src={blog.writer_avatar} alt={blog.writer} />
                       </div>
                       <div>
-                        <span className="name">{blog.writer.name}</span>
+                        <span className="name">{blog.writer}</span>
                         <span className="publish_date">
-                          {new Date(blog.publishDate).toDateString()}
+                          {new Date(blog.date).toDateString()}
                         </span>
                       </div>
                     </div>
@@ -172,26 +112,26 @@ function Index() {
               </Link>
             </>
           ))}
-          {blogs.slice(1).map((blog, index) => (
-            <Link key={index} href={`/blog/${blog.utitle}`}>
+          {posts.slice(1).map(({ frontmatter: blog, slug }, index) => (
+            <Link key={index} href={`/blog/${slug}`}>
               <div key={index} className="blog_card group">
                 <div className="blog_card_image">
-                  <img src={blog.mainImg} alt={blog.title} />
-                  <div className="duration">{blog.readingDuration}</div>
+                  <img src={blog.main_image} alt={blog.title} />
+                  <div className="duration">{blog.read_duration}</div>
                 </div>
                 <div className="blog_card_content">
                   <h4 className="title" title={blog.title}>
                     {blog.title}
                   </h4>
-                  <p className="paragraph">{blog.content}</p>
+                  <p className="paragraph">{blog.excerpt}</p>
                   <div className="writer">
                     <div className="image">
-                      <img src={blog.writer.avatar} alt={blog.writer.name} />
+                      <img src={blog.writer_avatar} alt={blog.writer} />
                     </div>
                     <div>
-                      <span className="name">{blog.writer.name}</span>
+                      <span className="name">{blog.writer}</span>
                       <span className="publish_date">
-                        {new Date(blog.publishDate).toDateString()}
+                        {new Date(blog.date).toDateString()}
                       </span>
                     </div>
                   </div>
