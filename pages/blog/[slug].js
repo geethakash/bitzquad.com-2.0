@@ -6,7 +6,6 @@ import { useRouter } from "next/router";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { marked } from "marked";
 import { motion, useScroll, useSpring } from "framer-motion";
 import Markdown from "markdown-to-jsx";
 import Code from "../../components";
@@ -131,7 +130,7 @@ function PostPage({ frontmatter: meta, content, slug, sections }) {
                 </div>
                 <div className="bz-container mt-0 mb-20 flex justify-center gap-x-5">
                     <article ref={ref} className=" text-[#181B3C]  lg:w-3/4">
-                        <Markdown>{marked(content)}</Markdown>
+                        <Markdown>{content}</Markdown>
                     </article>
                     <div className="hidden w-1/4 pt-16 lg:block">
                         <span className="block text-lg font-semibold uppercase">In This Article</span>
