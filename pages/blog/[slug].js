@@ -75,7 +75,7 @@ const extractHeadings = (str) => {
 
 const getidformheading = (str) => {
     return str
-        .replace(/[^a-zA-Z0-9 ]/g, "")
+        .replace(/[^a-zA-Z0-9 -]/g, "")
         .replace(/\s/g, "-")
         .toLowerCase();
 };
