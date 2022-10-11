@@ -40,9 +40,6 @@ export async function getStaticProps({ params: { slug } }) {
 }
 
 const extractHeadings = (str) => {
-    const h1patten = /(## )/;
-    const h2patten = /(^### )/;
-
     let h1 = [];
     let h2 = [];
     let obj = [];
@@ -50,10 +47,10 @@ const extractHeadings = (str) => {
 
     for (var i = 0; i < strarr.length; i++) {
         if (strarr[i].match(/(^## )/)) {
-            h1.push({ text: strarr[i].replace("## ", ""), row: i });
+            h1.push({ text: strarr[i].replace("## ", ""), row: i, id: getidformheading(strarr[i].replace("## ", "")) });
         }
         if (strarr[i].match(/(^### )/)) {
-            h2.push({ text: strarr[i].replace("### ", ""), row: i });
+            h2.push({ text: strarr[i].replace("### ", ""), row: i, id: getidformheading(strarr[i].replace("### ", "")) });
         }
     }
     obj = h1;
@@ -68,11 +65,19 @@ const extractHeadings = (str) => {
             }
         }
     }
+
     console.log("obj : ", JSON.stringify(obj));
 
     return obj;
     // console.log("h1 : ", h1);
     // console.log("h2 : ", h2);
+};
+
+const getidformheading = (str) => {
+    return str
+        .replace(/[^a-zA-Z0-9 ]/g, "")
+        .replace(/\s/g, "-")
+        .toLowerCase();
 };
 
 const HeadingLink = ({ children }) => <div className="text-red-400">{children}</div>;
@@ -134,7 +139,7 @@ function PostPage({ frontmatter: meta, content, slug, sections }) {
                             {sections.map((section, index) => (
                                 <div key={index} className="pb-1">
                                     {console.log(section.text)}
-                                    <a href={`#${section.text.replace(/\s+/g, "-").toLowerCase()}`} className="mr-1  text-base text-gray-500">
+                                    <a href={`#${section.id}`} className="mr-1  text-base text-gray-500">
                                         {index + 1}. {section.text.split(". ")[1]}
                                     </a>
 
