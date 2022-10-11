@@ -95,7 +95,7 @@ function PostPage({ frontmatter: meta, content, slug, sections }) {
                 description={meta.excerpt}
                 keywords="Blog Bitzquad, Bitzquad, Solutions Beyond Technology, Software Company, Information Systems, Business Process Re-engineering, Branding, Digital Marketing, E-Business services"
                 url={`${process.env.NEXT_PUBLIC_API_URL}${router.asPath}`}
-                imagefb={`${process.env.NEXT_PUBLIC_API_URL}/${meta.main_image}`}
+                imagefb={`${meta.main_image}`}
                 alt={meta.excerpt}
             />
             <div className="mx-auto w-full font-['Raleway'] lg:mt-36 2xl:mt-44 ">
