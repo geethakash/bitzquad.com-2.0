@@ -40,8 +40,8 @@ export async function getStaticProps({ params: { slug } }) {
 }
 
 const extractHeadings = (str) => {
-    const h1patten = /(# )/;
-    const h2patten = /(^## )/;
+    const h1patten = /(## )/;
+    const h2patten = /(^### )/;
 
     let h1 = [];
     let h2 = [];
@@ -49,11 +49,11 @@ const extractHeadings = (str) => {
     const strarr = str.split("\n");
 
     for (var i = 0; i < strarr.length; i++) {
-        if (strarr[i].match(/(^# )/)) {
-            h1.push({ text: strarr[i].replace("# ", ""), row: i });
-        }
         if (strarr[i].match(/(^## )/)) {
-            h2.push({ text: strarr[i].replace("## ", ""), row: i });
+            h1.push({ text: strarr[i].replace("## ", ""), row: i });
+        }
+        if (strarr[i].match(/(^### )/)) {
+            h2.push({ text: strarr[i].replace("### ", ""), row: i });
         }
     }
     obj = h1;
@@ -68,10 +68,11 @@ const extractHeadings = (str) => {
             }
         }
     }
+    console.log("obj : ", JSON.stringify(obj));
+
     return obj;
     // console.log("h1 : ", h1);
     // console.log("h2 : ", h2);
-    // console.log("obj : ", JSON.stringify(obj));
 };
 
 const HeadingLink = ({ children }) => <div className="text-red-400">{children}</div>;
@@ -131,11 +132,14 @@ function PostPage({ frontmatter: meta, content, slug, sections }) {
                         <span className="block text-lg font-semibold uppercase">In This Article</span>
                         <div className="mt-3">
                             {sections.map((section, index) => (
-                                <div className="" key={index}>
-                                    <span className="mr-1 text-lg text-gray-500">{index + 1}.</span>
-                                    {section.text}
+                                <div key={index} className="pb-1">
+                                    {console.log(section.text)}
+                                    <a href={`#${section.text.replace(/\s+/g, "-").toLowerCase()}`} className="mr-1  text-base text-gray-500">
+                                        {index + 1}. {section.text.split(". ")[1]}
+                                    </a>
+
                                     {section.subtexts?.map((ssection, index1) => (
-                                        <div className="ml-5" key={index1}>
+                                        <div key={index} className="ml-5">
                                             <span className="mr-1 text-lg text-gray-500">
                                                 {index + 1}.{index1 + 1}.
                                             </span>
