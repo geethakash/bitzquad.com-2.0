@@ -13,8 +13,8 @@ function Index() {
                 RE-ENGINEERING, BRANDING AND DIGITAL MARKETING and E-BUSINESS services in both local and international markets. Our passionate and competent team is keen to bring futuristic and pragmatic solutions that transcend your expectations. We believe our purpose is to upscale
                 the value of ideas of our clients and prospects."
                 keywords="About Bitzquad, Bitzquad, Solutions Beyond Technology, Software Company, Information Systems, Business Process Re-engineering, Branding, Digital Marketing, E-Business services"
-                url={`${process.env.NEXT_PUBLIC_API_URL}/${router.asPath}`}
-                imagefb="/logo-dark.webp"
+                url={`${process.env.NEXT_PUBLIC_API_URL}${router.asPath}`}
+                imagefb={`${process.env.NEXT_PUBLIC_API_URL}/logo-dark.webp`}
                 alt="We are a booming start-up in the tech ecosystem, based in Sri Lanka, focusing on providing diverse solutions in information systems, business process
                 re-engineering, Branding and Digital Marketing and E-Business services in both local and international markets. Our passionate and competent team is keen to bring futuristic and pragmatic solutions that transcend your expectations. We believe our purpose is to upscale
                 the value of ideas of our clients and prospects."
