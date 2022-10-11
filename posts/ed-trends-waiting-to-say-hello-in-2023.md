@@ -4,8 +4,8 @@ date: "Oct 10, 2022"
 excerpt: "The field of education is a topic that has been discussed for a long time. Because education as an enlightening process has been given utter importance all the..."
 category: "Technology"
 read_duration: "3min read"
-cover_image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-main_image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+cover_image: "/assets/img/blog/ed-trends-cover.webp"
+main_image: "/assets/img/blog/ed-trends-main.webp"
 writer: "RIDMI RATNAYAKE"
 writer_avatar: "/assets/img/squad/ridmi.webp"
 quote: "Tell me, and I forget. Teach me, and I remember. Involve me, and I learn."
@@ -20,7 +20,7 @@ Technology usage and cultivating the right mindset in learning are in the spotli
 
 Therefore, the **learning method and perspective development** are critical factors that require more attention. This article contains curated five trends in the field of education you can expect to experience in 2023.
 
-# 1. Gamification of Learning
+## 1. Gamification of Learning
 
 Gamification is becoming a popular way of learning, giving learners an engaging learning experience. Gaming has been an exciting way of taking out the competitive side of the personality, where it has an effect regardless of age.
 
@@ -49,13 +49,13 @@ Personalized learning is a method that caters to each learner according to their
 
 More focus will be on developing an individual's unique skills and interests. This technique,
 
--   motivates students to express their interests confidently
--   inspires students to make choices in their educational journey
--   teaches self-advocacy skills
+- motivates students to express their interests confidently
+- inspires students to make choices in their educational journey
+- teaches self-advocacy skills
 
 [Click Here](https://www.edapp.com/blog/10-personalized-learning-platforms/) to visit www.edapp.com article on personalized Learning platforms available for you.
 
-# 4. Distance and Hybrid Learning | Blended Learning
+## 4. Distance and Hybrid Learning | Blended Learning
 
 After the COVID-19 lockdown period, the new normal in the educational sector became questionable because most students were already comfortable with online learning, where all schedules were at their comfort. In addition to the comfort, the time and expenses related to better education drastically went down due to remote learning.
 
