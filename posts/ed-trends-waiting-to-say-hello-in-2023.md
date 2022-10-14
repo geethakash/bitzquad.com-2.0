@@ -4,8 +4,8 @@ date: "Oct 10, 2022"
 excerpt: "The field of education is a topic that has been discussed for a long time. Because education as an enlightening process has been given utter importance all the..."
 category: "Technology"
 read_duration: "3min read"
-cover_image: "/assets/img/blog/ed-trends-cover.webp"
-main_image: "/assets/img/blog/ed-trends-main.webp"
+cover_image: "https://www.bitzquad.com/assets/img/blog/ed-trends-cover.webp"
+main_image: "https://www.bitzquad.com/assets/img/blog/ed-trends-main.webp"
 writer: "RIDMI RATNAYAKE"
 writer_avatar: "/assets/img/squad/ridmi.webp"
 quote: "Tell me, and I forget. Teach me, and I remember. Involve me, and I learn."
@@ -49,9 +49,9 @@ Personalized learning is a method that caters to each learner according to their
 
 More focus will be on developing an individual's unique skills and interests. This technique,
 
-- motivates students to express their interests confidently
-- inspires students to make choices in their educational journey
-- teaches self-advocacy skills
+-   motivates students to express their interests confidently
+-   inspires students to make choices in their educational journey
+-   teaches self-advocacy skills
 
 [Click Here](https://www.edapp.com/blog/10-personalized-learning-platforms/) to visit www.edapp.com article on personalized Learning platforms available for you.
 

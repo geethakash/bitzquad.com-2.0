@@ -1,15 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
-import Link from "next/link";
 import { LayoutSubPages } from "../../components";
 import Meta from "../../components/defaults/Meta";
 import { useRouter } from "next/router";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { marked } from "marked";
 import { motion, useScroll, useSpring } from "framer-motion";
 import Markdown from "markdown-to-jsx";
-import Code from "../../components";
 
 export async function getStaticPaths() {
     const files = fs.readdirSync(path.join("posts"));
@@ -66,7 +63,7 @@ const extractHeadings = (str) => {
         }
     }
 
-    console.log("obj : ", JSON.stringify(obj));
+    //console.log("obj : ", JSON.stringify(obj));
 
     return obj;
     // console.log("h1 : ", h1);
@@ -97,8 +94,8 @@ function PostPage({ frontmatter: meta, content, slug, sections }) {
                 title={`Bitzquad | Blog - ${meta.title}`}
                 description={meta.excerpt}
                 keywords="Blog Bitzquad, Bitzquad, Solutions Beyond Technology, Software Company, Information Systems, Business Process Re-engineering, Branding, Digital Marketing, E-Business services"
-                url={`${process.env.NEXT_PUBLIC_API_URL}/${router.asPath}`}
-                imagefb={meta.main_image}
+                url={`${process.env.NEXT_PUBLIC_API_URL}${router.asPath}`}
+                imagefb={`${meta.main_image}`}
                 alt={meta.excerpt}
             />
             <div className="mx-auto w-full font-['Raleway'] lg:mt-36 2xl:mt-44 ">
@@ -131,7 +128,7 @@ function PostPage({ frontmatter: meta, content, slug, sections }) {
                 </div>
                 <div className="bz-container mt-0 mb-20 flex justify-center gap-x-5">
                     <article ref={ref} className=" text-[#181B3C]  lg:w-3/4">
-                        <Markdown>{marked(content)}</Markdown>
+                        <Markdown>{content}</Markdown>
                     </article>
                     <div className="hidden w-1/4 pt-16 lg:block">
                         <span className="block text-lg font-semibold uppercase">In This Article</span>
