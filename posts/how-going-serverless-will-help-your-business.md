@@ -1,3 +1,15 @@
+---
+title: "How going serverless will help your business"
+date: "Oct 24, 2022"
+excerpt: "Serverless is a well-known buzzword nowadays. How it will benifit my business?"
+category: "Technology"
+read_duration: "4 minutes read"
+cover_image: "https://www.bitzquad.com/assets/img/blog/ed-trends-cover.webp"
+main_image: "https://www.bitzquad.com/assets/img/blog/ed-trends-main.webp"
+writer: "HASINDU LANKA"
+writer_avatar: "/assets/img/squad/hasindu.webp"
+---
+
 # How going serverless will help your business
 
 Serverless is a well-known buzzword nowadays. It went from a futuristic mystery to a widely adopted need-to-have technology. By definition, serverless computing is running applications on clouds without managing underlying servers. A cloud platform provider will manage and monitor servers for your applications on demand. Application developers can **focus on business logic** rather than servers.
