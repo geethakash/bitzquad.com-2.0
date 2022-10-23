@@ -10,11 +10,11 @@ writer: "HASINDU LANKA"
 writer_avatar: "/assets/img/squad/hasindu.webp"
 ---
 
-# How going serverless will help your business
-
 Serverless is a well-known buzzword nowadays. It went from a futuristic mystery to a widely adopted need-to-have technology. By definition, serverless computing is running applications on clouds without managing underlying servers. A cloud platform provider will manage and monitor servers for your applications on demand. Application developers can **focus on business logic** rather than servers.
 
 ![serveless-is-not-no-servers-its-no-servers-for-you-to-manage-the-dictator](https://media.hasindu.lk/file/hasindu-media/bitzquad/post-serverless/img1.webp)
+
+## Traditional servers
 
 Let's say we have a coffee shop. We start small, and we have one coffee vendor in the shop. Each customer comes in a row and asks for the coffee they want. The vendor gives them coffee, and the customer leaves, making space for the next.
 
@@ -42,13 +42,13 @@ However, there is a small problem in our coffee shop. Even though 3 of our vendo
 
 This is where **serverless** comes in handy.
 
+## Going serverless
+
 Our coffee shop partners with a company called **Vendorless**. Vendorless will take the responsibility of managing vendors. Our coffee shop doesn't own any vendors now. When customers come into the shop, Vendorless provides the **optimal** number of vendors our customers need. We pay vendors only for the time they work in our shop. When there are more customers, there will be more vendors. When there are no customers, there will be no vendors, and we pay nothing. Now, even if the whole city suddenly turns up on our doorstep asking for coffee, we can serve them all without doing anything special. Vendorless got your back.
 
-How is Vendorless doing this? It turns out, Vendorless has thousands of coffee vendors working in hundreds of different coffee shops. When a shop needs vendors, Vendorless Allocates them from their vendor group. When a shop doesn't need some vendors anymore, Vendorless reclaims them.
+How is Vendorless doing this? It turns out, Vendorless has thousands of coffee vendors working in hundreds of different coffee shops. When a shop needs vendors, Vendorless allocates them from their vendor group. When a shop doesn't need some vendors anymore, Vendorless reclaims them.
 
-Congratulations, you just learned **what** serverless is and, more importantly, **how** it works!
-
-Vendorless and serverless are very similar concepts, except serverless isn't a company. It is a service provided by cloud platforms.
+Congratulations, you just learned **what** serverless is and, more importantly, **how** it works! Vendorless and serverless are very similar concepts, except serverless isn't a company. It is a service provided by cloud platforms.
 
 ## Advantages of using serverless compared to traditional service
 
@@ -76,4 +76,4 @@ Serverless applications, **by design**, do not rely on a continuing state. This 
 
 Serverless runners are specifically created to run your application. If we take the vendorless example, the coffee vendors that Vendorless provides are *born and live only to serve coffee*. They can not drive or sing. They don't even know what Netflix is. Similarly, serverless runners are created for the sole purpose of running your application. They are **containerized** with only the required dependencies of your application. This design is a prominent reason for serverless to be cost-effective and more secure.
 
-> At Bitzquad, we utilize sophisticated technology like serverless computing to give your business a higher ground of advantage. Contact us today. Let's work together!
+Serverless is exemplary technology for small startups to ample scale-ups alike. There's no need for a huge budget to get started in serverless as cloud platforms provide a generous free quota each month. We can celebrate business success with peace of mind, knowing that the software services will just grow along with the company. At Bitzquad, we utilize sophisticated technology like serverless computing to get your business a higher ground of advantage. Contact us today. Let's work together!
