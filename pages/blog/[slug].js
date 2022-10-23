@@ -47,18 +47,12 @@ const extractHeadings = (str) => {
 
   for (var i = 0; i < strarr.length; i++) {
     if (strarr[i].match(/(^## )/)) {
-      h1.push({
-        text: strarr[i].replace("## ", ""),
-        row: i,
-        id: getidformheading(strarr[i].replace("## ", "")),
-      });
+      const _str = strarr[i].replace("## ", "");
+      h1.push({ text: _str, row: i, id: getidformheading(_str) });
     }
     if (strarr[i].match(/(^### )/)) {
-      h2.push({
-        text: strarr[i].replace("### ", ""),
-        row: i,
-        id: getidformheading(strarr[i].replace("### ", "")),
-      });
+      const _str = strarr[i].replace("### ", "");
+      h2.push({ text: _str, row: i, id: getidformheading(_str) });
     }
   }
   obj = h1;
@@ -297,12 +291,14 @@ function PostPage({ frontmatter: meta, content, slug, sections }) {
             <div className="mt-3">
               {sections.map((section, index) => (
                 <div key={index} className="pb-1">
-                  {console.log(section.text)}
                   <a
                     href={`#${section.id}`}
                     className="mr-1  text-base text-gray-500"
                   >
-                    {index + 1}. {section.text.split(". ")[1]}
+                    {index + 1}.{" "}
+                    {section.text.split(". ") > 1
+                      ? section.text.split(". ")[1]
+                      : section.text}
                   </a>
 
                   {section.subtexts?.map((ssection, index1) => (
