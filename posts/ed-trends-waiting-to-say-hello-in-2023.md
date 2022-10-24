@@ -8,6 +8,16 @@ cover_image: "https://www.bitzquad.com/assets/img/blog/ed-trends-cover.webp"
 main_image: "https://www.bitzquad.com/assets/img/blog/ed-trends-main.webp"
 writer: "RIDMI RATNAYAKE"
 writer_avatar: "/assets/img/squad/ridmi.webp"
+writer_social: {
+    # "Website": "https://rid.mi/",
+    "LinkedIn": "https://www.linkedin.com/in/ridmi-ratnayake-aaa515172/",
+    "Facebook": "https://www.facebook.com/ridmi.ratnayake.7/",
+    "Twitter": "https://twitter.com/RidmiRatnayake",
+    # "Instagram": "https://facebook.com/",
+    # "Github": "https://facebook.com/",
+    # "Behance": "https://facebook.com/",
+    # "Youtube": "https://facebook.com/",
+  }
 quote: "Tell me, and I forget. Teach me, and I remember. Involve me, and I learn."
 quote_owner: "Benjamin Franklin"
 ---
@@ -49,9 +59,9 @@ Personalized learning is a method that caters to each learner according to their
 
 More focus will be on developing an individual's unique skills and interests. This technique,
 
--   motivates students to express their interests confidently
--   inspires students to make choices in their educational journey
--   teaches self-advocacy skills
+- motivates students to express their interests confidently
+- inspires students to make choices in their educational journey
+- teaches self-advocacy skills
 
 [Click Here](https://www.edapp.com/blog/10-personalized-learning-platforms/) to visit www.edapp.com article on personalized Learning platforms available for you.
 
