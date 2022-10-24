@@ -8,6 +8,14 @@ cover_image: "https://www.bitzquad.com/assets/img/blog/ed-trends-cover.webp"
 main_image: "https://www.bitzquad.com/assets/img/blog/ed-trends-main.webp"
 writer: "HASINDU LANKA"
 writer_avatar: "/assets/img/squad/hasindu.webp"
+writer_social: {
+    "Website": "https://hasindu.lk",
+    "Github": "https://github.com/hasindulanka",
+    "LinkedIn": "https://www.linkedin.com/in/hasindulanka",
+    "Twitter": "https://twitter.com/Hasindu_Lanka",
+  }
+quote: "We cannot solve our problems with the same thinking we used when we created them"
+quote_owner: "Albert Einstein"
 ---
 
 Serverless is a well-known buzzword nowadays. It went from a futuristic mystery to a widely adopted need-to-have technology. By definition, serverless computing is running applications on clouds without managing underlying servers. A cloud platform provider will manage and monitor servers for your applications on demand. Application developers can **focus on business logic** rather than servers.
