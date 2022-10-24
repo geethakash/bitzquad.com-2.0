@@ -1,5 +1,5 @@
 User-agent: *
-Sitemap: https://bitzquad-com-2-0-amber.vercel.app/sitemap.xml
+Sitemap: https://www.bitzquad.com/sitemap.xml
 Allow: /
 Disallow: /api
 Disallow: /admin
