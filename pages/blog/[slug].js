@@ -7,6 +7,7 @@ import path from "path";
 import matter from "gray-matter";
 import { motion, useScroll, useSpring } from "framer-motion";
 import Markdown from "markdown-to-jsx";
+import axios from "axios";
 
 export async function getStaticPaths() {
     const files = fs.readdirSync(path.join("posts"));
@@ -83,6 +84,7 @@ const HeadingLink = ({ children }) => <div className="text-red-400">{children}</
 
 function PostPage({ frontmatter: meta, content, slug, sections }) {
     const ref = useRef(null);
+    const [analytics, setAnalytics] = useState(null);
     const { scrollYProgress } = useScroll({ target: ref });
     const scaleX = useSpring(scrollYProgress, {
         stiffness: 100,
@@ -90,6 +92,20 @@ function PostPage({ frontmatter: meta, content, slug, sections }) {
         restDelta: 0.001,
     });
     const router = useRouter();
+
+    useEffect(() => {
+        fetchAnalytics();
+    }, []);
+
+    const fetchAnalytics = async () => {
+        if (analytics) return;
+        const response = await axios.get(`/api/analytics?url=${router.asPath}`);
+        if (response.data.status == 200) {
+            setAnalytics(response.data.data.data);
+            console.log(response.data.data.data);
+        }
+    };
+
     return (
         <LayoutSubPages>
             <Meta
@@ -110,6 +126,7 @@ function PostPage({ frontmatter: meta, content, slug, sections }) {
                                 <span className=" rounded py-1 font-semibold text-gray-400 lg:bg-purple-custom lg:px-3 lg:text-gray-700">{meta.category}</span>
                                 <span className=" font-semibold text-purple-custom">{meta.date}</span>
                                 <span className="text-base font-semibold text-gray-300">{meta.read_duration}</span>
+                                {analytics && <span className="text-base text-gray-300">{analytics.views}+ Reads</span>}
                             </div>
                             <h1 className="mt-2 font-semibold leading-snug text-gray-50 lg:mt-4 lg:text-5xl lg:font-bold lg:tracking-wider">{meta.title}</h1>
                             <div className="mt-3 mb-2 flex items-center gap-x-3">

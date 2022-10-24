@@ -21,38 +21,24 @@ export default async function handler(req, res) {
 /*  Handle HTTP GET Actions    */
 async function handleGET(req, res) {
     try {
-        const resp = await runReport();
+        const analyticsDataClient = new BetaAnalyticsDataClient({
+            credentials: cred,
+        });
+        const [response] = await analyticsDataClient.runReport({
+            property: `properties/329441108`,
+            dimensions: [{ name: "pagePath" }],
+            metrics: [{ name: "activeUsers" }, { name: "screenPageViews" }],
+            dateRanges: [{ startDate: "3000daysAgo", endDate: "today" }],
+            dimensionFilter: { filter: { fieldName: "pagePath", stringFilter: { matchType: "CONTAINS", value: req.query.url } } },
+            metricAggregations: ["TOTAL"],
+        });
+
         return res.status(200).json(
             new Transmit({
-                data: resp,
-                pages: 0,
-                page: 0,
-                limit: 0,
-                total: 0,
+                data: { users: response.rows[0].metricValues[0].value, views: response.rows[0].metricValues[1].value },
             })
         );
     } catch (e) {
         return res.status(200).json(new Transmit({ error: e.message }, 500, "Error"));
     }
-}
-
-async function runReport() {
-    const analyticsDataClient = new BetaAnalyticsDataClient({
-        key: "AIzaSyAHWz79beBgWRZf9MBA4F-7uBMRS-VchHI",
-        credentials: cred,
-    });
-    const [response] = await analyticsDataClient.runReport({
-        property: `properties/329441108`,
-        dimensions: [{ name: "pagePath" }],
-        metrics: [{ name: "activeUsers" }, { name: "screenPageViews" }],
-        dateRanges: [{ startDate: "3000daysAgo", endDate: "today" }],
-        dimensionFilter: { filter: { fieldName: "pagePath", stringFilter: { matchType: "CONTAINS", value: "/blog/ed-trends-waiting-to-say-hello-in-2023" } } },
-        metricAggregations: ["TOTAL"],
-    });
-
-    console.log("Report result:");
-    response.rows.forEach((row) => {
-        console.log(row.dimensionValues[0], row.metricValues[0]);
-    });
-    return response;
 }
