@@ -4,11 +4,12 @@ date: "Oct 24, 2022"
 excerpt: "Serverless is a well-known buzzword nowadays. How it will benifit my business?"
 category: "Technology"
 read_duration: "4 minutes read"
-cover_image: "https://media.hasindu.lk/file/hasindu-media/bitzquad/post-serverless/cover.webp"
-main_image: "https://media.hasindu.lk/file/hasindu-media/bitzquad/post-serverless/img2.webp"
+cover_image: "/assets/img/blogp/post-serverless/post-serverless-cover.webp"
+main_image: "/assets/img/blogp/post-serverless/post-serverless-main.webp"
 writer: "HASINDU LANKA"
 writer_avatar: "/assets/img/squad/hasindu.webp"
-writer_social: {
+writer_social:
+  {
     "Website": "https://hasindu.lk",
     "Github": "https://github.com/hasindulanka",
     "LinkedIn": "https://www.linkedin.com/in/hasindulanka",
@@ -20,15 +21,13 @@ quote_owner: "Albert Einstein"
 
 Serverless is a well-known buzzword nowadays. It went from a futuristic mystery to a widely adopted need-to-have technology. By definition, serverless computing is running applications on clouds without managing underlying servers. A cloud platform provider will manage and monitor servers for your applications on demand. Application developers can **focus on business logic** rather than servers.
 
-![serveless-is-not-no-servers-its-no-servers-for-you-to-manage](https://media.hasindu.lk/file/hasindu-media/bitzquad/post-serverless/img1.webp)
+![serveless-is-not-no-servers-its-no-servers-for-you-to-manage](/assets/img/blogp/post-serverless/img1.webp)
 
 ## Traditional servers
 
 Let's say we have a coffee shop. We start small, and we have one coffee vendor in the shop. Each customer comes in a row and asks for the coffee they want. The vendor gives them coffee, and the customer leaves, making space for the next.
 
-
-![traditional-servers-in-businesses](https://media.hasindu.lk/file/hasindu-media/bitzquad/post-serverless/img2.webp)
-
+![traditional-servers-in-businesses](/assets/img/blogp/post-serverless/img2.webp)
 
 > This process is the same as traditional single-server architecture, where one monolithic server serves all users.
 
@@ -40,13 +39,11 @@ Now there are three rows, and customers are happy because they have to wait less
 
 However, there is a small problem in our coffee shop. Even though 3 of our vendors work at their full capacity during rush hours, our shop doesn't get that many customers on some hours. Sometimes there are barely enough customers for a single vendor to serve. So the other two vendors sit around and watch Netflix. We cannot tell them to go home because we don't know when a sudden crowd of customers would enter the shop.
 
-![why-businesses-need-serverless](https://media.hasindu.lk/file/hasindu-media/bitzquad/post-serverless/img3.webp)
+![why-businesses-need-serverless](/assets/img/blogp/post-serverless/img3.webp)
 
 > The same issue is present on traditional servers or server clusters. We have to buy powerful enough servers to handle the peak traffic loads. However, they become excessive during low-traffic hours. We end up paying a lot more than we actually use, or worse, we may unknowingly purchase less than the optimal amount, and then some customers will lose our services during peak hours.
 
-
-![overallocation-and-underallocation-of-resources-in-businesses](https://media.hasindu.lk/file/hasindu-media/bitzquad/post-serverless/chart1.svg)
-
+![overallocation-and-underallocation-of-resources-in-businesses](/assets/img/blogp/post-serverless/chart1.svg)
 
 This is where **serverless** comes in handy.
 
@@ -70,7 +67,7 @@ Resources are allocated on demand. Therefore, you only pay for the resources you
 
 ### No server maintenance
 
-If you manage virtual servers, you have to configure them carefully from the operating system level. You have to *install software, patch them and update* them continually. One mistake you make over the course of years could open up a vulnerability to a hacker or malware getting into your system. By going serverless, you don't have to worry about these. Expert engineers working at your cloud provider will configure and maintain the servers and underlying software. They know what they do very well.
+If you manage virtual servers, you have to configure them carefully from the operating system level. You have to _install software, patch them and update_ them continually. One mistake you make over the course of years could open up a vulnerability to a hacker or malware getting into your system. By going serverless, you don't have to worry about these. Expert engineers working at your cloud provider will configure and maintain the servers and underlying software. They know what they do very well.
 
 ### Ephemeral state
 
@@ -78,8 +75,8 @@ Serverless applications, **by design**, do not rely on a continuing state. This 
 
 ### Specialized for your application
 
-![specialized-serverless-runners-for-business-applications](https://media.hasindu.lk/file/hasindu-media/bitzquad/post-serverless/img4.gif)
+![specialized-serverless-runners-for-business-applications](/assets/img/blogp/post-serverless/img4.gif)
 
-Serverless runners are specifically created to run your application. If we take the vendorless example, the coffee vendors that Vendorless provides are *born and live only to serve coffee*. They can not drive or sing. They don't even know what Netflix is. Similarly, serverless runners are created for the sole purpose of running your application. They are **containerized** with only the required dependencies of your application. This design is a prominent reason for serverless to be cost-effective and more secure.
+Serverless runners are specifically created to run your application. If we take the vendorless example, the coffee vendors that Vendorless provides are _born and live only to serve coffee_. They can not drive or sing. They don't even know what Netflix is. Similarly, serverless runners are created for the sole purpose of running your application. They are **containerized** with only the required dependencies of your application. This design is a prominent reason for serverless to be cost-effective and more secure.
 
 Serverless is exemplary technology for small startups to ample scale-ups alike. There's no need for a huge budget to get started in serverless as cloud platforms provide a generous free quota each month. We can celebrate business success with peace of mind, knowing that the software services will just grow along with the company. At Bitzquad, we utilize sophisticated technology like serverless computing to get your business a higher ground of advantage. Contact us today. Let's work together!
