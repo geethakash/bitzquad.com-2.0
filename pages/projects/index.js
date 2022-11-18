@@ -58,7 +58,7 @@ function Index() {
                   {project.description}
                 </p>
               </div>
-              <div className="relative md:w-1/2 lg:aspect-[9/6]">
+              <div className="relative md:w-1/2 lg:aspect-[8/6]">
                 <Link href={`${project.link}`}>
                   <div
                     data-cursor-text="view"
