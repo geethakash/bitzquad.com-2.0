@@ -38,8 +38,8 @@ export default function Example() {
         <div className="bz-container mt-0">
           <h2>Our Leaders</h2>
           <p>
-            Without bits, there won't be bytes. So does Bitzquad. This quad is
-            simply the set of dreamers and commanders who made Bitzquad a
+            Without bits, there won&apos;t be bytes. So does Bitzquad. This quad
+            is simply the set of dreamers and commanders who made Bitzquad a
             reality.
             <br /> Meet the bit+z+quad behind the terrific story of Bitzquad.
           </p>
