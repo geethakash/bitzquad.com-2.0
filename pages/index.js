@@ -10,6 +10,7 @@ import {
   LayoutMain,
   Loader,
   Testimonials,
+  OurTeam,
   Services,
   OurPartners,
   ProjectSection,
@@ -45,6 +46,7 @@ export default function Home() {
           <OurPartners />
           <ProjectSection />
           {/* <Testimonials /> */}
+          <OurTeam />
           <Collaborate />
         </div>
       </LayoutMain>
