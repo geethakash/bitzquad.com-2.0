@@ -63,7 +63,7 @@ function Landing({ loading }) {
               We are a team of thinkers, engineers, designers, and marketers
               representing different cultures worldwide. We work together to
               build sustainable solutions for a better world while serving our
-              stakeholders' best interests.
+              stakeholders&apos; best interests.
             </motion.div>
           </div>
         </div>
