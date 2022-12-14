@@ -21,6 +21,10 @@ body {
   bottom: 0;
 }
 
+.flurry-container {
+  @apply w-[100vw];
+}
+
 .scroll-container {
   position: absolute;
   overflow: hidden;
