@@ -4,7 +4,6 @@ import Contact from "../../../constants/schemas/contact";
 import Transmit from "../../../constants/Transmit";
 import request from "../../../middleware/request";
 import queryparser from "../../../middleware/queryparser";
-import cred from "../../../credentials.json";
 
 import { BetaAnalyticsDataClient } from "@google-analytics/data";
 
@@ -22,7 +21,7 @@ export default async function handler(req, res) {
 async function handleGET(req, res) {
     try {
         const analyticsDataClient = new BetaAnalyticsDataClient({
-            credentials: cred,
+            credentials: JSON.parse(process.env.GOOGLE_CRED),
         });
         const [response] = await analyticsDataClient.runReport({
             property: `properties/329441108`,
