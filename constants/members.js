@@ -12,19 +12,19 @@ export const members = [
         social: [
             {
                 name: "Facebook",
-                url: "https://www.facebook.com/jeffdaylan",
+                url: "https://www.facebook.com/kesaralive/",
             },
             {
                 name: "LinkedIn",
-                url: "https://www.linkedin.com/in/jeffdaylan/",
+                url: "https://www.linkedin.com/in/kesaralive/",
             },
             {
                 name: "Instagram",
-                url: "https://www.instagram.com/jeffdaylan/",
+                url: "https://www.instagram.com/kesaralive/",
             },
             {
                 name: "Github",
-                url: "",
+                url: "https://github.com/kesaralive",
             },
         ],
     },
@@ -40,19 +40,19 @@ export const members = [
         social: [
             {
                 name: "Facebook",
-                url: "https://www.facebook.com/jeffdaylan",
+                url: "https://www.facebook.com/harindu.wij",
             },
             {
                 name: "LinkedIn",
-                url: "https://www.linkedin.com/in/jeffdaylan/",
+                url: "https://www.linkedin.com/in/harinduwijesinghe/",
             },
             {
                 name: "Instagram",
-                url: "https://www.instagram.com/jeffdaylan/",
+                url: "https://www.instagram.com/harinducw/",
             },
             {
                 name: "Github",
-                url: "",
+                url: "https://github.com/hariwij",
             },
         ],
     },
@@ -68,19 +68,19 @@ export const members = [
         social: [
             {
                 name: "Facebook",
-                url: "https://www.facebook.com/jeffdaylan",
+                url: "https://www.facebook.com/akashgeethanjana/",
             },
             {
                 name: "LinkedIn",
-                url: "https://www.linkedin.com/in/jeffdaylan/",
+                url: "https://www.linkedin.com/in/geethakash/",
             },
             {
                 name: "Instagram",
-                url: "https://www.instagram.com/jeffdaylan/",
+                url: "https://instagram.com/geeth_akash/",
             },
             {
                 name: "Github",
-                url: "",
+                url: "https://github.com/geethakash/",
             },
         ],
     },
@@ -95,21 +95,21 @@ export const members = [
         description:
             "At Bitzquad, we go against the tide and select the best technology to ensure your product is reliable, scalable and sustainable. You will enjoy it the same tomorrow as well in 10 years.",
         social: [
-            {
-                name: "Facebook",
-                url: "https://www.facebook.com/jeffdaylan",
-            },
+            // {
+            //     name: "Facebook",
+            //     url: "https://www.facebook.com/jeffdaylan",
+            // },
             {
                 name: "LinkedIn",
-                url: "https://www.linkedin.com/in/jeffdaylan/",
+                url: "https://www.linkedin.com/in/hasindulanka/",
             },
-            {
-                name: "Instagram",
-                url: "https://www.instagram.com/jeffdaylan/",
-            },
+            // {
+            //     name: "Instagram",
+            //     url: "https://www.instagram.com/jeffdaylan/",
+            // },
             {
                 name: "Github",
-                url: "",
+                url: "https://github.com/hasindulanka",
             },
         ],
     },
@@ -126,20 +126,20 @@ export const members = [
         social: [
             {
                 name: "Facebook",
-                url: "https://www.facebook.com/jeffdaylan",
+                url: "https://www.facebook.com/ridmi.ratnayake.7",
             },
             {
                 name: "LinkedIn",
-                url: "https://www.linkedin.com/in/jeffdaylan/",
+                url: "https://www.linkedin.com/in/ridmi-ratnayake-aaa515172/",
             },
-            {
-                name: "Instagram",
-                url: "https://www.instagram.com/jeffdaylan/",
-            },
-            {
-                name: "Github",
-                url: "",
-            },
+            // {
+            //     name: "Instagram",
+            //     url: "https://www.instagram.com/jeffdaylan/",
+            // },
+            // {
+            //     name: "Github",
+            //     url: "",
+            // },
         ],
     },
     {
@@ -154,19 +154,19 @@ export const members = [
         social: [
             {
                 name: "Facebook",
-                url: "https://www.facebook.com/jeffdaylan",
+                url: "https://www.facebook.com/ashane.gunarathne.1",
             },
             {
                 name: "LinkedIn",
-                url: "https://www.linkedin.com/in/jeffdaylan/",
+                url: "https://www.linkedin.com/in/ashane-gunarathne/",
             },
-            {
-                name: "Instagram",
-                url: "https://www.instagram.com/jeffdaylan/",
-            },
+            // {
+            //     name: "Instagram",
+            //     url: "https://www.instagram.com/jeffdaylan/",
+            // },
             {
                 name: "Github",
-                url: "",
+                url: "https://github.com/AshaneKG",
             },
         ],
     },
@@ -182,19 +182,19 @@ export const members = [
         social: [
             {
                 name: "Facebook",
-                url: "https://www.facebook.com/jeffdaylan",
+                url: "https://www.facebook.com/isuruvihan.harishchandra",
             },
             {
                 name: "LinkedIn",
-                url: "https://www.linkedin.com/in/jeffdaylan/",
+                url: "https://www.linkedin.com/in/isuru-harischandra-9b09081a4",
             },
-            {
-                name: "Instagram",
-                url: "https://www.instagram.com/jeffdaylan/",
-            },
+            // {
+            //     name: "Instagram",
+            //     url: "https://www.instagram.com/jeffdaylan/",
+            // },
             {
                 name: "Github",
-                url: "",
+                url: "https://github.com/IsuruVihan",
             },
         ],
     },
@@ -208,21 +208,21 @@ export const members = [
         type: [1, 2],
         description: "Prioritize the significant milestones to achieve your goals & be consistent on them. Success will follow .",
         social: [
-            {
-                name: "Facebook",
-                url: "https://www.facebook.com/jeffdaylan",
-            },
+            // {
+            //     name: "Facebook",
+            //     url: "https://www.facebook.com/jeffdaylan",
+            // },
             {
                 name: "LinkedIn",
-                url: "https://www.linkedin.com/in/jeffdaylan/",
+                url: "https://www.linkedin.com/in/harshaabeyvickrama/",
             },
-            {
-                name: "Instagram",
-                url: "https://www.instagram.com/jeffdaylan/",
-            },
+            // {
+            //     name: "Instagram",
+            //     url: "https://www.instagram.com/jeffdaylan/",
+            // },
             {
                 name: "Github",
-                url: "",
+                url: "https://github.com/HarshaAbeyvickrama/",
             },
         ],
     },
@@ -236,21 +236,21 @@ export const members = [
         type: [1, 2],
         description: "Great innovations emerge from self organizing teams!",
         social: [
-            {
-                name: "Facebook",
-                url: "https://www.facebook.com/jeffdaylan",
-            },
+            // {
+            //     name: "Facebook",
+            //     url: "https://www.facebook.com/jeffdaylan",
+            // },
             {
                 name: "LinkedIn",
-                url: "https://www.linkedin.com/in/jeffdaylan/",
+                url: "https://www.linkedin.com/in/sanjana-navarathne",
             },
-            {
-                name: "Instagram",
-                url: "https://www.instagram.com/jeffdaylan/",
-            },
+            // {
+            //     name: "Instagram",
+            //     url: "https://www.instagram.com/jeffdaylan/",
+            // },
             {
                 name: "Github",
-                url: "",
+                url: "https://github.com/Sanjana-99",
             },
         ],
     },
@@ -266,20 +266,20 @@ export const members = [
         social: [
             {
                 name: "Facebook",
-                url: "https://www.facebook.com/jeffdaylan",
+                url: "https://www.facebook.com/daya.graphics99",
             },
             {
                 name: "LinkedIn",
-                url: "https://www.linkedin.com/in/jeffdaylan/",
+                url: "https://www.linkedin.com/company/dayagraphics/",
             },
-            {
-                name: "Instagram",
-                url: "https://www.instagram.com/jeffdaylan/",
-            },
-            {
-                name: "Github",
-                url: "",
-            },
+            // {
+            //     name: "Instagram",
+            //     url: "https://www.instagram.com/jeffdaylan/",
+            // },
+            // {
+            //     name: "Github",
+            //     url: "",
+            // },
         ],
     },
     {
@@ -292,22 +292,22 @@ export const members = [
         type: [3],
         description: "Your design should be future proof. As a result, consumers will remember your brand for a long time. ",
         social: [
-            {
-                name: "Facebook",
-                url: "https://www.facebook.com/jeffdaylan",
-            },
+            // {
+            //     name: "Facebook",
+            //     url: "https://www.facebook.com/jeffdaylan",
+            // },
             {
                 name: "LinkedIn",
-                url: "https://www.linkedin.com/in/jeffdaylan/",
+                url: "https://www.linkedin.com/in/dilshinepic/",
             },
-            {
-                name: "Instagram",
-                url: "https://www.instagram.com/jeffdaylan/",
-            },
-            {
-                name: "Github",
-                url: "",
-            },
+            // {
+            //     name: "Instagram",
+            //     url: "https://www.instagram.com/jeffdaylan/",
+            // },
+            // {
+            //     name: "Github",
+            //     url: "",
+            // },
         ],
     },
     {
@@ -322,20 +322,20 @@ export const members = [
         social: [
             {
                 name: "Facebook",
-                url: "https://www.facebook.com/jeffdaylan",
+                url: "https://www.facebook.com/Nuwahm",
             },
             {
                 name: "LinkedIn",
-                url: "https://www.linkedin.com/in/jeffdaylan/",
+                url: "https://www.linkedin.com/in/nuwantha-herath-15a01219b/",
             },
-            {
-                name: "Instagram",
-                url: "https://www.instagram.com/jeffdaylan/",
-            },
-            {
-                name: "Github",
-                url: "",
-            },
+            // {
+            //     name: "Instagram",
+            //     url: "https://www.instagram.com/jeffdaylan/",
+            // },
+            // {
+            //     name: "Github",
+            //     url: "",
+            // },
         ],
     },
 ];
