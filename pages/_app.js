@@ -1,7 +1,6 @@
 import "../styles/style.scss";
 import { AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import Head from "next/head";
-import Script from "next/script";
 import React from "react";
 
 function MyApp({ Component, pageProps }) {
@@ -69,10 +68,7 @@ function MyApp({ Component, pageProps }) {
             />
           </noscript>
         </React.Fragment>
-        <React.Fragment>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-          <script src="/assets/js/flurry.js"></script>
-        </React.Fragment>
+        
       </Head>
       <AnimatePresence>
         <Component {...pageProps} />
