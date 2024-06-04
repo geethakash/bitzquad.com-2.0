@@ -28,34 +28,34 @@ export const members = [
             },
         ],
     },
-    {
-        id: 2,
-        firstName: "Harindu",
-        lastName: "Wijesinghe",
-        role: { text: "Co-Founder", bgImg: "/assets/img/squad/role/management.svg" },
-        img: "/assets/img/squad/harindu.webp",
-        bgColor: "#F5D6C3",
-        type: [1, 2],
-        description: "Never give up on your efforts, pursue your dreams, follow your passions, and don't let anyone tell you what to do.",
-        social: [
-            {
-                name: "Facebook",
-                url: "https://www.facebook.com/harindu.wij",
-            },
-            {
-                name: "LinkedIn",
-                url: "https://www.linkedin.com/in/harinduwijesinghe/",
-            },
-            {
-                name: "Instagram",
-                url: "https://www.instagram.com/harinducw/",
-            },
-            {
-                name: "Github",
-                url: "https://github.com/hariwij",
-            },
-        ],
-    },
+    // {
+    //     id: 2,
+    //     firstName: "Harindu",
+    //     lastName: "Wijesinghe",
+    //     role: { text: "Co-Founder", bgImg: "/assets/img/squad/role/management.svg" },
+    //     img: "/assets/img/squad/harindu.webp",
+    //     bgColor: "#F5D6C3",
+    //     type: [1, 2],
+    //     description: "Never give up on your efforts, pursue your dreams, follow your passions, and don't let anyone tell you what to do.",
+    //     social: [
+    //         {
+    //             name: "Facebook",
+    //             url: "https://www.facebook.com/harindu.wij",
+    //         },
+    //         {
+    //             name: "LinkedIn",
+    //             url: "https://www.linkedin.com/in/harinduwijesinghe/",
+    //         },
+    //         {
+    //             name: "Instagram",
+    //             url: "https://www.instagram.com/harinducw/",
+    //         },
+    //         {
+    //             name: "Github",
+    //             url: "https://github.com/hariwij",
+    //         },
+    //     ],
+    // },
     {
         id: 3,
         firstName: "Akash",
